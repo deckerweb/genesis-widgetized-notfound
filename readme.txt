@@ -173,7 +173,7 @@ I've just included some filters for that - if ever needed (i.e. for clients, bra
 
 Example code for changing one of these filters:
 `
-add_filter( 'gwnf_filter_404_widget_title', 'custom_404_widget_title' );
+add_filter( 'gwnf/filter/widget_areas/404/title', 'custom_404_widget_title' );
 /**
  * Genesis Widgetized NotFound: Custom 404 Widget Title
  */
