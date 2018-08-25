@@ -200,16 +200,14 @@ function custom_404_widget_title() {
 ```
 
 
-**Final note:** I DON'T recommend to add customization code snippets to your child theme's `functions.php` file! **Please use a functionality plugin or an MU-plugin instead!** This way you can also use this better for Multisite environments. In general you are not abusing the functions.php for plugin-specific stuff and you are then also more independent from child theme changes etc. If you don't know how to create such a plugin yourself just use one of my recommended 'Code Snippets' plugins. Read & bookmark these Sites:
+**Final note:** I DON'T recommend to add customization code snippets to your child theme's `functions.php` file! **Please use a functionality plugin instead!** In general you should not abusing the functions.php for plugin-specific stuff. And you are then also more independent from child theme changes etc. If you don't know how to create such a plugin yourself just use one of my recommended 'Code Snippets' plugins. Read & bookmark these Sites:
 
+* [**Code Snippets** plugin by Shea Bunge](https://wordpress.org/plugins/code-snippets/)
+* [**PHP Code Snippets (Insert PHP)** plugin by webcraftic](https://wordpress.org/plugins/insert-php/)
 * [**"What is a functionality plugin and how to create one?"**](http://wpcandy.com/teaches/how-to-create-a-functionality-plugin) - *blog post by WPCandy*
 * [**"Creating a custom functions plugin for end users"**](http://justintadlock.com/archives/2011/02/02/creating-a-custom-functions-plugin-for-end-users) - *blog post by Justin Tadlock*
-* DON'T hack your `functions.php` file: [Resource One](http://thomasgriffinmedia.com/custom-snippets-plugin/) - [Resource Two](http://thomasgriffinmedia.com/blog/2012/09/calling-on-the-wordpress-community/) *(both by Thomas Griffin Media)*
-* [**"Code Snippets"** plugin by Shea Bunge](https://wordpress.org/plugins/code-snippets/) - also network wide!
-* [**"Code With WP Code Snippets"** plugin by Thomas Griffin](https://github.com/thomasgriffin/CWWP-Custom-Snippets) - Note: Plugin currently in development at GitHub.
-* [**"Toolbox Modules"** plugin by Sergej Müller](https://wordpress.org/plugins/toolbox/) - see also his [plugin instructions](http://playground.ebiene.de/toolbox-wordpress-plugin/).
 
-All the custom & branding stuff code above can also be found as a Gist on GitHub: https://gist.github.com/deckerweb/2473125 (you can also add your questions/ feedback there :)
+All the custom & branding stuff code above can also be found as a [Gist on GitHub: https://gist.github.com/deckerweb/2473125](https://gist.github.com/deckerweb/2473125) (you can also add your questions/ feedback there :)
 
 
 ### How can I use the advantages of this plugin for multlingual sites? 
