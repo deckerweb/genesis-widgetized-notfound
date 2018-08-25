@@ -1,0 +1,324 @@
+# Translation of Genesis Widgetized Not Found & 404 in Spanish (Spain)
+# This file is distributed under the same license as the Genesis Widgetized Not Found & 404 package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2013-05-29 12:03+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.4\n"
+"Project-Id-Version: Genesis Widgetized Not Found & 404\n"
+"POT-Creation-Date: \n"
+"Last-Translator: David Decker <deckerweb.mobil@googlemail.com>\n"
+"Language-Team: \n"
+
+#: genesis-widgetized-notfound.php:0
+msgid "1.5.0"
+msgstr "1.5.0"
+
+#: includes/gwnf-admin.php:239
+msgid "Provided Shortcodes by the plugin:"
+msgstr ""
+
+#: includes/gwnf-admin.php:242 includes/gwnf-admin.php:247
+msgid "Supporting the following parameters"
+msgstr ""
+
+#: includes/gwnf-admin.php:243
+msgid "ID of the Widget area (Sidebar; see above)"
+msgstr ""
+
+#: includes/gwnf-admin.php:243 includes/gwnf-admin.php:248
+#: includes/gwnf-admin.php:249 includes/gwnf-admin.php:250
+#: includes/gwnf-admin.php:251 includes/gwnf-admin.php:252
+#: includes/gwnf-admin.php:253
+msgid "Default: %s"
+msgstr ""
+
+#: includes/gwnf-admin.php:243 includes/gwnf-admin.php:250
+#: includes/gwnf-admin.php:252 includes/gwnf-admin.php:253
+msgid "none, empty"
+msgstr ""
+
+#: includes/gwnf-admin.php:248
+msgid "Search placeholder text"
+msgstr ""
+
+#: includes/gwnf-admin.php:248 includes/gwnf-shortcodes.php:53
+#: includes/gwnf-widget-search.php:254
+msgid "Search this website"
+msgstr ""
+
+#: includes/gwnf-admin.php:249 includes/gwnf-admin.php:251
+msgid "HTML wrapper tag"
+msgstr ""
+
+#: includes/gwnf-admin.php:249 includes/gwnf-shortcodes.php:54
+#: includes/gwnf-widget-search.php:255 includes/gwnf-widget-search.php:307
+#: includes/gwnf-widget-search.php:374
+msgid "Search"
+msgstr ""
+
+#: includes/gwnf-admin.php:250
+msgid "Additional label before the search form"
+msgstr ""
+
+#: includes/gwnf-admin.php:252
+msgid "Can be a custom class, added to the wrapper tag"
+msgstr ""
+
+#: includes/gwnf-admin.php:253
+msgid "Optional setup post type(s) for search"
+msgstr ""
+
+#: includes/gwnf-admin.php:253
+msgid "i.e., WordPress default search behavior"
+msgstr ""
+
+#: includes/gwnf-admin.php:220
+#: includes/gwnf-bbpress-widgetized-noresults.php:58
+msgid "bbPress: Forum Search No Results"
+msgstr ""
+
+#: includes/gwnf-bbpress-widgetized-noresults.php:63
+msgid ""
+"Only for bbPress 2.3+: Widgetized content area if there are no forum search "
+"results."
+msgstr ""
+
+#: includes/gwnf-admin.php:227
+msgid "Shortcodes are supported in all these widget areas."
+msgstr ""
+
+#: includes/gwnf-admin.php:202
+msgid "optional, could be deactivated %svia filter%s"
+msgstr ""
+
+#: includes/gwnf-admin.php:217 includes/gwnf-admin.php:218
+#: includes/gwnf-admin.php:220
+msgid "ID: %s"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:277
+msgid "Title:"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:284
+msgid "Optional Title URL:"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:292
+msgid "Open the URL in a new window/ tab?"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:299
+msgid "Do not display the Title?"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:306
+msgid "Optional intro text:"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:307 includes/gwnf-widget-search.php:374
+msgid "Add some additional %s info. NOTE: Just leave blank to not use at all."
+msgstr ""
+
+#: includes/gwnf-widget-search.php:315
+msgid "Search form"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:320
+msgid "Label string before search input field:"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:322 includes/gwnf-widget-search.php:330
+msgid "NOTE: Leave empty to not use/ display this string!"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:328
+msgid "Placeholder string for search input field:"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:336
+msgid "Search button string:"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:338
+msgid "NOTE: Displaying may depend on your child theme settings/ styles."
+msgstr ""
+
+#: includes/gwnf-widget-search.php:346
+msgid "Where to display this widget?"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:349
+msgid "Global (default)"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:353 includes/gwnf-widget-search.php:355
+msgid "Single %s"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:353
+msgid "Posts"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:355
+msgid "Pages"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:357
+msgid "Both, Single Posts & Pages"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:366
+msgid "Only displaying for logged in users?"
+msgstr ""
+
+#: includes/gwnf-widget-search.php:373
+msgid "Optional outro text:"
+msgstr ""
+
+#: includes/gwnf-admin.php:232
+msgid "Added Widget by the plugin: %s"
+msgstr ""
+
+#: includes/gwnf-admin.php:232 includes/gwnf-widget-search.php:56
+msgid "Genesis - Search Form"
+msgstr ""
+
+#: includes/gwnf-admin.php:234 includes/gwnf-widget-search.php:44
+msgid "A search form for your site. With a more options than the default one."
+msgstr ""
+
+#: includes/gwnf-admin.php:235
+msgid ""
+"For example, set placeholder and submit button texts via options, plus more "
+"stuff, like a few display options."
+msgstr ""
+
+#: includes/gwnf-widget-search.php:44
+msgid "Provided by the plugin %s."
+msgstr ""
+
+#: genesis-widgetized-notfound.php:105
+msgid ""
+"Sorry, you cannot activate the %1$s plugin unless you have installed the "
+"latest version of the %2$sGenesis Framework%3$s."
+msgstr ""
+"Disculpe, usted ni puede activar el%1$s  plugin ya que tiene que instalar la "
+"ultima versión de  %2$sGenesis Framework%3$s."
+
+#: includes/gwnf-admin.php:104 includes/gwnf-admin.php:202
+#: includes/gwnf-admin.php:258
+msgid "Code Snippets for Customization"
+msgstr "Fragmento de código útil para customizar"
+
+#: includes/gwnf-admin.php:104 includes/gwnf-admin.php:258
+msgid "Code Snippets"
+msgstr "Fragmento de código útil"
+
+#: includes/gwnf-admin.php:106 includes/gwnf-admin.php:258
+msgid "Translations"
+msgstr "traducciones"
+
+#: genesis-widgetized-notfound.php:110 includes/gwnf-admin.php:212
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/gwnf-admin.php:258
+msgid "Plugin website"
+msgstr "Sitio web del plugin"
+
+#: includes/gwnf-admin.php:278
+msgid "More about the plugin author"
+msgstr "Más sobre el autor del plugin"
+
+#: includes/gwnf-admin.php:279
+msgid "Social:"
+msgstr "Social:"
+
+#: includes/gwnf-admin.php:215
+msgid ""
+"Added Widget areas by the plugin - only displayed if having active widgets "
+"placed in:"
+msgstr ""
+"Adiciona areas de Widget para el plugin - Solamente disponible si se "
+"encuentra activo el widget"
+
+#: includes/gwnf-admin.php:257
+msgid "Important plugin links:"
+msgstr "Links importantes de plugins"
+
+#: genesis-widgetized-notfound.php:0
+msgid "http://genesisthemes.de/en/wp-plugins/genesis-widgetized-notfound/"
+msgstr "http://genesisthemes.de/en/wp-plugins/genesis-widgetized-notfound/"
+
+#: genesis-widgetized-notfound.php:0
+msgid "David Decker - DECKERWEB"
+msgstr "David Decker - DECKERWEB"
+
+#: genesis-widgetized-notfound.php:0
+msgid "http://deckerweb.de/"
+msgstr "http://deckerweb.de/"
+
+#: includes/gwnf-admin.php:100 includes/gwnf-admin.php:258
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/gwnf-admin.php:102 includes/gwnf-admin.php:258
+msgid "Support"
+msgstr "Soporte"
+
+#: includes/gwnf-admin.php:108 includes/gwnf-admin.php:258
+msgid "Donate"
+msgstr "Donar"
+
+#: includes/gwnf-admin.php:218 includes/gwnf-widget-areas.php:77
+msgid "Search Not Found"
+msgstr "Búsqueda sin éxito"
+
+#: includes/gwnf-widget-areas.php:83
+msgid "This is the widget area of the search not found content section."
+msgstr ""
+"Este es el área del widget de la sección de contenido \"Búsqueda sin éxito\""
+
+#: includes/gwnf-admin.php:217 includes/gwnf-widget-areas.php:54
+msgid "404 Error Page"
+msgstr "Error página 404"
+
+#: includes/gwnf-frontend.php:126
+msgid "Sorry, no content matched your criteria. Try a different search?"
+msgstr ""
+"Lo sentimos, no hay resultados para su búsqueda.  ¿Intentar una búsqueda "
+"diferente?"
+
+#: genesis-widgetized-notfound.php:0 genesis-widgetized-notfound.php:105
+#: genesis-widgetized-notfound.php:110 includes/gwnf-admin.php:173
+#: includes/gwnf-admin.php:212 includes/gwnf-widget-search.php:44
+msgid "Genesis Widgetized Not Found & 404"
+msgstr "Genesis Widgetized No se encontró & 404"
+
+#: genesis-widgetized-notfound.php:0
+msgid ""
+"Finally, use widgets to maintain and customize your 404 Error and Search Not "
+"Found pages in Genesis Framework and Child Themes."
+msgstr ""
+"Finalmente, utilice los widgets para mantener y personalizar las paginas "
+"\"Error 404\" y \"No hay resultados para su Búsqueda\" en Génesis Framework "
+"y Plantillas hijas"
+
+#: includes/gwnf-widget-areas.php:60
+msgid "This is the widget area of the 404 Not Found Error Page."
+msgstr ""
+"Este es el area del widget de \" Error 404 no hay resultados para su búsqueda"
+"\""
+
+#: includes/gwnf-admin.php:64
+msgid "Go to the Widgets settings page"
+msgstr "Ir al área de configuración de Widgets"
+
+#: includes/gwnf-admin.php:65
+msgid "Widgets"
+msgstr "Widgets"

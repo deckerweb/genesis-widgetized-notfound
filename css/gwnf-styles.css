@@ -1,0 +1,29 @@
+/**
+ * Plugin: Genesis Widgetized Not Found & 404
+ * Styles: Frontend Styles - XHTML
+ *
+ * @since 1.0.0
+ * @since 1.5.0 Updated styles.
+ */
+
+/* Widgets in Content Area
+------------------------------------------------------------ */
+
+/* Space around the whole container */
+#content #gwnf-404-area,
+#content #gwnf-notfound-area,
+#content #gwnf-bbpress-widgetized-content {
+	padding: 5px;
+}
+
+/* More bottom space after each widget */
+#content div.widget-area {
+	margin-bottom: 35px;
+}
+
+/* Handling the empty "p" left over from Genesis' "no content status" */
+.error404 div#content.hfeed > p,
+.search-no-results div#content.hfeed > p {
+	display: none;
+	height: 0;
+}

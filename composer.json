@@ -1,0 +1,22 @@
+{
+  "name": "deckerweb/genesis-widgetized-notfound",
+  "description": "WordPress plugin to finally, use widgets to maintain and customize your 404 Error and Search Not Found pages in Genesis Framework and Child Themes.",
+  "keywords": ["genesis", "genesiswp", "genesis framework", "404", "search", "not found", "page", "widget", "widgets", "searchform", "error", "deckerweb"],
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/deckerweb/genesis-widgetized-notfound",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "David Decker",
+      "homepage": "https://deckerweb.de/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/deckerweb/genesis-widgetized-notfound/issues",
+    "source": "https://github.com/deckerweb/genesis-widgetized-notfound"
+  },
+  "require": {
+    "php": ">=5.6"
+  }
+}
