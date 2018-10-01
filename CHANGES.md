@@ -6,9 +6,19 @@
 * [Translate the plugin](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
 * [**Donate** for the further development & support of the plugin](https://www.paypal.me/deckerweb)
 * [Plugin's documentation & FAQ](https://wordpress.org/plugins/genesis-widgetized-notfound/#faq)
+* [Facebook Community User Group](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 
 
 ## Changelog of the Plugin
+
+### 1.6.1 - 2018-10-01
+
+* New: Added plugin update message also to Plugins page (overview table)
+* New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
+* Tweak: Internal code improvements and tweaks
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+
 
 ### 1.6.0 - 2018-08-25
 
@@ -26,7 +36,7 @@
 * Tweak: Changed registering of widget areas to newer Genesis functions
 * Tweak: Changed some filter hook tags to comply with the new features, and, to have them more logical and better organized
 * Tweak: Code improvements and internal documentation updates
-* Tweak: Removed "Facetious" plugin support as this is 
+* Tweak: Removed "Facetious" plugin support as this is no longer available
 * Update: `.pot` file for translators, plus German translations
 * Update: Readme.txt file.
 * Update: All new screenshots - plus some more ;-)

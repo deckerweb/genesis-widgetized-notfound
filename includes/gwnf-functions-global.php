@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Setting internal plugin helper values.
  *
  * @since  1.6.0
+ * @since  1.6.1 Added FB Group.
  *
  * @return array Array of info values.
  */
@@ -28,13 +29,14 @@ function ddw_gwnf_info_values() {
 		'url_wporg_forum'   => 'https://wordpress.org/support/plugin/genesis-widgetized-notfound',
 		'url_wporg_profile' => 'https://profiles.wordpress.org/daveshine/',
 		'url_snippets'      => 'https://gist.github.com/deckerweb/2473125',
+		'url_fb_group'      => 'https://www.facebook.com/groups/deckerweb.wordpress.plugins/',
 		'license'           => 'GPL-2.0+',
 		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
 		'url_donate'        => 'https://www.paypal.me/deckerweb',
 		'url_plugin'        => 'https://github.com/deckerweb/genesis-widgetized-notfound',
 		'first_code'        => '2012',
 		'author'            => __( 'David Decker - DECKERWEB', 'genesis-widgetized-notfound' ),
-		'author_uri'        => __( 'https://deckerweb.de/', 'genesis-widgetized-notfound' ),
+		'author_uri'        => 'https://deckerweb.de/',
 
 	);  // end array
 
@@ -99,6 +101,7 @@ function ddw_gwnf_get_info_link( $url_key = '', $text = '', $class = '' ) {
  * Get timespan of coding years for this plugin.
  *
  * @since  1.6.0
+ * @since  1.6.1 Improved first year logic.
  *
  * @uses   ddw_gwnf_info_values()
  *
@@ -112,7 +115,7 @@ function ddw_gwnf_coding_years( $first_year = '' ) {
 	$first_year = ( empty( $first_year ) ) ? absint( $gwnf_info[ 'first_code' ] ) : absint( $first_year );
 
 	/** Set year of first released code */
-	$code_first_year = ( '' !== $first_year && date( 'Y' ) !== $first_year ) ? $first_year . '&#x02013;' : '';
+	$code_first_year = ( date( 'Y' ) == $first_year || 0 === $first_year ) ? '' : $first_year . '&#x02013;';
 
 	return $code_first_year . date( 'Y' );
 

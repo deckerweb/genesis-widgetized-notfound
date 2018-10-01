@@ -1,11 +1,11 @@
-=== Genesis Widgetized Not Found & 404 - Easy Setup for Search Not Found and 404 Page ===
+=== Genesis Widgetized Not Found & 404 - Easy Setup for 404 Page and Search Not Found ===
 Contributors: daveshine, deckerweb, wpautobahn
 Donate link: https://www.paypal.me/deckerweb
 Tags: genesis, genesiswp, genesis framework, 404, not found, error, search, searchform, page, widgets, widget, deckerweb
 Requires at least: 3.6
 Tested up to: 4.9.8
 Requires PHP: 5.6
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPL-2.0+
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -18,7 +18,7 @@ We all know that sometimes 404 Errors happen on our sites. And sometimes users s
 
 Just a great helper tool for Genesis Child Themes!
 
-**Please note:** The plugin requires the *Genesis Framework*, a paid premium product released by StudioPress/ WPEngine, Inc. (via studiopress.com).
+**Please note:** The plugin requires the *Genesis Framework*, a paid premium product released by StudioPress/ WPEngine, Inc. [(via studiopress.com)](https://deckerweb.de/go/genesis/)
 
 = What the Plugin Does - Advantages & Benefits =
 * Helps users stay longer on your site because you can give options like search form, recent posts, introductory text, image(s) etc.
@@ -55,9 +55,9 @@ Just a great helper tool for Genesis Child Themes!
 
 = Feedback =
 * I am open for your suggestions and feedback - Thank you for using or trying out one of my plugins!
-* Drop me a line [@deckerweb](https://twitter.com/deckerweb) on Twitter
+* Join our [**Facebook User Community Support Group**](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 
-== My Other Plugins ==
+= My Other Plugins =
 * [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [Genesis What's New Info](https://wordpress.org/plugins/genesis-whats-new-info/)
@@ -69,7 +69,7 @@ Just a great helper tool for Genesis Child Themes!
 
 == Installation ==
 
-**NOTE:** Only works with *Genesis Framework* as the parent theme. This is a paid premium product by StudioPress/ WPEngine, Inc., available via studiopress.com.
+**NOTE:** Only works with *Genesis Framework* as the parent theme. This is a paid premium product by StudioPress/ WPEngine, Inc., [available via studiopress.com](https://deckerweb.de/go/genesis/)
 
 1. Upload `genesis-widgetized-notfound` folder to the `/wp-content/plugins/` directory -- or just upload the ZIP package via 'Plugins > Add New > Upload' in your WP Admin
 2. Activate the plugin through the 'Plugins' menu in WordPress
@@ -258,6 +258,14 @@ if ( is_language( 'de' ) ) {
 
 == Changelog ==
 
+= 1.6.1 - 2018-10-01 =
+* New: Added plugin update message also to Plugins page (overview table)
+* New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
+* Tweak: Internal code improvements and tweaks
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+
+
 = 1.6.0 - 2018-08-25 =
 * *New: Brought the plugin back to life after more than five years, yeah! :)*
 * New: Added submenu item for Genesis Settings in WP-Admin left-hand menu - this redirects directly to the Widgets admin page, which makes it totally easy to setup the stuff
@@ -273,7 +281,7 @@ if ( is_language( 'de' ) ) {
 * Tweak: Changed registering of widget areas to newer Genesis functions
 * Tweak: Changed some filter hook tags to comply with the new features, and, to have them more logical and better organized
 * Tweak: Code improvements and internal documentation updates
-* Tweak: Removed "Facetious" plugin support as this is 
+* Tweak: Removed "Facetious" plugin support as this is no longer available
 * Update: `.pot` file for translators, plus German translations
 * Update: Readme.txt file.
 * Update: All new screenshots - plus some more ;-)
@@ -349,6 +357,9 @@ if ( is_language( 'de' ) ) {
 
 == Upgrade Notice ==
 
+= 1.6.1 =
+Maintenance release: Various tweaks and improvements, plus updated bundled library. Update recommended.
+
 = 1.6.0 =
 Major release: Back in life :) - improved user guiding in admin. Lots of improvements, tweaks and fixes.
 
@@ -377,9 +388,10 @@ Just released into the wild.
 Enjoy using *Genesis Widgetized Not Found & 404*? [**Please consider making a donation**](https://www.paypal.me/deckerweb) to support the project's continued development.
 
 == Plugin Links ==
-* [Translations (GlotPress)](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
+* [Translations (WP GlotPress Platform)](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
 * [User support forums](https://wordpress.org/support/plugin/genesis-widgetized-notfound)
 * [Code snippets archive for customizing, GitHub Gist](https://gist.github.com/deckerweb/2473125)
+* [DECKERWEB WordPress Plugins Facebook Group](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 
 == Translations ==
 

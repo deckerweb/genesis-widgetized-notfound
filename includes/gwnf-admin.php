@@ -133,8 +133,9 @@ add_filter( 'plugin_row_meta', 'ddw_gwnf_plugin_links', 10, 2 );
  * Add various support links to plugin page.
  *
  * @since  1.0.0
+ * @since  1.6.0 Refactoring.
  *
- * @uses   ddw_gwnf_info_values()
+ * @uses   ddw_gwnf_get_info_link()
  *
  * @param  $gwnf_links
  * @param  $gwnf_file
@@ -151,28 +152,43 @@ function ddw_gwnf_plugin_links( $gwnf_links, $gwnf_file ) {
 	/** List additional links only for this plugin */
 	if ( $gwnf_file == GWNF_PLUGIN_BASEDIR . 'genesis-widgetized-notfound.php' ) {
 
-		$gwnf_info = (array) ddw_gwnf_info_values();
+		?>
+			<style type="text/css">
+				tr[data-slug="genesis-widgetized-notfound"] .plugin-version-author-uri a.dashicons-before:before {
+					font-size: 17px;
+					margin-right: 2px;
+					opacity: .85;
+					vertical-align: sub;
+				}
+			</style>
+		<?php
 
 		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_wporg_faq', esc_html_x( 'FAQ', 'Plugins page listing', 'genesis-widgetized-notfound' ) );
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_wporg_faq', esc_html_x( 'FAQ', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-editor-help' );
 
 		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_wporg_forum', esc_html_x( 'Support', 'Plugins page listing', 'genesis-widgetized-notfound' ) );
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_wporg_forum', esc_html_x( 'Support', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-sos' );
 
 		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_snippets', esc_html_x( 'Code Snippets', 'Plugins page listing', 'genesis-widgetized-notfound' ) );
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_fb_group', esc_html_x( 'Facebook Group', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-facebook' );
 
 		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'genesis-widgetized-notfound' ) );
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_snippets', esc_html_x( 'Code Snippets', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-editor-code' );
 
 		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button-primary' );
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-translation' );
+
+		/* translators: Plugins page listing */
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button-primary dashicons-before dashicons-thumbs-up' );
 
 
 	}  // end if
 
 	/** Output the links */
-	return apply_filters( 'gwnf/filter/plugins_page/more_links', $gwnf_links );
+	return apply_filters(
+		'gwnf/filter/plugins_page/more_links',
+		$gwnf_links
+	);
 
 }  // end function
 
@@ -264,6 +280,10 @@ function ddw_gwnf_widgets_help_tab() {
 			#tab-panel-gwnf-widgets-help .dashicons-before:before {
 				vertical-align: bottom;
 			}
+			.gwnf-help-version {
+				margin-left: 7px;
+				opacity: .6;
+			}
 		</style>
 	<?php
 
@@ -300,7 +320,7 @@ function ddw_gwnf_widgets_help_content() {
 	$gwnf_space_helper = '<div style="height: 10px;"></div>';
 
 	/** Headline */
-	echo '<h2><span class="dashicons-before dashicons-welcome-widgets-menus"></span> ' . __( 'Plugin', 'genesis-widgetized-notfound' ) . ': ' . __( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ) . ' <small style="margin-left: 7px; opacity: .88;">v' . GWNF_VERSION . '</small></h2>';
+	echo '<h2><span class="dashicons-before dashicons-welcome-widgets-menus"></span> ' . __( 'Plugin', 'genesis-widgetized-notfound' ) . ': ' . __( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ) . ' <small class="gwnf-help-version">v' . GWNF_VERSION . '</small></h2>';
 
 	/** Widget areas info */
 	echo '<p><strong>' . __( 'Added Widget areas by the plugin - only displayed if having active widgets placed in:', 'genesis-widgetized-notfound' ) . '</strong>' .

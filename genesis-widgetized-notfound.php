@@ -14,7 +14,7 @@
  * Plugin Name:  Genesis Widgetized Not Found & 404
  * Plugin URI:   https://github.com/deckerweb/genesis-widgetized-notfound/
  * Description:  Finally, use widgets to maintain and customize your 404 Error and Search Not Found pages in Genesis Framework and Child Themes.
- * Version:      1.6.0
+ * Version:      1.6.1
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0+
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Set plugin version */
-define( 'GWNF_VERSION', '1.6.0' );
+define( 'GWNF_VERSION', '1.6.1' );
 
 /** Plugin directory */
 define( 'GWNF_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -133,19 +133,19 @@ function ddw_gwnf_init() {
 	$gwnf_textdomain = 'genesis-widgetized-notfound';
 
 	/** The 'plugin_locale' filter is also used by default in load_plugin_textdomain() */
-	$locale = apply_filters(
-		'plugin_locale',
-		get_locale(),
-		$gwnf_textdomain
-	);
-
-	/** Set filter for WordPress languages directory */
-	$gwnf_wp_lang_dir = esc_url(
+	$locale = esc_attr(
 		apply_filters(
-			'gwnf_filter_wp_lang_dir',
-			trailingslashit( WP_LANG_DIR ) . $gwnf_textdomain . '/' . $gwnf_textdomain . '-' . $locale . '.mo'
+			'plugin_locale',
+			get_locale(),
+			$gwnf_textdomain
 		)
 	);
+
+	/**
+	 * WordPress languages directory
+	 *   Will default to: wp-content/languages/genesis-widgetized-notfound/genesis-widgetized-notfound-{locale}.mo
+	 */
+	$gwnf_wp_lang_dir = trailingslashit( WP_LANG_DIR ) . trailingslashit( $gwnf_textdomain ) . $gwnf_textdomain . '-' . $locale . '.mo';
 
 	/** Translations: First, look in WordPress' "languages" folder = custom & update-secure! */
 	load_textdomain(
