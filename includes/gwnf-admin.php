@@ -181,7 +181,6 @@ function ddw_gwnf_plugin_links( $gwnf_links, $gwnf_file ) {
 		/* translators: Plugins page listing */
 		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button-primary dashicons-before dashicons-thumbs-up' );
 
-
 	}  // end if
 
 	/** Output the links */
@@ -387,7 +386,6 @@ function ddw_gwnf_widgets_help_content() {
 			ddw_gwnf_get_info_url( 'author_uri' ),	//esc_url( $gwnf_info[ 'author_uri' ] ),
 			esc_html( $gwnf_info[ 'author' ] )
 		);
-
 
 }  // end function
 
