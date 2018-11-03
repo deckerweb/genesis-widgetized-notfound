@@ -30,7 +30,7 @@ function ddw_gwnf_info_values() {
 		'url_wporg_profile' => 'https://profiles.wordpress.org/daveshine/',
 		'url_snippets'      => 'https://gist.github.com/deckerweb/2473125',
 		'url_fb_group'      => 'https://www.facebook.com/groups/deckerweb.wordpress.plugins/',
-		'license'           => 'GPL-2.0+',
+		'license'           => 'GPL-2.0-or-later',
 		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
 		'url_donate'        => 'https://www.paypal.me/deckerweb',
 		'url_plugin'        => 'https://github.com/deckerweb/genesis-widgetized-notfound',

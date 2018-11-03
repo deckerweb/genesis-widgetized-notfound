@@ -154,7 +154,7 @@ function ddw_gwnf_plugin_links( $gwnf_links, $gwnf_file ) {
 
 		?>
 			<style type="text/css">
-				tr[data-slug="genesis-widgetized-notfound"] .plugin-version-author-uri a.dashicons-before:before {
+				tr[data-plugin="<?php echo $gwnf_file; ?>"] .plugin-version-author-uri a.dashicons-before:before {
 					font-size: 17px;
 					margin-right: 2px;
 					opacity: .85;

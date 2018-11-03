@@ -7,17 +7,17 @@
  * @package      Genesis Widgetized Not Found & 404
  * @author       David Decker
  * @copyright    Copyright (c) 2012-2018, David Decker - DECKERWEB
- * @license      GPL-2.0+
+ * @license      GPL-2.0-or-later
  * @link         https://deckerweb.de/twitter
  *
  * @wordpress-plugin
  * Plugin Name:  Genesis Widgetized Not Found & 404
  * Plugin URI:   https://github.com/deckerweb/genesis-widgetized-notfound/
  * Description:  Finally, use widgets to maintain and customize your 404 Error and Search Not Found pages in Genesis Framework and Child Themes.
- * Version:      1.6.1
+ * Version:      1.6.2
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
- * License:      GPL-2.0+
+ * License:      GPL-2.0-or-later
  * License URI:  https://opensource.org/licenses/GPL-2.0
  * Text Domain:  genesis-widgetized-notfound
  * Domain Path:  /languages/
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Set plugin version */
-define( 'GWNF_VERSION', '1.6.1' );
+define( 'GWNF_VERSION', '1.6.2' );
 
 /** Plugin directory */
 define( 'GWNF_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );

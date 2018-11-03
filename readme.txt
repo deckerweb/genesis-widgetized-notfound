@@ -5,8 +5,8 @@ Tags: genesis, genesiswp, genesis framework, 404, not found, error, search, sear
 Requires at least: 3.6
 Tested up to: 4.9.8
 Requires PHP: 5.6
-Stable tag: 1.6.1
-License: GPL-2.0+
+Stable tag: 1.6.2
+License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
 Finally, use Widgets to maintain and customize your 404 Error and Search Not Found pages in Genesis Framework and Child Themes.
@@ -258,6 +258,11 @@ if ( is_language( 'de' ) ) {
 
 == Changelog ==
 
+= 1.6.2 - 2018-11-03 =
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
+* Tweak: Few internal code tweaks and improvements
+
+
 = 1.6.1 - 2018-10-01 =
 * New: Added plugin update message also to Plugins page (overview table)
 * New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
@@ -355,7 +360,11 @@ if ( is_language( 'de' ) ) {
 = 1.0.0 - 2012-04-20 =
 * Initial release
 
+
 == Upgrade Notice ==
+
+= 1.6.2 =
+Maintenance release. Bundled library update. Small tweaks. Update recommended.
 
 = 1.6.1 =
 Maintenance release: Various tweaks and improvements, plus updated bundled library. Update recommended.

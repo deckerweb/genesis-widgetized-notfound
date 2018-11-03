@@ -4,7 +4,7 @@
   "keywords": ["genesis", "genesiswp", "genesis framework", "404", "search", "not found", "page", "widget", "widgets", "searchform", "error", "deckerweb"],
   "type": "wordpress-plugin",
   "homepage": "https://github.com/deckerweb/genesis-widgetized-notfound",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "David Decker",
