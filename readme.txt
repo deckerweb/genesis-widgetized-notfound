@@ -16,6 +16,8 @@ Finally, use Widgets to maintain and customize your 404 Error and Search Not Fou
 = New Flexibility plus Enhanced User Experience =
 We all know that sometimes 404 Errors happen on our sites. And sometimes users search but get no results. I believe it's better to serve users some highly customized and maintained pages/content areas for these cases. What better to do that with Widgets in WordPress? -- In my opinion Genesis Framework could improve here so that's why I just made this little plugin to FINALLY have these two cases maintainable EASILY via your widgets admin. Just place in a search widget, your last blog posts, an image widget, some explanation via text widget, some galleries... You got it. The possibilities are endless. Finally.
 
+https://www.youtube.com/watch?v=0RJldBSH_fA
+
 Just a great helper tool for Genesis Child Themes!
 
 **Please note:** The plugin requires the *Genesis Framework*, a paid premium product released by StudioPress/ WPEngine, Inc. [(via studiopress.com)](https://deckerweb.de/go/genesis/)
@@ -259,6 +261,7 @@ if ( is_language( 'de' ) ) {
 == Changelog ==
 
 = 1.6.2 - 2018-11-03 =
+* New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=0RJldBSH_fA)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
 * Tweak: Few internal code tweaks and improvements
 
