@@ -5,7 +5,7 @@ Tags: genesis, genesiswp, genesis framework, 404, not found, error, search, sear
 Requires at least: 3.6
 Tested up to: 4.9.8
 Requires PHP: 5.6
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -68,6 +68,7 @@ Just a great helper tool for Genesis Child Themes!
 * [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/)
 * [Multisite Toolbar Additions](https://wordpress.org/plugins/multisite-toolbar-additions/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
+
 
 == Installation ==
 
@@ -260,6 +261,11 @@ if ( is_language( 'de' ) ) {
 
 == Changelog ==
 
+= 1.6.3 - 2018-11-22 =
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.1) - CSS fixes
+* Fix: Changed admin style enqueueing on the Widgets Admin - this fixes the issues when adding widgets AND also in the Customizer
+
+
 = 1.6.2 - 2018-11-03 =
 * New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=0RJldBSH_fA)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
@@ -365,6 +371,9 @@ if ( is_language( 'de' ) ) {
 
 
 == Upgrade Notice ==
+
+= 1.6.3 =
+Maintenance release. Important fix for Widgets. Bundled library update. - **Update highly recommended!**
 
 = 1.6.2 =
 Maintenance release. Bundled library update. Small tweaks. Update recommended.

@@ -11,6 +11,12 @@
 
 ## Changelog of the Plugin
 
+### 1.6.3 - 2018-11-22
+
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.1) - CSS fixes
+* Fix: Changed admin style enqueueing on the Widgets Admin - this fixes the issues when adding widgets AND also in the Customizer
+
+
 ### 1.6.2 - 2018-11-03
 
 * New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=0RJldBSH_fA)

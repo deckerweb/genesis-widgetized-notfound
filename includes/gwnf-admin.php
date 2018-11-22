@@ -32,11 +32,24 @@ function ddw_gwnf_add_genesis_submenu() {
 }  // end function
 
 
-add_action( 'sidebar_admin_setup', 'ddw_gwnf_widgets_styles', 50 );
+add_action( 'sidebar_admin_setup', 'ddw_gwnf_prepare_widgets_styles', 50 );
+/**
+ * Add subtle note in Widgets admin page for our Widget areas.
+ *
+ * @since 1.6.3
+ */
+function ddw_gwnf_prepare_widgets_styles() {
+
+	add_action( 'admin_head', 'ddw_gwnf_widgets_styles', 100 );
+
+}  // end function
+
+
 /**
  * Add subtle note in Widgets admin page for our Widget areas.
  *
  * @since 1.6.0
+ * @since 1.6.3 Changed hook.
  */
 function ddw_gwnf_widgets_styles() {
 

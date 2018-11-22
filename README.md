@@ -303,6 +303,11 @@ if ( is_language( 'de' ) ) {
 
 ## Changelog 
 
+### 1.6.3 - 2018-11-22
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.1) - CSS fixes
+* Fix: Changed admin style enqueueing on the Widgets Admin - this fixes the issues when adding widgets AND also in the Customizer
+
+
 ### 1.6.2 - 2018-11-03
 * New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=0RJldBSH_fA)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
@@ -415,6 +420,10 @@ if ( is_language( 'de' ) ) {
 
 
 ## Upgrade Notice 
+
+
+### 1.6.3
+Maintenance release. Important fix for Widgets. Bundled library update. - **Update highly recommended!**
 
 
 ### 1.6.2
