@@ -82,19 +82,38 @@ Just a great helper tool for Genesis Child Themes!
 
 ## Installation 
 
-**NOTE:** Only works with *Genesis Framework* as the parent theme. This is a paid premium product by StudioPress/ WPEngine, Inc., [available via studiopress.com](https://deckerweb.de/go/genesis/)
+### Minimum Requirements
 
-1. Upload `genesis-widgetized-notfound` folder to the `/wp-content/plugins/` directory -- or just upload the ZIP package via 'Plugins > Add New > Upload' in your WP Admin
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Got the "Widgets" admin page and configure your widgets for the "404 Error Page" and the "Search Not Found" page.
-4. Hope the new widgets will never be needed, but in case, you're prepared now! :-)
+* WordPress version 4.7 or higher, 4.9.8 recommended!
+* **NOTE:** Only works with *Genesis Framework* (GPL-2.0+) as the parent theme (latest version is fine!). This is a paid premium product by StudioPress/ WPEngine, Inc., [available via studiopress.com](https://deckerweb.de/go/genesis/)
+* PHP version 5.6 or higher
+* MySQL version 5.0 or higher
+* Administrator user with capabilities `manage_options` and `edit_theme_options` who is logged-in and has the Toolbar (Admin Bar) enabled (user profile)
 
-**Note:** The "Genesis Framework" is required for this plugin in order to work. If you don't own a copy it yet, this premium parent theme has to be bought. More info about that you'll find here: [https://deckerweb.de/go/genesis/](https://deckerweb.de/go/genesis/)
+### We Recommend Your Host Supports at least:
 
-**Own translation/wording:** For custom and update-secure language files please upload them to `/wp-content/languages/genesis-widgetized-notfound/` (just create this folder) - This enables you to use fully custom translations that won't be overridden on plugin updates. Also, complete custom English wording is possible with that, just use a language file like `genesis-widgetized-notfound-en_US.mo/.po` to achieve that (for creating one see the tools on "Other Notes").
+* PHP version 7.0 or higher
+* MySQL version 5.6 or higher / or MariaDB 10 or higher
+
+### Installation
+
+1. Install using the WordPress built-in Plugin installer (via **Plugins > Add New** - search for `genesis widgetized not found`), or extract the ZIP file and drop the contents in the `wp-content/plugins/` directory of your WordPress installation.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Go to **Genesis > Not Found & 404 Page** to adjust any widgets/ options for this plugin
+4. Alternatively go directly to the Widgets Admin or the Customizer to setup and preview the widget areas - configure your widgets for the "404 Error Page" and the "Search Not Found" page
+5. Hope the new widgets will never be needed, but in case, you're prepared now! :-)
 
 
 ## Frequently Asked Questions 
+
+
+### What HTTP Status Code gets delivered?
+For the 404 error ("Page not found") the proper `404` HTTP status code gets delivered. This is completely done via Genesis itself, NOT by this plugin. This plugin "only" tweaks the content that is rendered on the 404 page in the browser. Everything else is done by Genesis. This is also how it should be.
+
+You can (bulk) check the status yourself for any URL on online services like these:
+
+- [https://httpstatus.io/](https://httpstatus.io/)
+- [https://techseo.de/statuscodes/](https://techseo.de/statuscodes/)
 
 
 ### How can I change the layout of the '404 Error Page' (i.e. go full-width)? 
@@ -131,7 +150,6 @@ Note, WordPress itself additionally adds body classes in the 404 case and the se
 If that's still not enough, you can even enqueue your own style, an action hook is included for that: `gwnf_load_styles` -- This hook fires within the WordPress action hook `wp_enqueue_scripts` just after properly enqueueing the plugin's styles and only if at least one of both widgets is active, so it's fully conditional!
 
 
-
 ### Could I disable the Shortcode support for widgets? 
 Of course, it's possible! Just add the following constant to your child theme's `functions.php` file or to a functionality plugin:
 ```
@@ -139,7 +157,6 @@ Of course, it's possible! Just add the following constant to your child theme's 
 define( 'GWNF_NO_WIDGETS_SHORTCODE', TRUE );
 ```
 Some webmasters could need this for security reasons regarding their stuff members or for whatever other reasons... :).
-
 
 
 ### What are parameters of the plugin's own Shortcodes? 
@@ -305,6 +322,8 @@ if ( is_language( 'de' ) ) {
 
 ### 1.6.3 - 2018-11-22
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.1) - CSS fixes
+* Tweak: Overhauled "Installation" part of this Readme.txt file completely
+* Tweak: Added new FAQ entry regarding HTTP status in this Readme.txt file here
 * Fix: Changed admin style enqueueing on the Widgets Admin - this fixes the issues when adding widgets AND also in the Customizer
 
 

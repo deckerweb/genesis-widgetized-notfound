@@ -14,6 +14,8 @@
 ### 1.6.3 - 2018-11-22
 
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.1) - CSS fixes
+* Tweak: Overhauled "Installation" part of this Readme.txt file completely
+* Tweak: Added new FAQ entry regarding HTTP status in this Readme.txt file here
 * Fix: Changed admin style enqueueing on the Widgets Admin - this fixes the issues when adding widgets AND also in the Customizer
 
 
