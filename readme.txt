@@ -62,6 +62,7 @@ Just a great helper tool for Genesis Child Themes!
 = My Other Plugins =
 * [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
+* [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
 * [Genesis What's New Info](https://wordpress.org/plugins/genesis-whats-new-info/)
 * [Genesis Layout Extras](https://wordpress.org/plugins/genesis-layout-extras/)
 * [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/)
@@ -78,7 +79,7 @@ Just a great helper tool for Genesis Child Themes!
 * **NOTE:** Only works with *Genesis Framework* (GPL-2.0+) as the parent theme (latest version is fine!). This is a paid premium product by StudioPress/ WPEngine, Inc., [available via studiopress.com](https://deckerweb.de/go/genesis/)
 * PHP version 5.6 or higher
 * MySQL version 5.0 or higher
-* Administrator user with capabilities `manage_options` and `edit_theme_options` who is logged-in and has the Toolbar (Admin Bar) enabled (user profile)
+* Administrator user with capabilities `manage_options` and `edit_theme_options` who is logged-in
 
 = We Recommend Your Host Supports at least: =
 
@@ -230,22 +231,25 @@ You can use the awesome ["Widget Options"](https://wordpress.org/plugins/widget-
 
 With the following language detection code you are now able to make conditional statements, in the same way other WordPress conditional functions work, like `is_single()`, `is_home()` etc.:
 `
-/**
- * WPML: Conditional Switching Languages
- *
- * @author David Decker - DECKERWEB
- * @link   https://twitter.com/deckerweb
- *
- * @global mixed $sitepress
- */
-function is_language( $current_lang ) {
+if ( ! function_exists( 'is_language' ) ) :
 
-	global $sitepress;
+	/**
+	 * WPML: Conditional Switching Languages
+	 *
+	 * @author David Decker - DECKERWEB
+	 * @link   https://twitter.com/deckerweb
+	 *
+	 * @global mixed $GLOBALS[ 'sitepress' ]
+	 */
+	function is_language( $current_lang ) {
 
-	if ( $current_lang == $sitepress->get_current_language() ) {
-		return TRUE;
-	}
-}
+		if ( $current_lang == $GLOBALS[ 'sitepress' ]->get_current_language() ) {
+			return TRUE;
+		}
+
+	}  // end function
+
+endif;
 `
 
 *Note:* Be careful with the function name 'is_language' - this only works if there's no other function in your install with that name! If it's already taken (very rare case though), then just add a prefix like `my_custom_is_language()`.
@@ -259,6 +263,17 @@ if ( is_language( 'de' ) ) {
 	// do something for Spanish language...
 }
 `
+
+
+= More info on Translations? =
+
+* English - default, always included
+* German (de_DE): Deutsch - immer dabei! :-)
+* For custom and update-safe language files please upload them to `/wp-content/languages/genesis-widgetized-notfound/` (just create this folder) - This enables you to use fully custom translations that won't be overridden on plugin updates. Also, complete custom English wording is possible with that as well, just use a language file like `genesis-widgetized-notfound-en_US.mo/.po` to achieve that (for creating one see the following tools).
+
+**Easy WordPress.org plugin translation platform with GlotPress platform:** [**Translate "Genesis Widgetized Not Found & 404"...**](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
+
+*Note:* All my plugins are internationalized/ translateable by default. This is very important for all users worldwide. So please contribute your language to the plugin to make it even more useful. For translating and validating I recommend the awesome ["Poedit Editor"](https://www.poedit.net/), which works fine on Windows, macOS and Linux.
 
 
 == Screenshots ==
@@ -432,8 +447,10 @@ Several minor changes, mostly fixing two ugly bugs. Also changed readme files an
 = 1.0.0 =
 Just released into the wild.
 
+
 == Donate ==
 Enjoy using *Genesis Widgetized Not Found & 404*? [**Please consider making a donation**](https://www.paypal.me/deckerweb) to support the project's continued development.
+
 
 == Plugin Links ==
 * [Translations (WP GlotPress Platform)](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
@@ -441,19 +458,10 @@ Enjoy using *Genesis Widgetized Not Found & 404*? [**Please consider making a do
 * [Code snippets archive for customizing, GitHub Gist](https://gist.github.com/deckerweb/2473125)
 * [DECKERWEB WordPress Plugins Facebook Group](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 
-== Translations ==
-
-* English - default, always included
-* German (de_DE): Deutsch - immer dabei! [Download auch via deckerweb.de](http://deckerweb.de/material/sprachdateien/genesis-plugins/#genesis-widgetized-notfound)
-* Spanish (es_ES): Español - user-submitted, only a few strings yet...
-* For custom and update-secure language files please upload them to `/wp-content/languages/genesis-widgetized-notfound/` (just create this folder) - This enables you to use fully custom translations that won't be overridden on plugin updates. Also, complete custom English wording is possible with that as well, just use a language file like `genesis-widgetized-notfound-en_US.mo/.po` to achieve that.
-
-**Easy plugin translation platform with GlotPress tool:** [**Translate "Genesis Widgetized Not Found & 404"...**](http://translate.wpautobahn.com/projects/genesis-plugins-deckerweb/genesis-widgetized-notfound)
-
-*Note:* All my plugins are internationalized/ translateable by default. This is very important for all users worldwide. So please contribute your language to the plugin to make it even more useful. For translating I recommend the awesome ["Codestyling Localization" plugin](https://wordpress.org/plugins/codestyling-localization/) and for validating the ["Poedit Editor"](http://www.poedit.net/), which works fine on Windows, Mac and Linux.
 
 == Idea Behind / Philosophy ==
 I always wanted the 404 and search not found content easily customizeable! The standard messages like "Sorry, no posts matched your criteria." are a shame and lame user experience. Widgets in WordPress are powerful and allow for adding really diverse and custom stuff. So, when building my "Autobahn" child theme for Genesis I really came across this idea and technique. I also implemented it in a lot of my client projects. Now I am really happy to represent this tool in form of a plugin to make more webmasters and especially users/visitors really happy - and help them stay longer on your site!
+
 
 == Credits ==
 * Thanks to Genesis User & Blogger [Rick R. Duncan @RickRDuncan](https://twitter.com/RickRDuncan) for mentioning and supporting this plugin when it came out - Thank you! :-)
