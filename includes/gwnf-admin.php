@@ -104,7 +104,7 @@ function ddw_gwnf_widgets_page_link( $gwnf_links ) {
 
 	/** Widgets Admin link */
 	$gwnf_widgets_link = sprintf(
-		'<a class="dashicons-before dashicons-welcome-widgets-menus" href="%1$s" title="%2$s">%3$s</a>',
+		'<a href="%1$s" title="%2$s"><span class="dashicons-before dashicons-welcome-widgets-menus"></span> %3$s</a>',
 		esc_url( admin_url( 'widgets.php#gwnf-404-widget' ) ),
 		esc_html__( 'Go to the Widgets settings page', 'genesis-widgetized-notfound' ),
 		esc_attr__( 'Widgets', 'genesis-widgetized-notfound' )
@@ -112,7 +112,7 @@ function ddw_gwnf_widgets_page_link( $gwnf_links ) {
 
 	/** Customize Not Found link */
 	$gwnf_notfound_link = sprintf(
-		'<a class="dashicons-before dashicons-admin-customizer" href="%1$s" title="%2$s" target="_blank" rel="noopener noreferrer">%3$s</a>',
+		'<a href="%1$s" title="%2$s" target="_blank" rel="noopener noreferrer"><span class="dashicons-before dashicons-admin-customizer"></span> %3$s</a>',
 		esc_url( ddw_gwnf_get_customizer_preview_link( 'notfound' ) ),
 		esc_html__( 'Live preview search not found', 'genesis-widgetized-notfound' ),
 		esc_attr__( 'Not found', 'genesis-widgetized-notfound' )
@@ -120,7 +120,7 @@ function ddw_gwnf_widgets_page_link( $gwnf_links ) {
 
 	/** Customize 404 link */
 	$gwnf_404_link = sprintf(
-		'<a class="dashicons-before dashicons-admin-customizer" href="%1$s" title="%2$s" target="_blank" rel="noopener noreferrer">%3$s</a>',
+		'<a href="%1$s" title="%2$s" target="_blank" rel="noopener noreferrer"><span class="dashicons-before dashicons-admin-customizer"></span> %3$s</a>',
 		esc_url( ddw_gwnf_get_customizer_preview_link( '404' ) ),
 		esc_html__( 'Live preview 404 page', 'genesis-widgetized-notfound' ),
 		esc_attr__( '404', 'genesis-widgetized-notfound' )
@@ -192,7 +192,10 @@ function ddw_gwnf_plugin_links( $gwnf_links, $gwnf_file ) {
 		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-translation' );
 
 		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button-primary dashicons-before dashicons-thumbs-up' );
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button dashicons-before dashicons-thumbs-up' );
+
+		/* translators: Plugins page listing */
+		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_newsletter', esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button-primary dashicons-before dashicons-awards' );
 
 	}  // end if
 
@@ -209,7 +212,7 @@ add_action( 'sidebar_admin_setup', 'ddw_gwnf_widgets_help' );
 /**
  * Load plugin help tab after core help tabs on Widget admin page.
  *
- * @since  1.2.0
+ * @since 1.2.0
  *
  * @global mixed $GLOBALS[ 'pagenow' ]
  */
@@ -232,10 +235,10 @@ add_action( 'load-dynamik-dashboard_page_dynamik-image-manager', 'ddw_gwnf_widge
 /**
  * Create and display plugin help tab.
  *
- * @since  1.2.0
- * @since  1.6.0 Code tweaks.
+ * @since 1.2.0
+ * @since 1.6.0 Code tweaks.
  *
- * @uses   ddw_gwnf_help_sidebar_content()
+ * @uses ddw_gwnf_help_sidebar_content()
  *
  * @global mixed $gwnf_widgets_screen
  * @global mixed $GLOBALS[ 'pagenow' ]
@@ -305,13 +308,13 @@ function ddw_gwnf_widgets_help_tab() {
 /**
  * Create and display plugin help tab content.
  *
- * @since  1.0.0
- * @since  1.6.0 Tweaked markup/code and some content.
+ * @since 1.0.0
+ * @since 1.6.0 Tweaked markup/code and some content.
  *
- * @uses   ddw_gwnf_info_values() Array of all info values.
- * @uses   ddw_gwnf_get_info_link()
- * @uses   ddw_gwnf_get_info_url()
- * @uses   ddw_gwnf_coding_years()
+ * @uses ddw_gwnf_info_values() Array of all info values.
+ * @uses ddw_gwnf_get_info_link()
+ * @uses ddw_gwnf_get_info_url()
+ * @uses ddw_gwnf_coding_years()
  *
  * @return string HTML content for help tab.
  */
@@ -406,10 +409,10 @@ function ddw_gwnf_widgets_help_content() {
 /**
  * Helper function for returning the Help Sidebar content.
  *
- * @since  1.5.0
- * @since  1.6.0 Changed some URLs, tweaked code/markup.
+ * @since 1.5.0
+ * @since 1.6.0 Changed some URLs, tweaked code/markup.
  *
- * @uses   ddw_gwnf_get_info_url()
+ * @uses ddw_gwnf_get_info_url()
  *
  * @return string HTML content for help sidebar.
  */

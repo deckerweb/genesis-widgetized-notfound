@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Widgetized Not Found & 404\n"
-"POT-Creation-Date: 2018-10-01 13:46+0200\n"
-"PO-Revision-Date: 2018-10-01 13:46+0200\n"
+"POT-Creation-Date: 2019-05-04 00:42+0200\n"
+"PO-Revision-Date: 2019-05-04 00:42+0200\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 # @ genesis-widgetized-notfound
 #. translators: 1 = Plugin name / 2 = anchor opening tag / 3 = anchor closing tag
-#: genesis-widgetized-notfound.php:103
+#: genesis-widgetized-notfound.php:104
 #, php-format
 msgid ""
 "Sorry, you cannot activate the %1$s plugin unless you have installed the "
@@ -34,119 +34,192 @@ msgstr ""
 
 # @ genesis-widgetized-notfound
 #. Plugin Name of the plugin/theme
-#: genesis-widgetized-notfound.php:104 genesis-widgetized-notfound.php:111
-#: includes/gwnf-admin.php:248 includes/gwnf-admin.php:319
-#: includes/gwnf-widget-search.php:62
+#: genesis-widgetized-notfound.php:105 genesis-widgetized-notfound.php:112
+#: includes/gwnf-admin-extras.php:34 includes/gwnf-admin.php:263
+#: includes/gwnf-admin.php:338 includes/gwnf-widget-search.php:62
 msgid "Genesis Widgetized Not Found & 404"
 msgstr "Genesis Widgets für Nichts gefunden"
 
 # @ genesis-widgetized-notfound
-#: genesis-widgetized-notfound.php:111 includes/gwnf-admin.php:319
+#: genesis-widgetized-notfound.php:112 includes/gwnf-admin-extras.php:34
+#: includes/gwnf-admin.php:338
 msgid "Plugin"
 msgstr "Plugin"
 
-#: includes/gwnf-admin-extras.php:214
+#: includes/gwnf-admin-extras.php:29
+msgid "Yes, has widgets"
+msgstr "Ja, hat Widgets"
+
+# @ genesis-widgetized-notfound
+#: includes/gwnf-admin-extras.php:30
+msgid "No, is empty"
+msgstr "Nein, ist leer"
+
+# @ genesis-widgetized-notfound
+#: includes/gwnf-admin-extras.php:37
+msgid "Plugin version"
+msgstr "Plugin-Version"
+
+#: includes/gwnf-admin-extras.php:42
+msgid "Undefined"
+msgstr "Nicht definiert"
+
+#: includes/gwnf-admin-extras.php:45
+msgid "Widget Area for Not Found active"
+msgstr "Widget-Bereich für Nichts gefunden aktiv"
+
+#: includes/gwnf-admin-extras.php:49
+msgid "Widget Area for 404 active"
+msgstr "Widget-Bereich für 404 aktiv"
+
+#: includes/gwnf-admin-extras.php:116
+msgid "Genesis Plugins from the Plugin Directory"
+msgstr "Genesis Plugins aus dem Pluginverzeichnis"
+
+#: includes/gwnf-admin-extras.php:117
+msgid "Genesis Plugins"
+msgstr "Genesis Plugins"
+
+#: includes/gwnf-admin-extras.php:327
 msgctxt "Plugin installer: Tab name in installer toolbar"
 msgid "Newest"
 msgstr "Neueste"
 
-#: includes/gwnf-admin-extras.php:220
+#: includes/gwnf-admin-extras.php:333
 msgctxt "Plugin card: plugin version"
 msgid "Version:"
 msgstr "Version:"
+
+#: includes/gwnf-admin-extras.php:339
+msgctxt "Plugin installer: Tab name in installer toolbar"
+msgid "deckerweb Plugins"
+msgstr "deckerweb Plugins"
+
+#: includes/gwnf-admin-extras.php:345
+msgctxt "Plugin installer: Page title"
+msgid "deckerweb Plugins"
+msgstr "deckerweb Plugins"
+
+#: includes/gwnf-admin-extras.php:350
+msgid ""
+"Great helper tools for Site Builders to save time and get more productive"
+msgstr ""
+"Großartige Helferlein-Plugins für Site-Builder, um wertvolle Zeit zu sparen "
+"und noch produktiver zu werden."
+
+#: includes/gwnf-admin-extras.php:353
+#, php-format
+msgid "You can use any of our free plugins or premium plugins from %s"
+msgstr ""
+"Du kannst jedes unserer kostenlosen Plugins oder Premium-Plugins von %s "
+"verwenden."
+
+#: includes/gwnf-admin-extras.php:357
+msgid "Join our Newsletter"
+msgstr "Newsletter jetzt!"
+
+#: includes/gwnf-admin-extras.php:359
+msgid "Facebook User Group"
+msgstr "Facebook-Nutzergruppe"
 
 #: includes/gwnf-admin.php:26 includes/gwnf-admin.php:27
 msgid "Not Found &amp; 404 Page"
 msgstr "Nichts gefunden &amp; 404-Seite"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:45
+#: includes/gwnf-admin.php:58
 msgctxt "Note for Widget area title"
 msgid "Via plugin: Genesis Widgetized Not Found and 404"
 msgstr "Via Plugin: Genesis Widgets für Nichts gefunden"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:96
+#: includes/gwnf-admin.php:109
 msgid "Go to the Widgets settings page"
 msgstr "Zur Widgets-Einstellungen Seite ..."
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:97
+#: includes/gwnf-admin.php:110
 msgid "Widgets"
 msgstr "Widgets"
 
-#: includes/gwnf-admin.php:104
+#: includes/gwnf-admin.php:117
 msgid "Live preview search not found"
 msgstr "Live-Vorschau Suche-nichts-gefunden-Seite"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:105
+#: includes/gwnf-admin.php:118
 msgid "Not found"
 msgstr "Nichts gefunden"
 
-#: includes/gwnf-admin.php:112
+#: includes/gwnf-admin.php:125
 msgid "Live preview 404 page"
 msgstr "Live-Vorschau 404-Fehlerseite"
 
-#: includes/gwnf-admin.php:113
+#: includes/gwnf-admin.php:126
 msgid "404"
 msgstr "404"
 
 # @ genesis-widgetized-notfound
 #. translators: Plugins page listing
-#: includes/gwnf-admin.php:167
+#: includes/gwnf-admin.php:180
 msgctxt "Plugins page listing"
 msgid "FAQ"
 msgstr "FAQ - Häufige Fragen"
 
 # @ genesis-widgetized-notfound
 #. translators: Plugins page listing
-#: includes/gwnf-admin.php:170
+#: includes/gwnf-admin.php:183
 msgctxt "Plugins page listing"
 msgid "Support"
 msgstr "Support"
 
 #. translators: Plugins page listing
-#: includes/gwnf-admin.php:173
+#: includes/gwnf-admin.php:186
 msgctxt "Plugins page listing"
 msgid "Facebook Group"
 msgstr "Facebook-Gruppe"
 
 # @ genesis-widgetized-notfound
 #. translators: Plugins page listing
-#: includes/gwnf-admin.php:176
+#: includes/gwnf-admin.php:189
 msgctxt "Plugins page listing"
 msgid "Code Snippets"
 msgstr "Code-Snippets"
 
 # @ genesis-widgetized-notfound
 #. translators: Plugins page listing
-#: includes/gwnf-admin.php:179
+#: includes/gwnf-admin.php:192
 msgctxt "Plugins page listing"
 msgid "Translations"
 msgstr "Übersetzungen"
 
 # @ genesis-widgetized-notfound
 #. translators: Plugins page listing
-#: includes/gwnf-admin.php:182
+#: includes/gwnf-admin.php:195
 msgctxt "Plugins page listing"
 msgid "Donate"
 msgstr "Spenden"
 
+#. translators: Plugins page listing
+#: includes/gwnf-admin.php:198
+msgctxt "Plugins page listing"
+msgid "Join our Newsletter"
+msgstr "Newsletter jetzt!"
+
 # @ genesis-widgetized-notfound
 #. translators: 1, 2 = Open and close anchor tags
-#: includes/gwnf-admin.php:308
+#: includes/gwnf-admin.php:327
 #, php-format
 msgid "optional, could be deactivated %svia filter%s"
 msgstr "optional, kann %svia Filter%s deaktiviert werden"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:308
+#: includes/gwnf-admin.php:327
 msgid "Code Snippets for Customization"
 msgstr "Codeschnipsel für Anpassungen"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:322
+#: includes/gwnf-admin.php:341
 msgid ""
 "Added Widget areas by the plugin - only displayed if having active widgets "
 "placed in:"
@@ -155,53 +228,53 @@ msgstr ""
 "sich aktive Widgets darin befinden:"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:324 includes/gwnf-widget-areas.php:136
+#: includes/gwnf-admin.php:343 includes/gwnf-widget-areas.php:136
 msgid "404 Error Page"
 msgstr "404 Fehlerseite"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:324 includes/gwnf-admin.php:325
-#: includes/gwnf-admin.php:328
+#: includes/gwnf-admin.php:343 includes/gwnf-admin.php:344
+#: includes/gwnf-admin.php:347
 #, php-format
 msgid "ID: %s"
 msgstr "ID: %s"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:325 includes/gwnf-widget-areas.php:153
+#: includes/gwnf-admin.php:344 includes/gwnf-widget-areas.php:153
 msgid "Search Not Found"
 msgstr "Suche nichts gefunden"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:328
+#: includes/gwnf-admin.php:347
 #: includes/gwnf-bbpress-widgetized-noresults.php:45
 msgid "bbPress: Forum Search No Results"
 msgstr "bbPress: Forensuche keine Treffer"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:335
+#: includes/gwnf-admin.php:354
 msgid "Shortcodes are supported in all these widget areas."
 msgstr "Shortcodes werden in all diesen Widget-Bereichen unterstützt."
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:339
+#: includes/gwnf-admin.php:358
 #, php-format
 msgid "Added Widget by the plugin: %s"
 msgstr "Hinzugefügtes Widget durch das Plugin: %s"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:339 includes/gwnf-widget-search.php:75
+#: includes/gwnf-admin.php:358 includes/gwnf-widget-search.php:75
 msgid "Genesis - Search Form"
 msgstr "Genesis - Suchformular"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:341 includes/gwnf-widget-search.php:60
+#: includes/gwnf-admin.php:360 includes/gwnf-widget-search.php:60
 msgid "A search form for your site. With a more options than the default one."
 msgstr ""
 "Ein Suchformular für deine Webseite. Mit mehr Optionen als das Standard-"
 "Suchwidget."
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:342
+#: includes/gwnf-admin.php:361
 msgid ""
 "For example, set placeholder and submit button texts via options, plus more "
 "stuff, like a few display options."
@@ -211,127 +284,127 @@ msgstr ""
 "Anzeigeoptionen."
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:346
+#: includes/gwnf-admin.php:365
 msgid "Provided Shortcodes by the plugin:"
 msgstr "Verfügbare Shortcodes des Plugins:"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:349 includes/gwnf-admin.php:354
+#: includes/gwnf-admin.php:368 includes/gwnf-admin.php:373
 msgid "Supporting the following parameters"
 msgstr "Unterstützt werden die folgenden Parameter"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:350
+#: includes/gwnf-admin.php:369
 msgid "ID of the Widget area (Sidebar; see above)"
 msgstr "ID eines Widget-Bereiches (Sidebar; siehe oben)"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:350 includes/gwnf-admin.php:355
-#: includes/gwnf-admin.php:356 includes/gwnf-admin.php:357
-#: includes/gwnf-admin.php:358 includes/gwnf-admin.php:359
-#: includes/gwnf-admin.php:360
+#: includes/gwnf-admin.php:369 includes/gwnf-admin.php:374
+#: includes/gwnf-admin.php:375 includes/gwnf-admin.php:376
+#: includes/gwnf-admin.php:377 includes/gwnf-admin.php:378
+#: includes/gwnf-admin.php:379
 #, php-format
 msgid "Default: %s"
 msgstr "Standard: %s"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:350 includes/gwnf-admin.php:357
-#: includes/gwnf-admin.php:359 includes/gwnf-admin.php:360
+#: includes/gwnf-admin.php:369 includes/gwnf-admin.php:376
+#: includes/gwnf-admin.php:378 includes/gwnf-admin.php:379
 msgid "none, empty"
 msgstr "nichts, leer"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:355
+#: includes/gwnf-admin.php:374
 msgid "Search placeholder text"
 msgstr "Suche Platzhalter-Text"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:355 includes/gwnf-shortcodes.php:30
+#: includes/gwnf-admin.php:374 includes/gwnf-shortcodes.php:30
 #: includes/gwnf-widget-search.php:47
 msgid "Search this website"
 msgstr "Webseite durchsuchen"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:356 includes/gwnf-admin.php:358
+#: includes/gwnf-admin.php:375 includes/gwnf-admin.php:377
 msgid "HTML wrapper tag"
 msgstr "HTML-Wrapper-Tag"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:356 includes/gwnf-shortcodes.php:34
+#: includes/gwnf-admin.php:375 includes/gwnf-shortcodes.php:34
 #: includes/gwnf-widget-search.php:48 includes/gwnf-widget-search.php:309
 #: includes/gwnf-widget-search.php:376
 msgid "Search"
 msgstr "Suchen"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:357
+#: includes/gwnf-admin.php:376
 msgid "Additional label before the search form"
 msgstr "Zusätzliche Beschriftung (Label) for dem Suchformular"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:359
+#: includes/gwnf-admin.php:378
 msgid "Can be a custom class, added to the wrapper tag"
 msgstr ""
 "Optionale, benutzerdefinierte CSS-Klasse, welche dem umschließenden Wrapper "
 "hinzugefügt wird"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:360
+#: includes/gwnf-admin.php:379
 msgid "Optional setup post type(s) for search"
 msgstr "Optional, festgelegter Inhaltstyp (Post Type) für die Suche"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:360
+#: includes/gwnf-admin.php:379
 msgid "i.e., WordPress default search behavior"
 msgstr "d.h. WordPress-Standardverhalten bei der Suche"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:364
+#: includes/gwnf-admin.php:383
 msgid "Important plugin links:"
 msgstr "Wichtige Plugin-Links:"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:366
+#: includes/gwnf-admin.php:385
 msgid "Plugin website"
 msgstr "Plugin-Webseite"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:368
+#: includes/gwnf-admin.php:387
 msgctxt "Help tab info"
 msgid "FAQ"
 msgstr "FAQ - Häufige Fragen"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:370
+#: includes/gwnf-admin.php:389
 msgctxt "Help tab info"
 msgid "Support"
 msgstr "Support"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:372
+#: includes/gwnf-admin.php:391
 msgctxt "Help tab info"
 msgid "Code Snippets"
 msgstr "Code-Snippets"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:374
+#: includes/gwnf-admin.php:393
 msgctxt "Help tab info"
 msgid "Translations"
 msgstr "Übersetzungen"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:376
+#: includes/gwnf-admin.php:395
 msgctxt "Help tab info"
 msgid "Donate"
 msgstr "Spenden"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:403
+#: includes/gwnf-admin.php:421
 msgid "More about the plugin author"
 msgstr "Mehr über den Plugin-Autor"
 
 # @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:404
+#: includes/gwnf-admin.php:422
 msgid "Social:"
 msgstr "Vernetzen:"
 
@@ -353,7 +426,7 @@ msgstr ""
 
 # @ genesis-widgetized-notfound
 #. Author of the plugin/theme
-#: includes/gwnf-functions-global.php:38
+#: includes/gwnf-functions-global.php:50
 msgid "David Decker - DECKERWEB"
 msgstr "David Decker - DECKERWEB.de"
 

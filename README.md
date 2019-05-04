@@ -3,9 +3,9 @@
 **Donate link:** https://www.paypal.me/deckerweb  
 **Tags:** genesis, genesiswp, genesis framework, 404, not found, error, search, searchform, page, widgets, widget, deckerweb  
 **Requires at least:** 3.6  
-**Tested up to:** 5.0  
+**Tested up to:** 5.2  
 **Requires PHP:** 5.6  
-**Stable tag:** 1.6.3  
+**Stable tag:** 1.6.4  
 **License:** GPL-2.0-or-later  
 **License URI:** https://opensource.org/licenses/GPL-2.0  
 
@@ -64,21 +64,37 @@ Just a great helper tool for Genesis Child Themes!
 * Easy plugin translation platform with GlotPress tool: [Translate "Genesis Widgetized Not Found & 404"...](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
 
 
-### Feedback 
-* I am open for your suggestions and feedback - Thank you for using or trying out one of my plugins!
+### Liked Genesis Widgetized Not Found & 404?
+* **Rate us 5 stars** on [WordPress.org](https://wordpress.org/support/plugin/genesis-widgetized-notfound/reviews/?filter=5/#new-post) :)
 * Join our [**Facebook User Community Support Group**](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
+* Like our [**Facebook Info Page for Deckerweb Plugins**](https://www.facebook.com/deckerweb.wordpress.plugins/)
+* [**Subscribe to my Newsletter for insider info on this plugin**](https://eepurl.com/gbAUUn), plus tutorials and more stuff on deckerweb WordPress plugins - join a thriving community of site builders!
 
 
-## My Other Plugins 
+## Check out my other Genesis Plugins
+* [**Genesis Extra Settings Transporter**](https://wordpress.org/plugins/genesis-extra-settings-transporter/) - addionally export Genesis specific plugin & child theme settings
+* [**Genesis What's New Info**](https://wordpress.org/plugins/genesis-whats-new-info/) - Show the what's new overview page via left-hand admin menu
+* [**Genesis Layout Extras**](https://wordpress.org/plugins/genesis-layout-extras/) - Setup Default Layouts in Genesis for WordPress
+* [Genesis Shortcode UI (for Shortcake)](https://github.com/deckerweb/genesis-shortcode-ui)
+* [Genesis Elementor Canvas](https://github.com/deckerweb/genesis-elementor-canvas)
+* [Genesis Featured Page Extras](https://wordpress.org/plugins/genesis-featured-page-extras/) - more options for the featured page widget
+* [Genesis Prose Extras](https://wordpress.org/plugins/genesis-prose-extras/) - add-on for Prose child theme
+* [Genesis Printstyle Plus](https://wordpress.org/plugins/genesis-printstyle-plus/) - just print it out - only what's needed
+* [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/) - easily set up content for your Archive page (template)
+* [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/) - easily set up your copyright/ credits/ back to top
+* [Genesis Connect for Easy Digital Downloads](https://wordpress.org/plugins/genesis-connect-edd/) - plugin for easy & elegant integration
+* [*My Genesis plugins newsletter*](https://eepurl.com/gbAUUn)
+
+
+## My Other WordPress Plugins 
 * [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Toolbar Extras for Oxygen Builder - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-oxygen/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
-* [Genesis What's New Info](https://wordpress.org/plugins/genesis-whats-new-info/)
-* [Genesis Layout Extras](https://wordpress.org/plugins/genesis-layout-extras/)
-* [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/)
-* [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/)
+* [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)
 * [Multisite Toolbar Additions](https://wordpress.org/plugins/multisite-toolbar-additions/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
+* [*My plugins newsletter*](https://eepurl.com/gbAUUn)
 
 
 ## Installation 
@@ -335,20 +351,28 @@ if ( is_language( 'de' ) ) {
 
 ## Changelog 
 
-### 1.6.3 - 2018-11-22
+### ⚡ 1.6.4 - 2019-05-04
+* *New: Successfully tested with WordPress 5.2*
+* New: Integrated with WordPress 5.2+ new Site Health feature: Genesis Widgetized Not Found & 404 now has an extra section on the Debug Info tab - this is especially helpful for support requests
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.4.0) - feature updates
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* New: [Join my newsletter for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn) - insider info, plus tutorials and more useful stuff
+
+
+### ⚡ 1.6.3 - 2018-11-22
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.1) - CSS fixes
 * Tweak: Overhauled "Installation" part of this Readme.txt file completely
 * Tweak: Added new FAQ entry regarding HTTP status in this Readme.txt file here
 * Fix: Changed admin style enqueueing on the Widgets Admin - this fixes the issues when adding widgets AND also in the Customizer
 
 
-### 1.6.2 - 2018-11-03
+### ⚡ 1.6.2 - 2018-11-03
 * New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=0RJldBSH_fA)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
 * Tweak: Few internal code tweaks and improvements
 
 
-### 1.6.1 - 2018-10-01
+### ⚡ 1.6.1 - 2018-10-01
 * New: Added plugin update message also to Plugins page (overview table)
 * New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
@@ -356,7 +380,7 @@ if ( is_language( 'de' ) ) {
 * Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
 
 
-### 1.6.0 - 2018-08-25 
+### 🎉 1.6.0 - 2018-08-25 
 * *New: Brought the plugin back to life after more than five years, yeah! :)*
 * New: Added submenu item for Genesis Settings in WP-Admin left-hand menu - this redirects directly to the Widgets admin page, which makes it totally easy to setup the stuff
 * New: Added handy Customizer Live Preview links for our two Genesis Widget areas to Plugins page
@@ -379,7 +403,7 @@ if ( is_language( 'de' ) ) {
 
 
 
-### 1.5.0 - 2013-05-29 
+### 🎉 1.5.0 - 2013-05-29 
 * NEW: Added Widget "Genesis - Search Form" - more customizeable than the built-in WordPress core widget (change Search text, Submit text, display options etc.).
 * NEW: Added Shortcode `[gwnf-search]` for displaying a configurable search for anywhere you like :) -- conditionally with full support for HTMTL5 & Genesis 2.0.0+ if in use.
 * NEW: Added Shortcode `[gwnf-widget-area]` for displaying any of the plugin's 3 Widget areas (if active) into Shortcode aware content areas.
@@ -396,7 +420,7 @@ if ( is_language( 'de' ) ) {
 
 
 
-### 1.4.0 - 2012-12-15 
+### 🎉 1.4.0 - 2012-12-15 
 * *Maintenance release*
 * UPDATE: Added the class placeholder to widget registrations to fullfill WordPress standard for Widgets API.
 * NEW: Added constant for disabling the widget shortcode support (see FAQ here).
@@ -408,7 +432,7 @@ if ( is_language( 'de' ) ) {
 
 
 
-### 1.3.0 - 2012-08-20 
+### 🎉 1.3.0 - 2012-08-20 
 * *Maintenance release*
 * NEW: Added help tab also on Genesis settings page.
 * NEW: Compressed CSS file for improved performance (the development file has now the file name `gwnf-styles.dev.css` and is still packaged).
@@ -419,7 +443,7 @@ if ( is_language( 'de' ) ) {
 
 
 
-### 1.2.0 - 2012-04-27 
+### 🎉 1.2.0 - 2012-04-27 
 * NEW: Added little help tab on Widget admin page for better user experience. (Works only with WordPress 3.3 or higher!)
 * UPDATE: Moved plugin links from main file to extra admin file which only loads within 'wp-admin', this way it's performance-improved! This also effects the new help tab stuff :).
 * UPDAGE: Added action hook `gwnf_load_styles` if you ever need to properly enqueue your own stylesheet for the edge cases... (Also see FAQ here).
@@ -429,7 +453,7 @@ if ( is_language( 'de' ) ) {
 
 
 
-### 1.1.0 - 2012-04-23 
+### 🎉 1.1.0 - 2012-04-23 
 * NEW: Added two helper functions (via child theme) for applying the Genesis 'Full-Width' layout option for one or both 'not found' cases! This is very handy for lots of use cases... -- [See the FAQ section for more info on that!](https://wordpress.org/plugins/genesis-widgetized-notfound/#faq)
 * UPDATE: Placed widget display in conditionals only for the "404" or the "Search not found" case to avoid overlaying of more than one 'no content messages'. This should finally cover more edge cases...
 * UPDATE: Improved translations loading, especially for activation (messages).
@@ -439,7 +463,7 @@ if ( is_language( 'de' ) ) {
 
 
 
-### 1.0.1 - 2012-04-20 
+### ⚡ 1.0.1 - 2012-04-20 
 * Bugfix release. Mmh, stuff happens...
 * UPDATE: Changed widget registering from Genesis to WordPress function (it doesn't matter in the end!)
 * BUGFIX: Fixed function typo that was causing notices on plugin activation.
@@ -449,11 +473,15 @@ if ( is_language( 'de' ) ) {
 
 
 
-### 1.0.0 - 2012-04-20 
+### 🎉 1.0.0 - 2012-04-20 
 * Initial release
 
 
 ## Upgrade Notice 
+
+
+### 1.6.4
+Now with WordPress 5.2 Site Health integration. Plus few internal improvements. - **Update highly recommended!**
 
 
 ### 1.6.3
