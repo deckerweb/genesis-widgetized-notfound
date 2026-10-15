@@ -1,430 +1,165 @@
 <?php
-
-// includes/gwnf-admin
-
-/**
- * Prevent direct access to this file.
- *
- * @since 1.5.0
- */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit( 'Sorry, you are not allowed to access this file directly.' );
-}
-
-
+/** Administration links, contextual help and local documentation. */
+defined( 'ABSPATH' ) || exit;
+require_once GWNF_PLUGIN_DIR . 'includes/gwnf-comfort.php';
 add_action( 'admin_menu', 'ddw_gwnf_add_genesis_submenu' );
+add_action( 'admin_init', 'ddw_gwnf_register_settings' );
+add_filter( 'option_page_capability_gwnf_settings', 'ddw_gwnf_settings_capability' );
+add_action( 'current_screen', 'ddw_gwnf_widgets_help_tab' );
+add_action( 'admin_enqueue_scripts', 'ddw_gwnf_admin_assets' );
+add_action( 'admin_notices', 'ddw_gwnf_dependency_notice' );
+add_filter( 'plugin_action_links_' . plugin_basename( GWNF_PLUGIN_FILE ), 'ddw_gwnf_widgets_page_link' );
+add_filter( 'plugin_row_meta', 'ddw_gwnf_plugin_links', 10, 2 );
+add_action( 'admin_footer-widgets.php', 'ddw_gwnf_admin_footer' );
+
 /**
- * Add admin submenu item for each supported integration's post type.
- *   Note: The post type is added as additional param to the admin URL.
- *
+ * Add site presentation settings under Genesis, or WordPress Settings without Genesis.
  * @since 1.6.0
+ * @return void
  */
 function ddw_gwnf_add_genesis_submenu() {
+ if ( ddw_gwnf_has_genesis() ) {
+  add_submenu_page( 'genesis', __( 'Not Found & 404 Page', 'genesis-widgetized-notfound' ), __( 'Not Found & 404 Page', 'genesis-widgetized-notfound' ), 'edit_theme_options', 'gwnf-settings', 'ddw_gwnf_settings_page' );
+ } else {
+  add_options_page( __( 'Not Found & 404 Page', 'genesis-widgetized-notfound' ), __( 'Not Found & 404 Page', 'genesis-widgetized-notfound' ), 'edit_theme_options', 'gwnf-settings', 'ddw_gwnf_settings_page' );
+ }
+}
 
-	add_submenu_page(
-		'genesis',
-		esc_html__( 'Not Found &amp; 404 Page', 'genesis-widgetized-notfound' ),
-		esc_html__( 'Not Found &amp; 404 Page', 'genesis-widgetized-notfound' ),
-		'edit_theme_options',
-		esc_url( admin_url( 'widgets.php#gwnf-404-widget' ) )
-	);
-
-}  // end function
-
-
-add_action( 'sidebar_admin_setup', 'ddw_gwnf_prepare_widgets_styles', 50 );
 /**
- * Add subtle note in Widgets admin page for our Widget areas.
- *
- * @since 1.6.3
+ * Explain safely paused theme features only on the site's Plugins screen.
+ * @since 2.0.0
+ * @return void
  */
-function ddw_gwnf_prepare_widgets_styles() {
-
-	add_action( 'admin_head', 'ddw_gwnf_widgets_styles', 100 );
-
-}  // end function
-
+function ddw_gwnf_dependency_notice() {
+ $screen = get_current_screen();
+ if ( ddw_gwnf_has_genesis() || is_network_admin() || ! current_user_can( 'edit_theme_options' ) || ! $screen || 'plugins' !== $screen->id ) { return; }
+ echo '<div class="notice notice-info"><p>' . esc_html__( 'Genesis Widgetized Not Found & 404 is paused on this site because the Genesis parent theme is not active. Saved widgets are preserved.', 'genesis-widgetized-notfound' ) . '</p></div>';
+}
 
 /**
- * Add subtle note in Widgets admin page for our Widget areas.
- *
- * @since 1.6.0
- * @since 1.6.3 Changed hook.
+ * Prepend the representative settings link and existing Customizer shortcuts.
+ * @since 1.0.0
+ * @param array $links Existing plugin actions.
+ * @return array Filtered plugin actions for the current site only.
  */
-function ddw_gwnf_widgets_styles() {
-
-	/* translators: NO HTML please, no masked/encoded entities, only letters, numbers, hyphens */
-	$info = esc_html_x(
-		'Via plugin: Genesis Widgetized Not Found and 404',
-		'Note for Widget area title',
-		'genesis-widgetized-notfound'
-	);
-
-	?>
-		<style type='text/css'>
-			.wp-admin #gwnf-404-widget .sidebar-name:before,
-			.wp-admin #gwnf-notfound-widget .sidebar-name:before,
-			.wp-admin #gwnf-bbpress-notfound-area .sidebar-name:before {
-				color: #777;
-				content: '<?php echo $info; // Our note here! ?>';
-				display: inline-block;
-				font-size: 13px;
-				margin-left: 7px;
-				margin-top: 10px;
-				overflow: hidden;
-			}
-			.wp-admin #gwnf-404-widget .sidebar-description,
-			.wp-admin #gwnf-notfound-widget .sidebar-description,
-			.wp-admin #gwnf-bbpress-notfound-area .sidebar-description {
-				background-color: #f7f7f7;
-				margin-bottom: 10px;
-			}
-			.wp-admin #gwnf-404-widget .sidebar-description p,
-			.wp-admin #gwnf-notfound-widget .sidebar-description p,
-			.wp-admin #gwnf-bbpress-notfound-area .sidebar-description p {
-				padding: 15px;
-			}
-		</style>
-	<?php
-
-}  // end function
-
+function ddw_gwnf_widgets_page_link( $links ) {
+ if ( is_network_admin() || ! current_user_can( 'edit_theme_options' ) ) { return $links; }
+ $settings = '<a href="' . esc_url( admin_url( ( ddw_gwnf_has_genesis() ? 'admin.php' : 'options-general.php' ) . '?page=gwnf-settings' ) ) . '">' . esc_html__( 'Settings', 'genesis-widgetized-notfound' ) . '</a>';
+ $notfound = '<a href="' . esc_url( ddw_gwnf_get_customizer_preview_link( 'notfound' ) ) . '">' . esc_html__( 'Not found', 'genesis-widgetized-notfound' ) . '</a>';
+ $error = '<a href="' . esc_url( ddw_gwnf_get_customizer_preview_link( '404' ) ) . '">404</a>';
+ if ( ddw_gwnf_has_genesis() ) { array_unshift( $links, $settings, $notfound, $error ); }
+ else { array_unshift( $links, $settings ); }
+ /**
+  * Filter plugin settings actions.
+  * @since 1.6.0
+  * @param array $links All action links to return.
+  * @param string $settings Settings action markup.
+  * @param string $notfound Empty-search preview markup.
+  * @param string $error 404 preview markup.
+  */
+ return apply_filters( 'gwnf/filter/plugins_page/settings_link', $links, $settings, $notfound, $error );
+}
 
 /**
- * Add "Widgets Page" link to plugin page.
- *
- * @since  1.0.0
- * @since  1.6.0 Enhanced with additional links.
- *
- * @param  string $gwnf_links
- *
- * @return strings String of Widgets admin link.
+ * Add concise documentation and support links without promotional user-data URLs.
+ * @since 1.0.0
+ * @param array $links Existing row links.
+ * @param string $file Plugin basename.
+ * @return array Row links, unchanged for other plugins.
  */
-function ddw_gwnf_widgets_page_link( $gwnf_links ) {
+function ddw_gwnf_plugin_links( $links, $file ) {
+ if ( plugin_basename( GWNF_PLUGIN_FILE ) !== $file ) { return $links; }
+ $links[] = '<a href="https://github.com/deckerweb/genesis-widgetized-notfound#faq">' . esc_html__( 'Documentation', 'genesis-widgetized-notfound' ) . '</a>';
+ $links[] = '<a href="https://github.com/deckerweb/genesis-widgetized-notfound/issues">' . esc_html__( 'Support', 'genesis-widgetized-notfound' ) . '</a>';
+ /** Filter this plugin's support links. @since 1.6.0 @param array $links Row links to return. */
+ return apply_filters( 'gwnf/filter/plugins_page/more_links', $links );
+}
 
-	/** Widgets Admin link */
-	$gwnf_widgets_link = sprintf(
-		'<a href="%1$s" title="%2$s"><span class="dashicons-before dashicons-welcome-widgets-menus"></span> %3$s</a>',
-		esc_url( admin_url( 'widgets.php#gwnf-404-widget' ) ),
-		esc_html__( 'Go to the Widgets settings page', 'genesis-widgetized-notfound' ),
-		esc_attr__( 'Widgets', 'genesis-widgetized-notfound' )
-	);
-
-	/** Customize Not Found link */
-	$gwnf_notfound_link = sprintf(
-		'<a href="%1$s" title="%2$s" target="_blank" rel="noopener noreferrer"><span class="dashicons-before dashicons-admin-customizer"></span> %3$s</a>',
-		esc_url( ddw_gwnf_get_customizer_preview_link( 'notfound' ) ),
-		esc_html__( 'Live preview search not found', 'genesis-widgetized-notfound' ),
-		esc_attr__( 'Not found', 'genesis-widgetized-notfound' )
-	);
-
-	/** Customize 404 link */
-	$gwnf_404_link = sprintf(
-		'<a href="%1$s" title="%2$s" target="_blank" rel="noopener noreferrer"><span class="dashicons-before dashicons-admin-customizer"></span> %3$s</a>',
-		esc_url( ddw_gwnf_get_customizer_preview_link( '404' ) ),
-		esc_html__( 'Live preview 404 page', 'genesis-widgetized-notfound' ),
-		esc_attr__( '404', 'genesis-widgetized-notfound' )
-	);
-
-	/** Set the order of the links */
-	array_unshift( $gwnf_links, $gwnf_widgets_link, $gwnf_notfound_link, $gwnf_404_link );
-
-	/** Display plugin settings links */
-	return apply_filters(
-		'gwnf/filter/plugins_page/settings_link',
-		$gwnf_links,
-		$gwnf_widgets_link,		// additional param
-		$gwnf_notfound_link,	// additional param
-		$gwnf_404_link			// additional param
-	);
-
-}  // end function
-
-
-add_filter( 'plugin_row_meta', 'ddw_gwnf_plugin_links', 10, 2 );
 /**
- * Add various support links to plugin page.
- *
- * @since  1.0.0
- * @since  1.6.0 Refactoring.
- *
- * @uses   ddw_gwnf_get_info_link()
- *
- * @param  $gwnf_links
- * @param  $gwnf_file
- *
- * @return strings String of plugin links.
- */
-function ddw_gwnf_plugin_links( $gwnf_links, $gwnf_file ) {
-
-	/** Capability check */
-	if ( ! current_user_can( 'install_plugins' ) ) {
-		return $gwnf_links;
-	}
-
-	/** List additional links only for this plugin */
-	if ( $gwnf_file == GWNF_PLUGIN_BASEDIR . 'genesis-widgetized-notfound.php' ) {
-
-		?>
-			<style type="text/css">
-				tr[data-plugin="<?php echo $gwnf_file; ?>"] .plugin-version-author-uri a.dashicons-before:before {
-					font-size: 17px;
-					margin-right: 2px;
-					opacity: .85;
-					vertical-align: sub;
-				}
-			</style>
-		<?php
-
-		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_wporg_faq', esc_html_x( 'FAQ', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-editor-help' );
-
-		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_wporg_forum', esc_html_x( 'Support', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-sos' );
-
-		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_fb_group', esc_html_x( 'Facebook Group', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-facebook' );
-
-		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_snippets', esc_html_x( 'Code Snippets', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-editor-code' );
-
-		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'dashicons-before dashicons-translation' );
-
-		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button dashicons-before dashicons-thumbs-up' );
-
-		/* translators: Plugins page listing */
-		$gwnf_links[] = ddw_gwnf_get_info_link( 'url_newsletter', esc_html_x( 'Join our Newsletter', 'Plugins page listing', 'genesis-widgetized-notfound' ), 'button-primary dashicons-before dashicons-awards' );
-
-	}  // end if
-
-	/** Output the links */
-	return apply_filters(
-		'gwnf/filter/plugins_page/more_links',
-		$gwnf_links
-	);
-
-}  // end function
-
-
-add_action( 'sidebar_admin_setup', 'ddw_gwnf_widgets_help' );
-/**
- * Load plugin help tab after core help tabs on Widget admin page.
- *
+ * Register contextual help on the Widgets screen and Genesis administration screens.
  * @since 1.2.0
- *
- * @global mixed $GLOBALS[ 'pagenow' ]
- */
-function ddw_gwnf_widgets_help() {
-
-	add_action( 'admin_head-' . $GLOBALS[ 'pagenow' ], 'ddw_gwnf_widgets_help_tab' );
-
-}  // end function
-
-
-add_action( 'load-toplevel_page_genesis', 'ddw_gwnf_widgets_help_tab', 16 );				// Genesis Core
-add_action( 'load-genesis_page_seo-settings', 'ddw_gwnf_widgets_help_tab', 16 );			// Genesis SEO
-add_action( 'load-genesis_page_genesis-import-export', 'ddw_gwnf_widgets_help_tab', 16 );	// Genesis Import/Export
-add_action( 'load-genesis_page_design-settings', 'ddw_gwnf_widgets_help_tab', 16 );			// Prose Child Theme
-add_action( 'load-genesis_page_prose-custom', 'ddw_gwnf_widgets_help_tab', 16 );			// Prose Custom Section
-add_action( 'load-toplevel_page_dynamik-dashboard', 'ddw_gwnf_widgets_help_tab', 16 );				// Dynamik Child Theme
-add_action( 'load-dynamik-dashboard_page_dynamik-design', 'ddw_gwnf_widgets_help_tab', 16 );		// Dynamik Child Design
-add_action( 'load-dynamik-dashboard_page_dynamik-custom', 'ddw_gwnf_widgets_help_tab', 16 );		// Dynamik Custom Section
-add_action( 'load-dynamik-dashboard_page_dynamik-image-manager', 'ddw_gwnf_widgets_help_tab', 16 );	// Dynamik Image Manager
-/**
- * Create and display plugin help tab.
- *
- * @since 1.2.0
- * @since 1.6.0 Code tweaks.
- *
- * @uses ddw_gwnf_help_sidebar_content()
- *
- * @global mixed $gwnf_widgets_screen
- * @global mixed $GLOBALS[ 'pagenow' ]
+ * @return void
  */
 function ddw_gwnf_widgets_help_tab() {
-
-	global $gwnf_widgets_screen;
-
-	$gwnf_widgets_screen = get_current_screen();
-
-	/** Bail early if conditions not met */
-	if ( ! $gwnf_widgets_screen
-		|| 'genesis' !== basename( get_template_directory() )
-	) {
-		return;
-	}
-
-	/** Add the new help tab */
-	$gwnf_widgets_screen->add_help_tab(
-		array(
-			'id'       => 'gwnf-widgets-help',
-			'title'    => __( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ),
-			'callback' => apply_filters(
-				'gwnf/filter/help_content/help_tab',
-				'ddw_gwnf_widgets_help_content'
-			),
-		)
-	);
-
-	/** Add help sidebar */
-	if ( 'widgets.php' === $GLOBALS[ 'pagenow' ] ) {
-		$gwnf_widgets_screen->set_help_sidebar( ddw_gwnf_help_sidebar_content() );
-	}
-
-	/** Some subtle CSS styling additions ... ;-) */
-	?>
-		<style type='text/css'>
-			/** Dashicons commons */
-			#tab-link-gwnf-widgets-help a:before {
-				display: inline-block;
-				-webkit-font-smoothing: antialiased;
-				font-family: 'dashicons';
-				font-weight: 400;
-				vertical-align: top;
-			}
-
-			/** Our help tab */
-			#tab-link-gwnf-widgets-help a:before {
-				clear: left;
-				content: "\f106";
-				float: left;
-				margin: 1px 5px 25px -3px;
-			}
-			#tab-panel-gwnf-widgets-help .dashicons-before:before {
-				vertical-align: bottom;
-			}
-			.gwnf-help-version {
-				margin-left: 7px;
-				opacity: .6;
-			}
-		</style>
-	<?php
-
-}  // end function
-
+ $screen = get_current_screen();
+ if ( ! $screen || ! ddw_gwnf_has_genesis() || ! current_user_can( 'edit_theme_options' ) || ( 'widgets' !== $screen->id && false === strpos( $screen->id, 'genesis' ) ) ) { return; }
+ /** Filter the help-tab callback. @since 1.6.0 @param callable $callback Accessible help renderer. */
+ $callback = apply_filters( 'gwnf/filter/help_content/help_tab', 'ddw_gwnf_widgets_help_content' );
+ $screen->add_help_tab( array( 'id' => 'gwnf-widgets-help', 'title' => __( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ), 'callback' => is_callable( $callback ) ? $callback : 'ddw_gwnf_widgets_help_content' ) );
+ if ( 'widgets' === $screen->id ) { $screen->set_help_sidebar( ddw_gwnf_help_sidebar_content() ); }
+}
 
 /**
- * Create and display plugin help tab content.
- *
+ * Render setup guidance in the existing help tab.
  * @since 1.0.0
- * @since 1.6.0 Tweaked markup/code and some content.
- *
- * @uses ddw_gwnf_info_values() Array of all info values.
- * @uses ddw_gwnf_get_info_link()
- * @uses ddw_gwnf_get_info_url()
- * @uses ddw_gwnf_coding_years()
- *
- * @return string HTML content for help tab.
+ * @return void
  */
 function ddw_gwnf_widgets_help_content() {
-
-	$gwnf_info = (array) ddw_gwnf_info_values();
-
-	/** Helper strings */
-	/* translators: 1, 2 = Open and close anchor tags */
-	$gwnf_filter_help = ' &ndash; ' . sprintf( __( 'optional, could be deactivated %svia filter%s', 'genesis-widgetized-notfound' ), '<a href="' . esc_url( $gwnf_info[ 'url_snippets' ] ) . '" target="_blank" rel="nofollow noopener noreferrer" title="' . __( 'Code Snippets for Customization', 'genesis-widgetized-notfound' ) . '">', '</a>' );
-
-	$gwnf_bbpress_noresults_widgetized = (bool) apply_filters(
-		'gwnf_filter_bbpress_noresults_widgetized',
-		'__return_true'
-	);
-
-	/** Helper style */
-	$gwnf_space_helper = '<div style="height: 10px;"></div>';
-
-	/** Headline */
-	echo '<h2><span class="dashicons-before dashicons-welcome-widgets-menus"></span> ' . __( 'Plugin', 'genesis-widgetized-notfound' ) . ': ' . __( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ) . ' <small class="gwnf-help-version">v' . GWNF_VERSION . '</small></h2>';
-
-	/** Widget areas info */
-	echo '<p><strong>' . __( 'Added Widget areas by the plugin - only displayed if having active widgets placed in:', 'genesis-widgetized-notfound' ) . '</strong>' .
-	'<ul>' . 
-		'<li>' . apply_filters( 'gwnf_filter_404_widget_title', __( '404 Error Page', 'genesis-widgetized-notfound' ) ) . ' &mdash; ' . sprintf( __( 'ID: %s', 'genesis-widgetized-notfound' ), '<code>gwnf-404-widget</code>' ) . '</li>' .
-		'<li>' . apply_filters( 'gwnf_filter_notfound_widget_title', __( 'Search Not Found', 'genesis-widgetized-notfound' ) ) . ' &mdash; ' . sprintf( __( 'ID: %s', 'genesis-widgetized-notfound' ), '<code>gwnf-notfound-widget</code>' ) . '</li>';
-		if ( $gwnf_bbpress_noresults_widgetized ) {
-
-			echo '<li>' . apply_filters( 'gwnf_filter_bbpress_noresults_widget_title', __( 'bbPress: Forum Search No Results', 'genesis-widgetized-notfound' ) ) . ' &mdash; ' . sprintf( __( 'ID: %s', 'genesis-widgetized-notfound' ), '<code>gwnf-bbpress-notfound-area</code>' ) . $gwnf_filter_help . '</li>';
-
-		}  // end if
-	echo '</ul>';
-
-	/** Widgets shortcode support */
-	if ( defined( 'GWNF_NO_WIDGETS_SHORTCODE' ) && ! GWNF_NO_WIDGETS_SHORTCODE ) {
-		echo '<p>' . __( 'Shortcodes are supported in all these widget areas.', 'genesis-widgetized-notfound' ) . '</p>';
-	}
-
-	/** Search widget info */
-	echo $gwnf_space_helper . '<p><strong>' . sprintf( __( 'Added Widget by the plugin: %s', 'genesis-widgetized-notfound' ), '<em>' . __( 'Genesis - Search Form', 'genesis-widgetized-notfound' ) . '</em>' ) . '</strong></p>' .
-		'<ul>' .
-			'<li>' . __( 'A search form for your site. With a more options than the default one.', 'genesis-widgetized-notfound' ) . '</li>' .
-			'<li>' . __( 'For example, set placeholder and submit button texts via options, plus more stuff, like a few display options.', 'genesis-widgetized-notfound' ) . '</li>' .
-		'</ul>';
-
-	/** Shortcode info, plus parameters */
-	echo $gwnf_space_helper . '<p><strong>' . __( 'Provided Shortcodes by the plugin:', 'genesis-widgetized-notfound' ) . '</strong></p>' .
-		'<p><code>[gwnf-widget-area]</code></p>' .
-		'<blockquote><ul>' .
-			'<li><em>' . __( 'Supporting the following parameters', 'genesis-widgetized-notfound' ) . ':</em></li>' .
-			'<li><code>area</code> &mdash; ' . __( 'ID of the Widget area (Sidebar; see above)', 'genesis-widgetized-notfound' ) . ' &mdash; ' . sprintf( __( 'Default: %s', 'genesis-widgetized-notfound' ), '<em>' . __( 'none, empty', 'genesis-widgetized-notfound' ) . '</em>' ) . '</li>' .
-		'</ul></blockquote>' .
-		'<p><code>[gwnf-search]</code></p>' .
-		'<blockquote><ul>' .
-			'<li><em>' . __( 'Supporting the following parameters', 'genesis-widgetized-notfound' ) . ':</em></li>' .
-			'<li><code>search_text</code> &mdash; ' . __( 'Search placeholder text', 'genesis-widgetized-notfound' ) . ' &mdash; ' . sprintf( __( 'Default: %s', 'genesis-widgetized-notfound' ), __( 'Search this website', 'genesis-widgetized-notfound' ) ) . '</li>' .
-			'<li><code>button_text</code> &mdash; ' . __( 'HTML wrapper tag', 'genesis-widgetized-notfound' ) . ' &mdash; ' . sprintf( __( 'Default: %s', 'genesis-widgetized-notfound' ), __( 'Search', 'genesis-widgetized-notfound' ) ) . '</li>' .
-			'<li><code>form_label</code> &mdash; ' . __( 'Additional label before the search form', 'genesis-widgetized-notfound' ) . ' &mdash; ' . sprintf( __( 'Default: %s', 'genesis-widgetized-notfound' ), '<em>' . __( 'none, empty', 'genesis-widgetized-notfound' ) . '</em>' ) . '</li>' .
-			'<li><code>wrapper</code> &mdash; ' . __( 'HTML wrapper tag', 'genesis-widgetized-notfound' ) . ' &mdash; ' . sprintf( __( 'Default: %s', 'genesis-widgetized-notfound' ), '<code>div</code>' ) . '</li>' .
-			'<li><code>class</code> &mdash; ' . __( 'Can be a custom class, added to the wrapper tag', 'genesis-widgetized-notfound' ) . ' &mdash; ' . sprintf( __( 'Default: %s', 'genesis-widgetized-notfound' ), '<em>' . __( 'none, empty', 'genesis-widgetized-notfound' ) . '</em>' ) . '</li>' .
-			'<li><code>post_type</code> &mdash; ' . __( 'Optional setup post type(s) for search', 'genesis-widgetized-notfound' ) . ' &mdash; ' . sprintf( __( 'Default: %s', 'genesis-widgetized-notfound' ), '<em>' . __( 'none, empty', 'genesis-widgetized-notfound' ) . '</em>' . ' &ndash; ' . __( 'i.e., WordPress default search behavior', 'genesis-widgetized-notfound' ) ) . '</li>' .
-		'</ul></blockquote>';
-
-	/** Further help content */
-	echo $gwnf_space_helper . '<p><h4 style="font-size: 1.1em;">' . __( 'Important plugin links:', 'genesis-widgetized-notfound' ) . '</h4>' .
-
-		ddw_gwnf_get_info_link( 'url_plugin', esc_html__( 'Plugin website', 'genesis-widgetized-notfound' ), 'button' ) .
-
-		'&nbsp;&nbsp;' . ddw_gwnf_get_info_link( 'url_wporg_faq', esc_html_x( 'FAQ', 'Help tab info', 'genesis-widgetized-notfound' ), 'button' ) .
-
-		'&nbsp;&nbsp;' . ddw_gwnf_get_info_link( 'url_wporg_forum', esc_html_x( 'Support', 'Help tab info', 'genesis-widgetized-notfound' ), 'button' ) .
-
-		'&nbsp;&nbsp;' . ddw_gwnf_get_info_link( 'url_snippets', esc_html_x( 'Code Snippets', 'Help tab info', 'genesis-widgetized-notfound' ), 'button' ) .
-
-		'&nbsp;&nbsp;' . ddw_gwnf_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Help tab info', 'genesis-widgetized-notfound' ), 'button' ) .
-
-		'&nbsp;&nbsp;' . ddw_gwnf_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Help tab info', 'genesis-widgetized-notfound' ), 'button button-primary' ) .
-
-		sprintf(
-			'<p><a href="%1$s" target="_blank" rel="nofollow noopener noreferrer" title="%2$s">%2$s</a> &#x000A9; %3$s <a href="%4$s" target="_blank" rel="noopener noreferrer" title="%5$s">%5$s</a></p>',
-			ddw_gwnf_get_info_url( 'url_license' ),	//esc_url( $gwnf_info[ 'url_license' ] ),
-			esc_attr( $gwnf_info[ 'license' ] ),
-			ddw_gwnf_coding_years(),
-			ddw_gwnf_get_info_url( 'author_uri' ),	//esc_url( $gwnf_info[ 'author_uri' ] ),
-			esc_html( $gwnf_info[ 'author' ] )
-		);
-
-}  // end function
-
+ echo '<div class="gwnf-help-header"><img src="' . esc_url( plugins_url( 'assets/icon-128x128.png', GWNF_PLUGIN_FILE ) ) . '" alt="" width="48" height="48" /><div><h2>' . esc_html__( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ) . '</h2><p>' . esc_html__( 'Helpful content when nothing is found.', 'genesis-widgetized-notfound' ) . '</p></div></div>';
+ echo '<p>' . esc_html__( 'Add widgets to 404 Error Page or Search Not Found under Appearance → Widgets. Empty 404 areas use Genesis output or the enabled 404 starter; empty search areas show the message and search form.', 'genesis-widgetized-notfound' ) . '</p>';
+ echo '<p>' . esc_html__( 'The Genesis – Search Form widget lets you set labels, placeholder, button text, title links and display rules.', 'genesis-widgetized-notfound' ) . '</p>';
+ echo '<p><code>[gwnf-search]</code> · <code>[gwnf-widget-area area="404"]</code> · <code>[gwnf-widget-area area="notfound"]</code></p>';
+ echo '<p>' . esc_html__( 'For forum searches, add widgets to bbPress: Forum Search No Results. The area is available when bbPress is active.', 'genesis-widgetized-notfound' ) . '</p>';
+ echo '<p><a href="' . esc_url( ddw_gwnf_get_customizer_preview_link( '404' ) ) . '">' . esc_html__( 'Test 404 error page', 'genesis-widgetized-notfound' ) . '</a> · <a href="' . esc_url( ddw_gwnf_get_customizer_preview_link( 'notfound' ) ) . '">' . esc_html__( 'Test search not found results', 'genesis-widgetized-notfound' ) . '</a></p>';
+}
 
 /**
- * Helper function for returning the Help Sidebar content.
- *
+ * Return the host's contextual-help sidebar without changing other screens.
  * @since 1.5.0
- * @since 1.6.0 Changed some URLs, tweaked code/markup.
- *
- * @uses ddw_gwnf_get_info_url()
- *
- * @return string HTML content for help sidebar.
+ * @return string Escaped help links, customizable as trusted HTML.
  */
 function ddw_gwnf_help_sidebar_content() {
+ $html = '<p><a href="https://github.com/deckerweb/genesis-widgetized-notfound#faq">' . esc_html__( 'Documentation', 'genesis-widgetized-notfound' ) . '</a></p>';
+ /** Filter help-sidebar markup. @since 1.5.0 @param string $html Trusted HTML to return. */
+ return apply_filters( 'gwnf/filter/help_content/help_sidebar', $html );
+}
 
-	$gwnf_help_sidebar_content = '<p><strong>' . __( 'More about the plugin author', 'genesis-widgetized-notfound' ) . '</strong></p>' .
-			'<p>' . __( 'Social:', 'genesis-widgetized-notfound' ) . '<br /><a href="https://twitter.com/deckerweb" target="_blank" rel="nofollow noopener noreferrer" title="@ Twitter">Twitter</a> | <a href="https://github.com/deckerweb" target="_blank" rel="nofollow noopener noreferrer" title="@ GitHub">GitHub</a> | <a href="' . ddw_gwnf_get_info_url( 'author_uri' ) . '" target="_blank" rel="noopener noreferrer" title="@ deckerweb.de">deckerweb</a></p>' .
-			'<p><a href="' . ddw_gwnf_get_info_url( 'url_wporg_profile' ) . '" target="_blank" rel="noopener noreferrer" title="@ WordPress.org">@ WordPress.org</a></p>';
+/**
+ * Enqueue scoped local admin assets; no raw style/script output is used.
+ * @since 2.0.0
+ * @param string $hook Current admin page hook suffix.
+ * @return void
+ */
+function ddw_gwnf_admin_assets( $hook ) {
+ // Harden the embedded Library dialog without changing its pinned runtime.
+ if ( str_contains( $hook, 'deckerweb-library' ) || ( 'plugin-install.php' === $hook && ( $_GET['tab'] ?? '' ) === 'deckerweb' ) ) {
+  wp_enqueue_style( 'gwnf-library-dialog', plugins_url( 'css/gwnf-admin.css', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION );
+ }
+ if ( str_contains( $hook, 'gwnf-settings' ) ) {
+  wp_enqueue_script( 'gwnf-comfort', plugins_url( 'js/gwnf-comfort.js', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION, true );
+  wp_enqueue_style( 'gwnf-admin', plugins_url( 'css/gwnf-admin.css', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION );
+  wp_enqueue_style( 'gwnf-footer', plugins_url( 'css/deckerweb-footer.css', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION );
+  wp_enqueue_script( 'gwnf-footer', plugins_url( 'js/deckerweb-footer.js', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION, true );
+  return;
+ }
+ if ( ! ddw_gwnf_has_genesis() ) { return; }
+ if ( 'widgets.php' !== $hook && false === strpos( $hook, 'genesis' ) ) { return; }
+ wp_enqueue_style( 'gwnf-admin', plugins_url( 'css/gwnf-admin.css', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION );
+ if ( 'widgets.php' === $hook && current_user_can( 'edit_theme_options' ) ) {
+  wp_enqueue_style( 'gwnf-footer', plugins_url( 'css/deckerweb-footer.css', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION );
+  wp_enqueue_script( 'gwnf-footer', plugins_url( 'js/deckerweb-footer.js', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION, true );
+ }
+}
 
-	return apply_filters(
-		'gwnf/filter/help_content/help_sidebar',
-		$gwnf_help_sidebar_content
-	);
-
-}  // end function
+/**
+ * Render local structured changelog and documentation through the shared footer.
+ * @since 2.0.0
+ * @return void
+ */
+function ddw_gwnf_admin_footer() {
+ $screen = get_current_screen();
+ if ( ! ddw_gwnf_has_genesis() && ( ! $screen || ! str_contains( $screen->id, 'gwnf-settings' ) ) ) { return; }
+ if ( ! current_user_can( 'edit_theme_options' ) ) { return; }
+ require_once GWNF_PLUGIN_DIR . 'includes/deckerweb-changelog-v1.php';
+ require_once GWNF_PLUGIN_DIR . 'includes/deckerweb-admin-footer-v1.php';
+ $de = str_starts_with( determine_locale(), 'de_' );
+ $suffix = $de ? '-de' : '';
+ \Deckerweb\AdminFooter\V1\StructuredFooter::render( array(
+  'id' => 'gwnf', 'about' => __( 'About this plugin', 'genesis-widgetized-notfound' ), 'name' => __( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ), 'version_label' => __( 'Version', 'genesis-widgetized-notfound' ), 'version' => GWNF_VERSION,
+  'slogan' => __( 'Helpful content when nothing is found.', 'genesis-widgetized-notfound' ), 'copyright' => '© 2012–2026', 'repository' => 'https://github.com/deckerweb/genesis-widgetized-notfound', 'website' => 'GitHub', 'close' => __( 'Close', 'genesis-widgetized-notfound' ),
+  'documents' => array(
+   'documentation' => array( 'label' => __( 'Documentation', 'genesis-widgetized-notfound' ), 'url' => 'https://github.com/deckerweb/genesis-widgetized-notfound/blob/master/README' . $suffix . '.md', 'text' => file_get_contents( GWNF_PLUGIN_DIR . 'docs/help' . ( 'de_DE_formal' === determine_locale() ? '-de-formal' : $suffix ) . '.txt' ) ),
+   'changelog' => array( 'label' => __( 'Changelog', 'genesis-widgetized-notfound' ), 'url' => 'https://github.com/deckerweb/genesis-widgetized-notfound/blob/master/CHANGES' . $suffix . '.md', 'text' => file_get_contents( GWNF_PLUGIN_DIR . 'docs/changelog' . $suffix . '.txt' ) ),
+  ),
+ ) );
+}

@@ -1,560 +1,145 @@
-# Genesis Widgetized Not Found & 404 - Easy Setup for 404 Page and Search Not Found 
-**Contributors:** daveshine, deckerweb, wpautobahn  
-**Donate link:** https://www.paypal.me/deckerweb  
-**Tags:** genesis, genesiswp, genesis framework, 404, not found, error, search, searchform, page, widgets, widget, deckerweb  
-**Requires at least:** 3.6  
-**Tested up to:** 5.2  
-**Requires PHP:** 5.6  
-**Stable tag:** 1.6.4  
-**License:** GPL-2.0-or-later  
-**License URI:** https://opensource.org/licenses/GPL-2.0  
-
-Finally, use Widgets to maintain and customize your 404 Error and Search Not Found pages in Genesis Framework and Child Themes.
-
-[<img src="https://ps.w.org/genesis-widgetized-notfound/assets/banner-1544x500.png" data-canonical-src="https://ps.w.org/genesis-widgetized-notfound/assets/banner-1544x500.png" width="772" height="250" />](https://wordpress.org/plugins/genesis-widgetized-notfound/)
-
-
-## Description 
-
-
-### New Flexibility plus Enhanced User Experience 
-We all know that sometimes 404 Errors happen on our sites. And sometimes users search but get no results. I believe it's better to serve users some highly customized and maintained pages/content areas for these cases. What better to do that with Widgets in WordPress? -- In my opinion Genesis Framework could improve here so that's why I just made this little plugin to FINALLY have these two cases maintainable EASILY via your widgets admin. Just place in a search widget, your last blog posts, an image widget, some explanation via text widget, some galleries... You got it. The possibilities are endless. Finally.
-
-[![Video of Plugin's Live Demo and Walkthrough](https://img.youtube.com/vi/0RJldBSH_fA/0.jpg)](https://www.youtube.com/watch?v=0RJldBSH_fA)
-[**original video link**](https://www.youtube.com/watch?v=0RJldBSH_fA) *by plugin developer David Decker*
+# Genesis Widgetized Not Found & 404
 
-Just a great helper tool for Genesis Child Themes!
+![Genesis Widgetized Not Found & 404](assets/github-banner-en.png)
 
-**Please note:** The plugin requires the *Genesis Framework*, a paid premium product released by StudioPress/ WPEngine, Inc. [(via studiopress.com)](https://deckerweb.de/go/genesis/)
+[Deutsch](README-de.md) · [Wiki](https://github.com/deckerweb/genesis-widgetized-notfound/wiki) · [Download](https://github.com/deckerweb/genesis-widgetized-notfound/releases/latest)
 
+## About
 
-### What the Plugin Does - Advantages & Benefits 
-* Helps users stay longer on your site because you can give options like search form, recent posts, introductory text, image(s) etc.
-* Hugely improved user experience! (Helps decrease the "Oops, I broke the internet..." experiences...)
-* Easily customizeable for any webmaster! -- In Widgets admin or in Customizer > Widgets
-* Works across Genesis child themes - so you can switch your "skin" but not loosing this tool :-)
-* Provides *extra Search Form Widget* with more options than the default WordPress core widget.
-* Handy search form Shortcode!
-* Ideal for multilingual websites (for example with "WPML"): Much better handling of 404/Not found content for different languages. -- [See bottom of FAQ section here](https://wordpress.org/plugins/genesis-widgetized-notfound/#faq) for more info on that.
+Customize 404 pages and empty search results with familiar WordPress widgets. For classic Genesis themes, with a search widget, shortcodes and optional bbPress integration.
 
+**Version:** 2.0.0 · WordPress ≥ 6.4 · PHP ≥ 8.0 · Genesis
 
-### General Features 
-* Small & lightweight plugin tool: Just activate plugin, place your widgets and you're done!
-* Adds a new widget area (Sidebar) for the "404 Error Page"
-* Adds a new widget area (Sidebar) for the "Search not found" page (if there are no results for a search term)
-* Adds a new Search Form Widget - which gives you more options than the default WordPress "Search" widget! (Search text, Submit text etc.)
-* Adds 2 Shortcodes: a customizeable Search form to place anywhere Shortcodes are supported, plus Shortcode for this plugin's widget areas.
-* Special Bonus for bbPress 2.3+: make the forum search not found content/status widgetized - take full control!
-* Adds a few CSS styles for the content area to properly divide widgets with some more space (all other styling is recommended via your child theme)
-* Included are two handy helper functions (via child theme) for applying the Genesis 'Full-Width' layout option for one or both 'not found' cases! -- [See the FAQ section for more info on that!](https://wordpress.org/plugins/genesis-widgetized-notfound/#faq)
-* For developers & advanced users: plugin provides lots of filter and acton hooks throughout for easy customization if ever needed.
-* All markup is fully compatible with Genesis 2.0+, that means for HTML5 if the child theme supports it (is done all automatically & conditionally under the surface!).
-* Integrated default Genesis filters `genesis_search_text` and `genesis_search_button_text` for default strings :-).
-* Fully internationalized! Real-life tested and developed with international users in mind!
-* Fully WPML compatible!
-* Fully Multisite compatible, you can also network-enable it if ever needed (per Site use is recommended).
+[FAQ](#faq) · [Docs](docs/FAQ.md)
 
+- [About](#about)
+- [At a Glance](#glance)
+- [Installation and first steps](#install)
+- [Features](#features)
+- [FAQ](#faq)
+- [Changelog](#changelog)
+- [Author and history](#author)
+- [Support and security](#support)
+- [Copyright and license](#license)
 
-### Translations 
-* English (default, `en_US`) - always included
-* German (`de_DE`) - always included
-* German formal (`de_DE_formal`) - always included
-* Spanish (`es_ES`) - user-submitted - currently 37% complete for v1.5.0
-* `.pot` file (`genesis-widgetized-notfound.pot`) for translators is also always included :)
-* Easy plugin translation platform with GlotPress tool: [Translate "Genesis Widgetized Not Found & 404"...](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
+<a id="glance"></a>
+## At a Glance
 
+- Widget areas for 404 and empty searches.
+- Search widget with configurable texts, title link and display rules.
+- Two shortcodes and optional bbPress search area.
+- Local documentation, German translations and GitHub updates.
 
-### Liked Genesis Widgetized Not Found & 404?
-* **Rate us 5 stars** on [WordPress.org](https://wordpress.org/support/plugin/genesis-widgetized-notfound/reviews/?filter=5/#new-post) :)
-* Join our [**Facebook User Community Support Group**](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
-* Like our [**Facebook Info Page for Deckerweb Plugins**](https://www.facebook.com/deckerweb.wordpress.plugins/)
-* [**Subscribe to my Newsletter for insider info on this plugin**](https://eepurl.com/gbAUUn), plus tutorials and more stuff on deckerweb WordPress plugins - join a thriving community of site builders!
+<a id="install"></a>
+## Installation and first steps
 
+Upload the plugin ZIP and activate it. Genesis must be the active parent theme on the current site. Open **Appearance → Widgets** and populate the two areas. Updates preserve existing widget IDs and settings.
 
-## Check out my other Genesis Plugins
-* [**Genesis Extra Settings Transporter**](https://wordpress.org/plugins/genesis-extra-settings-transporter/) - addionally export Genesis specific plugin & child theme settings
-* [**Genesis What's New Info**](https://wordpress.org/plugins/genesis-whats-new-info/) - Show the what's new overview page via left-hand admin menu
-* [**Genesis Layout Extras**](https://wordpress.org/plugins/genesis-layout-extras/) - Setup Default Layouts in Genesis for WordPress
-* [Genesis Shortcode UI (for Shortcake)](https://github.com/deckerweb/genesis-shortcode-ui)
-* [Genesis Elementor Canvas](https://github.com/deckerweb/genesis-elementor-canvas)
-* [Genesis Featured Page Extras](https://wordpress.org/plugins/genesis-featured-page-extras/) - more options for the featured page widget
-* [Genesis Prose Extras](https://wordpress.org/plugins/genesis-prose-extras/) - add-on for Prose child theme
-* [Genesis Printstyle Plus](https://wordpress.org/plugins/genesis-printstyle-plus/) - just print it out - only what's needed
-* [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/) - easily set up content for your Archive page (template)
-* [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/) - easily set up your copyright/ credits/ back to top
-* [Genesis Connect for Easy Digital Downloads](https://wordpress.org/plugins/genesis-connect-edd/) - plugin for easy & elegant integration
-* [*My Genesis plugins newsletter*](https://eepurl.com/gbAUUn)
+<a id="features"></a>
+## Features
 
+The search widget controls label, placeholder and button text. Shortcodes place forms or active widget areas in supported content. bbPress gets its own area for unsuccessful forum searches. Styling comes from your child theme.
 
-## My Other WordPress Plugins 
-* [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
-* [**Toolbar Extras for Oxygen Builder - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-oxygen/)
-* [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
-* [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
-* [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)
-* [Multisite Toolbar Additions](https://wordpress.org/plugins/multisite-toolbar-additions/)
-* [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
-* [*My plugins newsletter*](https://eepurl.com/gbAUUn)
+Under Genesis → Not Found & 404 Page, choose full content width separately for 404 and empty searches, and customize the default search message. Both layout options are off by default; an empty text field uses the translated default. Settings belong to each site and are preserved when the plugin is removed.
 
+GitHub updates request release metadata and download the package during an update. The Library displays its bundled catalog locally; online catalog retrieval is optional and off by default. GitHub sees the requesting IP address during external requests. No telemetry or required GitHub account/token. If an active Git Updater causes problems, temporarily deactivate it and reactivate it afterward if needed.
 
-## Installation 
+The setup overview shows assigned widget counts, the empty-area fallback and individual editing links, including bbPress when its area is registered. Counts do not guarantee visible output: widget visibility rules still apply. Conflicting search-widget rules and logged-in-only visibility are explained. The new rules Only on 404 pages and Only on searches with no results are optional.
 
-### Minimum Requirements
+Frontend test links open normal requests in a new tab, separately from the existing Customizer previews. Also test logged out; search plugins and redirects may affect the result. Shortcodes can be copied with the button, or selected manually if clipboard access is unavailable. Widget-area shortcodes render assigned widgets, not starter content.
 
-* WordPress version 4.7 or higher, 4.9.8 recommended!
-* **NOTE:** Only works with *Genesis Framework* (GPL-2.0+) as the parent theme (latest version is fine!). This is a paid premium product by StudioPress/ WPEngine, Inc., [available via studiopress.com](https://deckerweb.de/go/genesis/)
-* PHP version 5.6 or higher
-* MySQL version 5.0 or higher
-* Administrator user with capabilities `manage_options` and `edit_theme_options` who is logged-in
+The optional 404 starter is off by default. When enabled and the 404 widget area is empty, it supplies a heading and explanation, plus optional search form and homepage link. Empty text fields use translated defaults. Assigned 404 widgets always take precedence; even a widget hidden by its own rule prevents the empty-area fallback. Disabling the starter restores the usual Genesis output for an empty 404 area. The real missing-page request keeps its 404 status. All settings belong to the current site.
 
-### We Recommend Your Host Supports at least:
+<a id="faq"></a>
+## FAQ
 
-* PHP version 7.0 or higher
-* MySQL version 5.6 or higher / or MariaDB 10 or higher
+### Where do I add the content?
 
-### Installation
+Open Genesis → Not Found & 404 Page for the setup overview, layout options, search message and optional 404 starter. Use each area’s editing link or Appearance → Widgets to assign content.
 
-1. Install using the WordPress built-in Plugin installer (via **Plugins > Add New** - search for `genesis widgetized not found`), or extract the ZIP file and drop the contents in the `wp-content/plugins/` directory of your WordPress installation.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to **Genesis > Not Found & 404 Page** to adjust any widgets/ options for this plugin
-4. Alternatively go directly to the Widgets Admin or the Customizer to setup and preview the widget areas - configure your widgets for the "404 Error Page" and the "Search Not Found" page
-5. Hope the new widgets will never be needed, but in case, you're prepared now! :-)
+### Does this work without Genesis?
 
+The page integration requires an active Genesis parent theme. Without Genesis it pauses safely and keeps saved widgets. The Library and updater remain available.
 
-## Frequently Asked Questions 
+### What happens with empty widget areas?
 
+An empty 404 area keeps Genesis output unless the optional 404 starter is enabled. An empty search area shows the no-results message and search form. bbPress keeps its own feedback when its widget area is empty. Assigned widgets take precedence even if their own visibility rules hide them.
 
-### What HTTP Status Code gets delivered?
-For the 404 error ("Page not found") the proper `404` HTTP status code gets delivered. This is completely done via Genesis itself, NOT by this plugin. This plugin "only" tweaks the content that is rendered on the 404 page in the browser. Everything else is done by Genesis. This is also how it should be.
+### Which shortcodes are available?
 
-You can (bulk) check the status yourself for any URL on online services like these:
+Use [gwnf-search] and [gwnf-widget-area area="404"]. The other area values are notfound and bbpress-notfound. Search attributes: search_text, button_text, form_label, wrapper, class, post_type. Copy buttons for the search form and the two main areas are available on the settings page; manual selection also works. Area shortcodes do not insert 404 starter content.
 
-- [https://httpstatus.io/](https://httpstatus.io/)
-- [https://techseo.de/statuscodes/](https://techseo.de/statuscodes/)
+### Does it support Multisite?
 
+Yes. Widgets belong to each site. Network activation is allowed; Genesis features run only on sites using Genesis. Shared Library settings belong to the network. Theme editors manage widgets; network administrators manage network-wide plugin updates.
 
-### How can I change the layout of the '404 Error Page' (i.e. go full-width)? 
-You can use my ["Genesis Layout Extras" plugin](https://wordpress.org/plugins/genesis-layout-extras/) for that, which has an option for the 404 case built in. Or you can also use my built in helper function and add this little line to your `functions.php` of your child theme (backup file before!) or to the "Custom Function" section of Prose Child Theme 1.5+:
-```
-/** Genesis Widgetized NotFound: 404 Error Page - Full-Width Layout */
-add_action( 'genesis_meta', '__gwnf_layout_404_full_width' );
-```
+### Does a 404 still return HTTP 404?
 
+Yes. WordPress and Genesis determine the HTTP status. This plugin changes the displayed content, without redirects or soft-404 handling.
 
-### How can I change the layout of the 'Search not found' Page (i.e. go full-width)? 
-You can use my ["Genesis Layout Extras" plugin](https://wordpress.org/plugins/genesis-layout-extras/) for that, which has an option for the search case built in. -- Or you can also use my built in helper function and add this little line to your `functions.php` of your child theme (backup file before!) or to the "Custom Functions" section of Prose Child Theme 1.5+:
-```
-/** Genesis Widgetized NotFound: Search not found Page - Full-Width Layout */
-add_action( 'genesis_meta', '__gwnf_layout_searchnotfound_full_width' );
-```
-*Note:* The above code is restricted to the case when NO search results are found! It doesn't effect your search results display IF THERE ARE any results!
+### What happens to data when I remove it?
 
+Deactivation and uninstall preserve widget content and this site’s presentation settings. Final-host uninstall cleans temporary shared Library data; optional Library settings deletion follows its own switch. Other plugins and content are never deleted.
 
-### How can I style the content/widget areas? 
-It's all done via your child theme. Maybe you need to add an "!important" to some CSS rules here and there... For more even better styling I included some IDs and classes:
+[FAQ by topic / Fragen nach Themen](docs/FAQ.md).
 
-* "404 Error Page" section:
- * the whole content area, before and after all widgets is wrapped in a div with the ID: `#gwnf-404-area`
- * each widget in this area has its own ID depending on the widget (regular WordPress behavior!)
- * each widget gets an additional class: `.gwnf-404` -- which allows to set some common styles for all widgets in this area
-* "Search not found" section:
- * the whole content area, before and after all widgets is wrapped in a div with the ID: `#gwnf-notfound-area`
- * each widget in this area has its own ID depending on the widget (regular WordPress behavior!)
- * each widget gets an additional class: `.gwnf-notfound` -- which allows to set some common styles for all widgets in this area
+<a id="changelog"></a>
+## Changelog
 
-Note, WordPress itself additionally adds body classes in the 404 case and the search not found case. So you can also use these classes: `.error404` and `.search-no-results`
+### 2.0.0 · 2026-10-15
 
-If that's still not enough, you can even enqueue your own style, an action hook is included for that: `gwnf_load_styles` -- This hook fires within the WordPress action hook `wp_enqueue_scripts` just after properly enqueueing the plugin's styles and only if at least one of both widgets is active, so it's fully conditional!
+* New: Setup overview with widget counts, editing shortcuts and visibility hints.
+* New: Optional 404 starter content with custom heading, explanation, search form and homepage link.
+* New: Independent full-width options for 404 pages and empty searches, plus a custom no-results message.
+* New: Direct frontend tests, copyable shortcodes and search-widget rules for 404 and empty-search pages.
+* Improved: Compatibility with current WordPress, PHP and Genesis, including per-site settings and network activation.
+* Improved: Accessible search forms, local documentation, German translations and updated banners and icons.
+* Fixed: Safer widget input, shortcode rendering and bbPress empty-search integration.
+* Misc: Requires WordPress 6.4 and PHP 8.0. Existing widgets and settings are preserved.
+* Misc: Distributed through GitHub with deckerweb Library and Updater; the previous installer-recommendations library has been removed.
 
+### 1.6.4 · 2019-05-04
 
-### Could I disable the Shortcode support for widgets? 
-Of course, it's possible! Just add the following constant to your child theme's `functions.php` file or to a functionality plugin:
-```
-/** Genesis Widgetized Not Found & 404: Remove Widgets Shortcode Support */
-define( 'GWNF_NO_WIDGETS_SHORTCODE', TRUE );
-```
-Some webmasters could need this for security reasons regarding their stuff members or for whatever other reasons... :).
+* New: Site Health debug information and newsletter links.
+* Improved: WordPress 5.2 compatibility, installer recommendations library 1.4.0 and German translations.
 
+### 1.6.3 · 2018-11-22
 
-### What are parameters of the plugin's own Shortcodes? 
+* Improved: Installation instructions, HTTP-status FAQ and installer recommendations library 1.2.1.
+* Fixed: Widget administration and Customizer styles while adding widgets.
 
-**(1) Parameters for `[gwnf-widget-area]` Shortcode:**
+### 1.6.2 · 2018-11-03
 
-* `area` -- ID of the Widget area (Sidebar) (default: none, empty)
-* The following values are accepted: `404` OR `notfound` OR `bbpress-notfound`
+* New: Plugin walkthrough video.
+* Improved: Installer recommendations library 1.2.0 with Dark Mode styling.
 
-**(2) Parameters for `[gwnf-search]` Shortcode:**
+### 1.6.1 · 2018-10-01
 
-* `search_text` -- Search placeholder text (default: `Search this website`)
-* `button_text` -- HTML wrapper tag (default: `Search`)
-* `form_label` -- Additional label before the search form (default: none, empty)
-* `wrapper` -- HTML wrapper tag (default: `Latest update date:`)
-* `class` -- Additional custom CSS class for the wrapper (default: none, empty)
-* `post_type` -- Optional setup post type(s) for search (default: none, empty - i.e., WordPress default search behavior!)
+* New: Update messages on the Plugins screen and community support links.
+* Improved: Installer recommendations library 1.1.0 and German translations.
 
+### 1.6.0 · 2018-08-25
 
-### Could I completely remove the plugin's Shortcode features? 
-Of course, that's possible! Just add the following constant to your child theme's `functions.php` file or to a functionality plugin:
-```
-/** Genesis Widgetized Not Found & 404: Remove Shortcode Features */
-define( 'GWNF_SHORTCODE_FEATURES', TRUE );
-```
+* New: Genesis menu shortcut, Customizer preview/test links, widget-area hints, GitHub distribution, Composer metadata, icons and installer recommendations.
+* Improved: Widget registration, developer filters, documentation, translations and screenshots.
+* Misc: Removed unavailable Facetious integration.
 
+### 1.5.0 · 2013-05-29
 
-### Can I remove the widgetized content area for bbPress forum search "not found"? 
-Of course, that's possible - very easily :). Just add the following line of code to your child theme's `functions.php` file or a functionality plugin:
+* New: Configurable search widget, search and widget-area shortcodes, bbPress 2.3 empty-search integration and partial Spanish translation.
+* Improved: Genesis 2.0 HTML5 markup, conditional frontend loading, stylesheet handling, documentation and German translations.
 
-```
-/**
- * Genesis Widgetized Not Found & 404:
- *  Remove bbPress Widgetized Content Area on "not found"
- */
-add_filter( 'gwnf_filter_bbpress_noresults_widgetized', '__return_false' );
-```
+<a id="author"></a>
+## Author and history
 
+Developed and published by David Decker – DECKERWEB. First released on April 20, 2012. This GitHub package includes the updater and is not intended for WordPress.org.
 
+<a id="support"></a>
+## Support and security
 
-### How can I customize the widget titles/strings in the admin? 
-I've just included some filters for that - if ever needed (i.e. for clients, branding purposes etc.), you can use these filters:
+[Issues](https://github.com/deckerweb/genesis-widgetized-notfound/issues) · [Private security reporting](SECURITY.md) · [Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
 
-**gwnf/filter/widget_areas/404/title** - default value: "404 Error Page"
+<a id="license"></a>
+## Copyright and license
 
-**gwnf/filter/widget_areas/404/description** - default value: "This is the widget area of the 404 Not Found Error Page."
-
-**gwnf/filter/widget_areas/notfound/title** - default value: "Search Not Found"
-
-**gwnf/filter/widget_areas/notfound/description** - default value: "This is the widget area of the search not found content section."
-
-**gwnf_filter_notfound_default** - default value: "Sorry, no content matched your criteria. Try a different search?"
-
-Example code for changing one of these filters:
-```
-add_filter( 'gwnf/filter/widget_areas/404/title', 'custom_404_widget_title' );
-/**
- * Genesis Widgetized NotFound: Custom 404 Widget Title
- */
-function custom_404_widget_title() {
-	return __( 'Custom Error Page', 'your-child-theme-textdomain' );
-}
-```
-
-
-**Final note:** I DON'T recommend to add customization code snippets to your child theme's `functions.php` file! **Please use a functionality plugin instead!** In general you should not abusing the functions.php for plugin-specific stuff. And you are then also more independent from child theme changes etc. If you don't know how to create such a plugin yourself just use one of my recommended 'Code Snippets' plugins. Read & bookmark these Sites:
-
-* [**Code Snippets** plugin by Shea Bunge](https://wordpress.org/plugins/code-snippets/)
-* [**PHP Code Snippets (Insert PHP)** plugin by webcraftic](https://wordpress.org/plugins/insert-php/)
-* [**"What is a functionality plugin and how to create one?"**](http://wpcandy.com/teaches/how-to-create-a-functionality-plugin) - *blog post by WPCandy*
-* [**"Creating a custom functions plugin for end users"**](http://justintadlock.com/archives/2011/02/02/creating-a-custom-functions-plugin-for-end-users) - *blog post by Justin Tadlock*
-
-All the custom & branding stuff code above can also be found as a [Gist on GitHub: https://gist.github.com/deckerweb/2473125](https://gist.github.com/deckerweb/2473125) (you can also add your questions/ feedback there :)
-
-
-### How can I use the advantages of this plugin for multlingual sites? 
-(1) In general: You may use it for "global" widgets.
-
-(2) Usage with the "WPML" plugin:
-Widgets can be translated with their "String Translation" component - this is much easier than adding complex information/instructions to the 404 error or search not found pages for a lot of languages...
-
-You can use the awesome ["Widget Options"](https://wordpress.org/plugins/widget-options/) or ["Widget Logic"](https://wordpress.org/plugins/widget-logic/) plugins (or similar ones) and add additional paramaters, mostly conditional stuff like `is_home()` in conjunction with `is_language( 'de' )` etc. This way widget usage on a per-language basis is possible. Or you place in the WPML language codes like `ICL_LANGUAGE_CODE == 'de'` for German language. Fore more info on that see their blog post: http://wpml.org/2011/03/howto-display-different-widgets-per-language/
-
-With the following language detection code you are now able to make conditional statements, in the same way other WordPress conditional functions work, like `is_single()`, `is_home()` etc.:
-```
-if ( ! function_exists( 'is_language' ) ) :
-
-	/**
-	 * WPML: Conditional Switching Languages
-	 *
-	 * @author David Decker - DECKERWEB
-	 * @link   https://twitter.com/deckerweb
-	 *
-	 * @global mixed $GLOBALS[ 'sitepress' ]
-	 */
-	function is_language( $current_lang ) {
-
-		if ( $current_lang == $GLOBALS[ 'sitepress' ]->get_current_language() ) {
-			return TRUE;
-		}
-
-	}  // end function
-
-endif;
-```
-
-*Note:* Be careful with the function name 'is_language' - this only works if there's no other function in your install with that name! If it's already taken (very rare case though), then just add a prefix like `my_custom_is_language()`.
-
---> You now can use conditionals like that:
-
-```
-if ( is_language( 'de' ) ) {
-	// do something for German language...
-} elseif ( is_language( 'es' ) ) {
-	// do something for Spanish language...
-}
-```
-
-
-### More info on Translations?
-
-* English - default, always included
-* German (de_DE): Deutsch - immer dabei! :-)
-* For custom and update-safe language files please upload them to `/wp-content/languages/genesis-widgetized-notfound/` (just create this folder) - This enables you to use fully custom translations that won't be overridden on plugin updates. Also, complete custom English wording is possible with that as well, just use a language file like `genesis-widgetized-notfound-en_US.mo/.po` to achieve that (for creating one see the following tools).
-
-**Easy WordPress.org plugin translation platform with GlotPress platform:** [**Translate "Genesis Widgetized Not Found & 404"...**](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
-
-*Note:* All my plugins are internationalized/ translateable by default. This is very important for all users worldwide. So please contribute your language to the plugin to make it even more useful. For translating and validating I recommend the awesome ["Poedit Editor"](https://www.poedit.net/), which works fine on Windows, macOS and Linux.
-
-
-
-## Screenshots 
-
-### 1. Two additional Widget areas - here with some example widgets placed in
-![Two additional Widget areas - here with some example widgets placed in](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-1.png)
-
-
-### 2. Live site: displaying 404 Page - widgetized now! (Demo: Genesis Sample 2.6.0)
-![Live site: displaying 404 Page - widgetized now! (Demo: Genesis Sample 2.6.0)](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-2.png)
-
-
-### 3. Live site: displaying here the "Search not found" page (Demo: Genesis Sample 2.6.0)
-![Live site: displaying here the "Search not found" page (Demo: Genesis Sample 2.6.0)](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-3.png)
-
-
-### 4. Widgets in Customizer with Live Preview: setup the 404 Error Page Widget area (Demo: Genesis Sample 2.6.0)
-![Widgets in Customizer with Live Preview: setup the 404 Error Page Widget area (Demo: Genesis Sample 2.6.0)](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-4.png)
-
-
-### 5. The plugin's own search widget called "Genesis - Search Form" with way more options than the WordPress core search widget!
-![The plugin's own search widget called "Genesis - Search Form" with way more options than the WordPress core search widget!](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-5.png)
-
-
-### 6. The lugin's optional Shortcodes in action for a page
-![The lugin's optional Shortcodes in action for a page](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-6.png)
-
-
-### 7. Live site: Shortcode from test page in action (Demo: Genesis Sample 2.6.0)
-![Live site: Shortcode from test page in action (Demo: Genesis Sample 2.6.0)](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-7.png)
-
-
-### 8. Submenu on Genesis Settings - quick access to setup
-![Submenu on Genesis Settings - quick access to setup](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-8.png)
-
-
-### 9. The plugin's help tab on the Widgets admin page with additional info
-![The plugin's help tab on the Widgets admin page with additional info](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-9.png)
-
-
-### 10. Plugins page entry with Quick Jump Links for setup, preview/ testing
-![Plugins page entry with Quick Jump Links for setup, preview/ testing](https://ps.w.org/genesis-widgetized-notfound/assets/screenshot-10.png)
-
-
-
-
-## Changelog 
-
-### ⚡ 1.6.4 - 2019-05-04
-* *New: Successfully tested with WordPress 5.2*
-* New: Integrated with WordPress 5.2+ new Site Health feature: Genesis Widgetized Not Found & 404 now has an extra section on the Debug Info tab - this is especially helpful for support requests
-* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.4.0) - feature updates
-* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
-* New: [Join my newsletter for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn) - insider info, plus tutorials and more useful stuff
-
-
-### ⚡ 1.6.3 - 2018-11-22
-* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.1) - CSS fixes
-* Tweak: Overhauled "Installation" part of this Readme.txt file completely
-* Tweak: Added new FAQ entry regarding HTTP status in this Readme.txt file here
-* Fix: Changed admin style enqueueing on the Widgets Admin - this fixes the issues when adding widgets AND also in the Customizer
-
-
-### ⚡ 1.6.2 - 2018-11-03
-* New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=0RJldBSH_fA)
-* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
-* Tweak: Few internal code tweaks and improvements
-
-
-### ⚡ 1.6.1 - 2018-10-01
-* New: Added plugin update message also to Plugins page (overview table)
-* New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
-* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
-* Tweak: Internal code improvements and tweaks
-* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
-
-
-### 🎉 1.6.0 - 2018-08-25 
-* *New: Brought the plugin back to life after more than five years, yeah! :)*
-* New: Added submenu item for Genesis Settings in WP-Admin left-hand menu - this redirects directly to the Widgets admin page, which makes it totally easy to setup the stuff
-* New: Added handy Customizer Live Preview links for our two Genesis Widget areas to Plugins page
-* New: For WP 4.9.7 or higher: Added handy Customizer Live Preview links, plus live testing links to the description of our two Genesis Widget areas on the Widgets page (in WP-Admin)
-* New: Added subtle note on our two Widget area titles to make it more clear what belongs to what
-* New: Release on GitHub.com as well (for issues, development etc.), see here: [https://github.com/deckerweb/genesis-widgetized-notfound](https://github.com/deckerweb/genesis-widgetized-notfound)
-* New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
-* New: Added `README.md` file for plugin's GitHub.com repository to make it more readable there
-* New: Added new plugin icon and banner on WordPress.org
-* New: Added plugins recommendations library by deckerweb to add plugin installer tips
-* Tweak: Updated all internal plugin links to current state, deleted the ones that were dead or no longer needed
-* Tweak: Changed registering of widget areas to newer Genesis functions
-* Tweak: Changed some filter hook tags to comply with the new features, and, to have them more logical and better organized
-* Tweak: Code improvements and internal documentation updates
-* Tweak: Removed "Facetious" plugin support as this is no longer available
-* Update: `.pot` file for translators, plus German translations
-* Update: Readme.txt file.
-* Update: All new screenshots - plus some more ;-)
-* *Trivia fact: this plugin is already over 6 (six!) years old. Whoa, that's a lot. ;-)*
-
-
-
-### 🎉 1.5.0 - 2013-05-29 
-* NEW: Added Widget "Genesis - Search Form" - more customizeable than the built-in WordPress core widget (change Search text, Submit text, display options etc.).
-* NEW: Added Shortcode `[gwnf-search]` for displaying a configurable search for anywhere you like :) -- conditionally with full support for HTMTL5 & Genesis 2.0.0+ if in use.
-* NEW: Added Shortcode `[gwnf-widget-area]` for displaying any of the plugin's 3 Widget areas (if active) into Shortcode aware content areas.
-* NEW: Added support for bbPress 2.3+ forum plugin: Added widgetized content area for the "No results" state of the bbPress Forum search - now you can easily customize this "edge case" with well-known and proved regular WordPress tools (that are Widgets!).
-* UPDATE: All markup output by the plugin is now fully compatible with Genesis 2.0+, that means for HTML5 if the child theme supports it (is done all automatically & conditionally under the surface!).
-* UPDATE: Additional stylesheet now uses the WordPress convention for file names: `gwnf-styles.min.css` (`gwnf-html5-styles.min.css`) is the minified default version, plus, `gwnf-styles.css` (`gwnf-html5-styles.css`) is now the development version. If `WP_DEBUG` or `SCRIPT_DEBUG` constants are `true`, the dev styles will be loaded. This makes development/ customizing & debugging a lot easier! :)
-* UPDATE: Improved versioning of stylesheet, also in light of above update :).
-* UPDATE: All frontent relevant code is now moved into the plugin's frontend file and only then loaded!
-* CODE: Some code optimizations, plus code/documentation updates & improvements.
-* UPDATE: Added a few new screenshots.
-* UPDATE: Updated readme.txt file here.
-* UPDATE: Updated German translations and also the .pot file for all translators.
-* NEW: Added partly Spanish translations, user-submitted.
-
-
-
-### 🎉 1.4.0 - 2012-12-15 
-* *Maintenance release*
-* UPDATE: Added the class placeholder to widget registrations to fullfill WordPress standard for Widgets API.
-* NEW: Added constant for disabling the widget shortcode support (see FAQ here).
-* CODE: Some code/documentation updates & improvements.
-* UPDATE: Updated readme.txt file here.
-* UPDATE: Initiated new three digits versioning, starting with this version.
-* UPDATE: Updated German translations and also the .pot file for all translators.
-* UPDATE: Moved screenshots to 'assets' folder in WP.org SVN to reduce plugin package size.
-
-
-
-### 🎉 1.3.0 - 2012-08-20 
-* *Maintenance release*
-* NEW: Added help tab also on Genesis settings page.
-* NEW: Compressed CSS file for improved performance (the development file has now the file name `gwnf-styles.dev.css` and is still packaged).
-* CODE: Minor code/documentation updates & improvements.
-* UPDATE: Updated German translations and also the .pot file for all translators.
-* UPDATE: Extended GPL License info in readme.txt as well as main plugin file.
-* NEW: Easy plugin translation platform with GlotPress tool: [Translate "Genesis Widgetized Not Found & 404"...](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
-
-
-
-### 🎉 1.2.0 - 2012-04-27 
-* NEW: Added little help tab on Widget admin page for better user experience. (Works only with WordPress 3.3 or higher!)
-* UPDATE: Moved plugin links from main file to extra admin file which only loads within 'wp-admin', this way it's performance-improved! This also effects the new help tab stuff :).
-* UPDAGE: Added action hook `gwnf_load_styles` if you ever need to properly enqueue your own stylesheet for the edge cases... (Also see FAQ here).
-* CODE: Minor code/documentation tweaks and improvements.
-* UPDATE: Extended and improved readme.txt file documentation here, corrected typos.
-* UPDATE: Updated German translations and also the .pot file for all translators.
-
-
-
-### 🎉 1.1.0 - 2012-04-23 
-* NEW: Added two helper functions (via child theme) for applying the Genesis 'Full-Width' layout option for one or both 'not found' cases! This is very handy for lots of use cases... -- [See the FAQ section for more info on that!](https://wordpress.org/plugins/genesis-widgetized-notfound/#faq)
-* UPDATE: Placed widget display in conditionals only for the "404" or the "Search not found" case to avoid overlaying of more than one 'no content messages'. This should finally cover more edge cases...
-* UPDATE: Improved translations loading, especially for activation (messages).
-* UPDATE: Improved registering of widget areas/sidebars: switching back to Genesis register function, but now properly wrapped in a conditional, checking for activated Genesis. This way we also get further improved Multisite support!
-* UPDATE: Improved CSS styling, handling the limition of the empty "p" (left over from the original "no content status" of Genesis).
-* UPDATE: Updated German translations and also the .pot file for all translators.
-
-
-
-### ⚡ 1.0.1 - 2012-04-20 
-* Bugfix release. Mmh, stuff happens...
-* UPDATE: Changed widget registering from Genesis to WordPress function (it doesn't matter in the end!)
-* BUGFIX: Fixed function typo that was causing notices on plugin activation.
-* UPDATE: Minor code documentation updates. Also, minor updates to readme.txt file here.
-* UPDATE: Updated German translations and also the .pot file for all translators.
-* UPDATE: Added banner image on WordPress.org for better plugin branding :)
-
-
-
-### 🎉 1.0.0 - 2012-04-20 
-* Initial release
-
-
-## Upgrade Notice 
-
-
-### 1.6.4
-Now with WordPress 5.2 Site Health integration. Plus few internal improvements. - **Update highly recommended!**
-
-
-### 1.6.3
-Maintenance release. Important fix for Widgets. Bundled library update. - **Update highly recommended!**
-
-
-### 1.6.2
-Maintenance release. Bundled library update. Small tweaks. Update recommended.
-
-
-### 1.6.1
-Maintenance release: Various tweaks and improvements, plus updated bundled library. Update recommended.
-
-
-### 1.6.0 
-Major release: Back in life :) - improved user guiding in admin. Lots of improvements, tweaks and fixes.
-
-
-### 1.5.0 
-Major additions & improvements: Own search widget; Shortcodes. Some code & documentation optimizations and improvements. Also updated .pot file for translators plus German & Spanish translations.
-
-
-### 1.4.0 
-Maintenance release: Improvements for the Widgets API. Minor code & documentation improvements. Also updated .pot file for translators plus German translations.
-
-
-### 1.3.0 
-Maintenance release: Added help tab for Genesis settings. Minor code & documentation improvements. Also updated .pot file for translators plus German translations.
-
-
-### 1.2.0 
-Several changes & improvements: Performance/Code improvements. Added little help tab, corrected typos and extended readme.txt documentation. Also updated .pot file for translators plus German translations.
-
-
-### 1.1.0 
-Several changes & improvements: Added two layout helper functions. Further, improved conditional checks, code and documentation. Also updated readme.txt file as well as .pot plus German translations.
-
-
-### 1.0.1 
-Several minor changes, mostly fixing two ugly bugs. Also changed readme files and updated translations.
-
-
-### 1.0.0 
-Just released into the wild.
-
-
-## Donate 
-Enjoy using *Genesis Widgetized Not Found & 404*? [**Please consider making a donation**](https://www.paypal.me/deckerweb) to support the project's continued development.
-
-
-## Plugin Links 
-* [Translations (WP GlotPress Platform)](https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound)
-* [User support forums](https://wordpress.org/support/plugin/genesis-widgetized-notfound)
-* [Code snippets archive for customizing, GitHub Gist](https://gist.github.com/deckerweb/2473125)
-* [DECKERWEB WordPress Plugins Facebook Group](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
-
-
-## Translations 
-
-* English - default, always included
-* German (de_DE): Deutsch - immer dabei! [Download auch via deckerweb.de](http://deckerweb.de/material/sprachdateien/genesis-plugins/#genesis-widgetized-notfound)
-* Spanish (es_ES): Español - user-submitted, only a few strings yet...
-* For custom and update-secure language files please upload them to `/wp-content/languages/genesis-widgetized-notfound/` (just create this folder) - This enables you to use fully custom translations that won't be overridden on plugin updates. Also, complete custom English wording is possible with that as well, just use a language file like `genesis-widgetized-notfound-en_US.mo/.po` to achieve that.
-
-**Easy plugin translation platform with GlotPress tool:** [**Translate "Genesis Widgetized Not Found & 404"...**](http://translate.wpautobahn.com/projects/genesis-plugins-deckerweb/genesis-widgetized-notfound)
-
-*Note:* All my plugins are internationalized/ translateable by default. This is very important for all users worldwide. So please contribute your language to the plugin to make it even more useful. For translating I recommend the awesome ["Codestyling Localization" plugin](https://wordpress.org/plugins/codestyling-localization/) and for validating the ["Poedit Editor"](http://www.poedit.net/), which works fine on Windows, Mac and Linux.
-
-
-## Idea Behind / Philosophy 
-I always wanted the 404 and search not found content easily customizeable! The standard messages like "Sorry, no posts matched your criteria." are a shame and lame user experience. Widgets in WordPress are powerful and allow for adding really diverse and custom stuff. So, when building my "Autobahn" child theme for Genesis I really came across this idea and technique. I also implemented it in a lot of my client projects. Now I am really happy to represent this tool in form of a plugin to make more webmasters and especially users/visitors really happy - and help them stay longer on your site!
-
-
-## Credits 
-* Thanks to Genesis User & Blogger [Rick R. Duncan @RickRDuncan](https://twitter.com/RickRDuncan) for mentioning and supporting this plugin when it came out - Thank you! :-)
-* Any other blog post or something cool about this plugin? - Just contact me :)
+Copyright © 2012–2026 David Decker – DECKERWEB. GPL-2.0-or-later. [License and components](docs/LICENSES.md).

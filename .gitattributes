@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.php text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+/docs/content.json export-ignore
+/tools/ export-ignore
+/wiki/ export-ignore
+/assets/drafts/ export-ignore
+/assets/archive/ export-ignore
+/.github/ export-ignore
+/pages/ export-ignore

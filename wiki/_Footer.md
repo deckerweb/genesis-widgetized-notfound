@@ -1,0 +1,1 @@
+© 2012–2026 David Decker – DECKERWEB · [GitHub](https://github.com/deckerweb/genesis-widgetized-notfound) · [Security](https://github.com/deckerweb/genesis-widgetized-notfound/security/advisories/new)

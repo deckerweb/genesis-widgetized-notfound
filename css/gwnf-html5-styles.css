@@ -16,7 +16,7 @@ main.content #gwnf-bbpress-widgetized-content {
 }
 
 /* More bottom space after each widget */
-main.content div.widget-area {
+main.content .gwnf-area .widget {
 	margin-bottom: 35px;
 }
 
@@ -26,3 +26,4 @@ main.content div.widget-area {
 	display: none;
 	height: 0;
 }
+.gwnf-area .widget,.gwnf-bbpress-widgetized-noresults{margin-bottom:30px}

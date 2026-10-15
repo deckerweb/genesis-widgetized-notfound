@@ -14,16 +14,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_action( 'genesis_meta', 'gwnf_404_content' );
 /**
- * Add the new widgetized 404 Error Page content.
+ * Select assigned 404 widgets or the explicitly enabled empty-area starter.
  *
  * @since 1.0.0
+ * @return void
  */
 function gwnf_404_content() {
 
-	if ( is_404() && is_active_sidebar( 'gwnf-404-widget' ) ) {
+	$settings = ddw_gwnf_get_settings();
+	if ( is_404() && ( is_active_sidebar( 'gwnf-404-widget' ) || $settings['starter_404'] ) ) {
 
 		remove_action( 'genesis_loop', 'genesis_404' );		// Genesis Core
-		add_action( 'genesis_loop', 'gwnf_display_404_widget' );
+		add_action( 'genesis_loop', is_active_sidebar( 'gwnf-404-widget' ) ? 'gwnf_display_404_widget' : 'ddw_gwnf_display_404_starter' );
 
 	}  // end if
 
@@ -34,6 +36,7 @@ function gwnf_404_content() {
  * Display the "404 Error Page" widget area.
  *
  * @since 1.0.0
+ * @return void
  */
 function gwnf_display_404_widget() {
 
@@ -49,6 +52,7 @@ add_action( 'genesis_meta', 'gwnf_notfound_content' );
  * Logic for "Search Not Found" status.
  *
  * @since 1.5.0
+ * @return void
  */
 function gwnf_notfound_content() {
 
@@ -81,6 +85,7 @@ function gwnf_notfound_content() {
  * @since 1.5.0
  *
  * @uses  dynamic_sidebar()
+ * @return void
  */
 function gwnf_display_notfound_widget() {
 
@@ -95,21 +100,24 @@ function gwnf_display_notfound_widget() {
  * Modify the no content text, adding search form.
  *
  * @since 1.0.0
+ * @return void
  */
 function gwnf_nocontent_status() {
 
-	/** Set filter for default "Search Not Found" message */
+	$settings = ddw_gwnf_get_settings();
+	$message = '' !== $settings['notfound_text'] ? nl2br( esc_html( $settings['notfound_text'] ) ) : __( 'Sorry, no content matched your criteria. Try a different search?', 'genesis-widgetized-notfound' );
+	/** Filter empty-search fallback HTML, sanitized on output. @since 1.0.0 @param string $message Message HTML. */
 	$gwnf_notfound_default = apply_filters(
 		'gwnf_filter_notfound_default',
-		__( 'Sorry, no content matched your criteria. Try a different search?', 'genesis-widgetized-notfound' )
+		$message
 	);
 
 	printf(
 		'<div class="gwnf-notfound-default gwnf-area">%1$s</div>
 		<br />
 		<div class="gwnf-search-area gwnf-area">%2$s</div>',
-		$gwnf_notfound_default,
-		get_search_form( $echo = FALSE )
+		wp_kses_post( $gwnf_notfound_default ),
+		get_search_form( false )
 	);
 
 }  // end function
@@ -119,19 +127,21 @@ add_action( 'wp_enqueue_scripts', 'ddw_gwnf_styles' );
 /**
  * Enqueue a few additional CSS rules for enhanced compatibility with Genesis
  *    Child Themes.
- * 
+ *
  * @since  1.0.0
  *
  * @uses   ddw_gwnf_script_suffix()
  * @uses   ddw_gwnf_script_version()
  *
  * @global mixed $GLOBALS[ 'wp_query' ]
+ * @return void
  */
 function ddw_gwnf_styles() {
 
 	/** Check for the active widget areas */
-	if ( ( is_404() || empty( $GLOBALS[ 'wp_query' ]->posts ) )
-		&& ( is_active_sidebar( 'gwnf-404-widget' ) || is_active_sidebar( 'gwnf-notfound-widget' ) )
+	if ( ( is_404() && is_active_sidebar( 'gwnf-404-widget' ) )
+		|| ( is_search() && empty( $GLOBALS['wp_query']->posts ) && is_active_sidebar( 'gwnf-notfound-widget' ) )
+		|| ( function_exists( 'bbp_is_search' ) && bbp_is_search() && is_active_sidebar( 'gwnf-bbpress-notfound-area' ) )
 	) {
 
 		/** Check for Genesis HTML5 */
@@ -141,7 +151,7 @@ function ddw_gwnf_styles() {
 		wp_register_style(
 			'genesis-widgetized-notfound',
 			plugins_url( 'css/gwnf-' . $gwnf_genesis_html . 'styles' . ddw_gwnf_script_suffix() . '.css', dirname( __FILE__ ) ),
-			false,
+			array(),
 			ddw_gwnf_script_version(),
 			'all'
 		);
@@ -149,7 +159,7 @@ function ddw_gwnf_styles() {
 		/** Enqueue our XHTML or HTML5 styles */
 		wp_enqueue_style( 'genesis-widgetized-notfound' );
 
-		/** Action hook: 'gwnf_load_styles' - allows for enqueueing additional custom styles */
+		/** Enqueue additional styles for a displayed plugin widget area. @since 1.2.0 */
 		do_action( 'gwnf_load_styles' );
 
 	}  // end if active widget check
@@ -163,6 +173,7 @@ function ddw_gwnf_styles() {
  * Usage: add_action( 'genesis_meta', '__gwnf_layout_404_full_width' );
  *
  * @since 1.1.0
+ * @return void
  */
 function __gwnf_layout_404_full_width() {
 
@@ -182,6 +193,7 @@ function __gwnf_layout_404_full_width() {
  * @since  1.1.0
  *
  * @global mixed $GLOBALS[ 'wp_query' ]
+ * @return void
  */
 function __gwnf_layout_searchnotfound_full_width() {
 
@@ -201,7 +213,7 @@ function __gwnf_layout_searchnotfound_full_width() {
  * @return string String for minifying scripts/ stylesheets.
  */
 function ddw_gwnf_script_suffix() {
-	
+
 	return ( ( defined( 'WP_DEBUG' ) && WP_DEBUG ) || ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ) ? '' : '.min';
 
 }  // end function
@@ -216,6 +228,23 @@ function ddw_gwnf_script_suffix() {
  */
 function ddw_gwnf_script_version() {
 
-	return ( ( defined( 'WP_DEBUG' ) && WP_DEBUG ) || ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ) ? time() : filemtime( plugin_dir_path( __FILE__ ) );
+	return GWNF_VERSION;
 
 }  // end function
+
+/**
+ * Render the opt-in 404 starter only when the normal 404 area is unassigned.
+ * Saved widget areas take precedence; all custom text is escaped as plain text.
+ * @since 2.0.0
+ * @return void
+ */
+function ddw_gwnf_display_404_starter() {
+ $settings = ddw_gwnf_get_settings();
+ if ( ! is_404() || ! $settings['starter_404'] || is_active_sidebar( 'gwnf-404-widget' ) ) { return; }
+ $title = '' !== $settings['starter_404_title'] ? $settings['starter_404_title'] : __( 'Page not found', 'genesis-widgetized-notfound' );
+ $text = '' !== $settings['starter_404_text'] ? $settings['starter_404_text'] : __( 'The page you are looking for could not be found. Please check the address.', 'genesis-widgetized-notfound' );
+ echo '<article class="gwnf-404-starter entry"><header class="entry-header"><h1 class="entry-title">' . esc_html( $title ) . '</h1></header><div class="entry-content"><p>' . nl2br( esc_html( $text ) ) . '</p>';
+ if ( $settings['starter_404_search'] ) { echo get_search_form( array( 'echo' => false ) ); }
+ if ( $settings['starter_404_home'] ) { echo '<p><a class="gwnf-home-link" href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Back to the homepage', 'genesis-widgetized-notfound' ) . '</a></p>'; }
+ echo '</div></article>';
+}

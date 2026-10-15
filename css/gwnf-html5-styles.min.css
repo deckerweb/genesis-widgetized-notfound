@@ -1,1 +1,29 @@
-main.content #gwnf-404-area,main.content #gwnf-notfound-area,main.content #gwnf-bbpress-widgetized-content{padding:5px;}main.content div.widget-area{margin-bottom:35px;}.error404 main.content>p,.search-no-results main.content>p{display:none;height:0;}
+/**
+ * Plugin: Genesis Widgetized Not Found & 404
+ * Styles: Frontend - HTML5
+ *
+ * @since 1.5.0
+ */
+
+/* Widgets in Content Area
+------------------------------------------------------------ */
+
+/* Space around the whole container */
+main.content #gwnf-404-area,
+main.content #gwnf-notfound-area,
+main.content #gwnf-bbpress-widgetized-content {
+	padding: 5px;
+}
+
+/* More bottom space after each widget */
+main.content .gwnf-area .widget {
+	margin-bottom: 35px;
+}
+
+/* Handling the empty "p" left over from Genesis' "no content status" */
+.error404 main.content > p,
+.search-no-results main.content > p {
+	display: none;
+	height: 0;
+}
+.gwnf-area .widget,.gwnf-bbpress-widgetized-noresults{margin-bottom:30px}

@@ -23,16 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function ddw_gwnf_info_values() {
 
-	/** Get current user */
-	$user = wp_get_current_user();
-
-	/** Build Newsletter URL */
-	$url_nl = sprintf(
-		'https://deckerweb.us2.list-manage.com/subscribe?u=e09bef034abf80704e5ff9809&amp;id=380976af88&amp;MERGE0=%1$s&amp;MERGE1=%2$s',
-		esc_attr( $user->user_email ),
-		esc_attr( $user->user_firstname )
-	);
-
 	$gwnf_info = array(
 
 		'url_translate'     => 'https://translate.wordpress.org/projects/wp-plugins/genesis-widgetized-notfound',
@@ -42,13 +32,13 @@ function ddw_gwnf_info_values() {
 		'url_snippets'      => 'https://gist.github.com/deckerweb/2473125',
 		'url_fb_group'      => 'https://www.facebook.com/groups/deckerweb.wordpress.plugins/',
 		'license'           => 'GPL-2.0-or-later',
-		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
+		'url_license'       => 'https://www.gnu.org/licenses/gpl-2.0.html',
 		'url_donate'        => 'https://www.paypal.me/deckerweb',
-		'url_newsletter'    => $url_nl,
+		'url_newsletter'    => 'https://github.com/deckerweb',
 		'url_plugin'        => 'https://github.com/deckerweb/genesis-widgetized-notfound',
 		'first_code'        => '2012',
 		'author'            => __( 'David Decker - DECKERWEB', 'genesis-widgetized-notfound' ),
-		'author_uri'        => 'https://deckerweb.de/',
+		'author_uri'        => 'https://github.com/deckerweb',
 
 	);  // end array
 
@@ -72,10 +62,10 @@ function ddw_gwnf_get_info_url( $url_key = '', $raw = FALSE ) {
 
 	$gwnf_info = (array) ddw_gwnf_info_values();
 
-	$output = esc_url( $gwnf_info[ sanitize_key( $url_key ) ] );
+	$output = esc_url( $gwnf_info[ sanitize_key( $url_key ) ] ?? '' );
 
 	if ( TRUE === $raw ) {
-		$output = esc_url_raw( $gwnf_info[ esc_attr( $url_key ) ] );
+		$output = esc_url_raw( $gwnf_info[ sanitize_key( $url_key ) ] ?? '' );
 	}
 
 	return $output;
@@ -127,9 +117,9 @@ function ddw_gwnf_coding_years( $first_year = '' ) {
 	$first_year = ( empty( $first_year ) ) ? absint( $gwnf_info[ 'first_code' ] ) : absint( $first_year );
 
 	/** Set year of first released code */
-	$code_first_year = ( date( 'Y' ) == $first_year || 0 === $first_year ) ? '' : $first_year . '&#x02013;';
+	$code_first_year = ( gmdate( 'Y' ) == $first_year || 0 === $first_year ) ? '' : $first_year . '&#x02013;';
 
-	return $code_first_year . date( 'Y' );
+	return $code_first_year . gmdate( 'Y' );
 
 }  // end function
 
@@ -145,16 +135,16 @@ function ddw_gwnf_coding_years( $first_year = '' ) {
 function ddw_gwnf_get_customizer_preview_link( $area = '' ) {
 
 	/** Sanitize given area string */
-	$area = sanitize_key( $area );
+	$area = in_array( $area, array( '404', 'notfound' ), true ) ? $area : '404';
 
 	/** Check Widget area the 2 possible values */
 	switch ( $area ) {
 
 		case 'notfound':
-			$url = get_site_url() . '/?s=' . md5( rand() );
+			$url = home_url() . '/?s=' . md5( rand() );
 			break;
 		case '404':
-			$url = get_site_url() . '/404-testing-' . md5( rand() );
+			$url = home_url() . '/404-testing-' . md5( rand() );
 			break;
 
 	}  // end switch
@@ -169,3 +159,15 @@ function ddw_gwnf_get_customizer_preview_link( $area = '' ) {
 	);
 
 }  // end function
+
+/**
+ * Build a normal frontend test URL without altering saved content or query behavior.
+ * Random identifiers make a real missing-page/empty-search response very likely.
+ * @since 2.0.0
+ * @param string $area Test context: notfound or 404 (default).
+ * @return string Local frontend URL; no preview bypass or forced status.
+ */
+function ddw_gwnf_get_frontend_test_link( $area = '404' ) {
+ $token = 'gwnf-test-' . wp_generate_uuid4();
+ return add_query_arg( 'notfound' === $area ? 's' : 'pagename', $token, home_url( '/' ) );
+}

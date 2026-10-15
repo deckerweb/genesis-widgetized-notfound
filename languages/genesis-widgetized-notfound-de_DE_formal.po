@@ -1,599 +1,957 @@
 msgid ""
-msgstr ""
-"Project-Id-Version: Genesis Widgetized Not Found & 404\n"
-"POT-Creation-Date: 2019-05-04 00:42+0200\n"
-"PO-Revision-Date: 2019-05-04 00:42+0200\n"
-"Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
-"Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
-"Language: de_DE\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
-"X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: genesis-widgetized-notfound.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+msgstr "Project-Id-Version: Genesis Widgetized Not Found & 404 2.0.0\nLanguage: de_DE_formal\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nPO-Revision-Date: 2026-10-15 00:00+0200\nLast-Translator: David Decker\nLanguage-Team: German\n"
 
-# @ genesis-widgetized-notfound
-#. translators: 1 = Plugin name / 2 = anchor opening tag / 3 = anchor closing tag
-#: genesis-widgetized-notfound.php:104
-#, php-format
-msgid ""
-"Sorry, you cannot activate the %1$s plugin unless you have installed the "
-"latest version of the %2$sGenesis Framework%3$s."
-msgstr ""
-"Hinweis: Das Plugin '%1$s' kann <em>nicht</em> aktiviert werden, solange die "
-"neueste Version des %2$sGenesis Frameworks%3$s nicht installiert ist."
-
-# @ genesis-widgetized-notfound
-#. Plugin Name of the plugin/theme
-#: genesis-widgetized-notfound.php:105 genesis-widgetized-notfound.php:112
-#: includes/gwnf-admin-extras.php:34 includes/gwnf-admin.php:263
-#: includes/gwnf-admin.php:338 includes/gwnf-widget-search.php:62
 msgid "Genesis Widgetized Not Found & 404"
 msgstr "Genesis Widgets für Nichts gefunden"
 
-# @ genesis-widgetized-notfound
-#: genesis-widgetized-notfound.php:112 includes/gwnf-admin-extras.php:34
-#: includes/gwnf-admin.php:338
-msgid "Plugin"
-msgstr "Plugin"
+msgid "https://github.com/deckerweb/genesis-widgetized-notfound"
+msgstr "https://github.com/deckerweb/genesis-widgetized-notfound"
 
-#: includes/gwnf-admin-extras.php:29
+msgid "Customize Genesis 404 pages and empty search results with widgets, an accessible search form and shortcodes."
+msgstr "Gestalten Sie Genesis-404-Seiten und leere Suchergebnisse mit Widgets, einem zugänglichen Suchformular und Shortcodes."
+
+msgid "David Decker – DECKERWEB"
+msgstr "David Decker – DECKERWEB"
+
+msgid "https://github.com/deckerweb"
+msgstr "https://github.com/deckerweb"
+
 msgid "Yes, has widgets"
 msgstr "Ja, hat Widgets"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin-extras.php:30
 msgid "No, is empty"
 msgstr "Nein, ist leer"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin-extras.php:37
+msgid "Plugin"
+msgstr "Plugin"
+
 msgid "Plugin version"
 msgstr "Plugin-Version"
 
-#: includes/gwnf-admin-extras.php:42
 msgid "Undefined"
 msgstr "Nicht definiert"
 
-#: includes/gwnf-admin-extras.php:45
 msgid "Widget Area for Not Found active"
 msgstr "Widget-Bereich für Nichts gefunden aktiv"
 
-#: includes/gwnf-admin-extras.php:49
 msgid "Widget Area for 404 active"
 msgstr "Widget-Bereich für 404 aktiv"
 
-#: includes/gwnf-admin-extras.php:116
-msgid "Genesis Plugins from the Plugin Directory"
-msgstr "Genesis Plugins aus dem Pluginverzeichnis"
+msgid "Not Found & 404 Page"
+msgstr "Nicht gefunden & 404-Seite"
 
-#: includes/gwnf-admin-extras.php:117
-msgid "Genesis Plugins"
-msgstr "Genesis Plugins"
+msgid "Genesis Widgetized Not Found & 404 is paused on this site because the Genesis parent theme is not active. Saved widgets are preserved."
+msgstr "Genesis Widgetized Not Found & 404 pausiert auf dieser Website, weil das Genesis-Parent-Theme nicht aktiv ist. Gespeicherte Widgets bleiben erhalten."
 
-#: includes/gwnf-admin-extras.php:327
-msgctxt "Plugin installer: Tab name in installer toolbar"
-msgid "Newest"
-msgstr "Neueste"
+msgid "Settings"
+msgstr "Einstellungen"
 
-#: includes/gwnf-admin-extras.php:333
-msgctxt "Plugin card: plugin version"
-msgid "Version:"
-msgstr "Version:"
-
-#: includes/gwnf-admin-extras.php:339
-msgctxt "Plugin installer: Tab name in installer toolbar"
-msgid "deckerweb Plugins"
-msgstr "deckerweb Plugins"
-
-#: includes/gwnf-admin-extras.php:345
-msgctxt "Plugin installer: Page title"
-msgid "deckerweb Plugins"
-msgstr "deckerweb Plugins"
-
-#: includes/gwnf-admin-extras.php:350
-msgid ""
-"Great helper tools for Site Builders to save time and get more productive"
-msgstr ""
-"Großartige Helferlein-Plugins für Site-Builder, um wertvolle Zeit zu sparen "
-"und noch produktiver zu werden."
-
-#: includes/gwnf-admin-extras.php:353
-#, php-format
-msgid "You can use any of our free plugins or premium plugins from %s"
-msgstr ""
-"Sie können jedes unserer kostenlosen Plugins oder Premium-Plugins von %s "
-"verwenden"
-
-#: includes/gwnf-admin-extras.php:357
-msgid "Join our Newsletter"
-msgstr "Newsletter jetzt!"
-
-#: includes/gwnf-admin-extras.php:359
-msgid "Facebook User Group"
-msgstr "Facebook-Nutzergruppe"
-
-#: includes/gwnf-admin.php:26 includes/gwnf-admin.php:27
-msgid "Not Found &amp; 404 Page"
-msgstr "Nichts gefunden &amp; 404-Seite"
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:58
-msgctxt "Note for Widget area title"
-msgid "Via plugin: Genesis Widgetized Not Found and 404"
-msgstr "Via Plugin: Genesis Widgets für Nichts gefunden"
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:109
-msgid "Go to the Widgets settings page"
-msgstr "Zur Widgets-Einstellungen Seite ..."
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:110
-msgid "Widgets"
-msgstr "Widgets"
-
-#: includes/gwnf-admin.php:117
-msgid "Live preview search not found"
-msgstr "Live-Vorschau Suche-nichts-gefunden-Seite"
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:118
 msgid "Not found"
 msgstr "Nichts gefunden"
 
-#: includes/gwnf-admin.php:125
-msgid "Live preview 404 page"
-msgstr "Live-Vorschau 404-Fehlerseite"
+msgid "Documentation"
+msgstr "Dokumentation"
 
-#: includes/gwnf-admin.php:126
-msgid "404"
-msgstr "404"
-
-# @ genesis-widgetized-notfound
-#. translators: Plugins page listing
-#: includes/gwnf-admin.php:180
-msgctxt "Plugins page listing"
-msgid "FAQ"
-msgstr "FAQ - Häufige Fragen"
-
-# @ genesis-widgetized-notfound
-#. translators: Plugins page listing
-#: includes/gwnf-admin.php:183
-msgctxt "Plugins page listing"
 msgid "Support"
 msgstr "Support"
 
-#. translators: Plugins page listing
-#: includes/gwnf-admin.php:186
-msgctxt "Plugins page listing"
-msgid "Facebook Group"
-msgstr "Facebook-Gruppe"
+msgid "Helpful content when nothing is found."
+msgstr "Hilfreiche Inhalte, wenn nichts gefunden wird."
 
-# @ genesis-widgetized-notfound
-#. translators: Plugins page listing
-#: includes/gwnf-admin.php:189
-msgctxt "Plugins page listing"
-msgid "Code Snippets"
-msgstr "Code-Snippets"
+msgid "Add widgets to 404 Error Page or Search Not Found under Appearance → Widgets. Empty 404 areas use Genesis output or the enabled 404 starter; empty search areas show the message and search form."
+msgstr "Unter Design → Widgets lassen sich Inhalte zur 404-Fehlerseite oder Suche ohne Treffer hinzufügen. Ein leerer 404-Bereich zeigt die Genesis-Ausgabe oder den aktivierten 404-Startinhalt; ein leerer Suchbereich zeigt Meldung und Suchformular."
 
-# @ genesis-widgetized-notfound
-#. translators: Plugins page listing
-#: includes/gwnf-admin.php:192
-msgctxt "Plugins page listing"
-msgid "Translations"
-msgstr "Übersetzungen"
+msgid "The Genesis – Search Form widget lets you set labels, placeholder, button text, title links and display rules."
+msgstr "Mit dem Widget Genesis – Suchformular legen Sie Beschriftung, Platzhalter, Schaltflächentext, Titellinks und Anzeigeregeln fest."
 
-# @ genesis-widgetized-notfound
-#. translators: Plugins page listing
-#: includes/gwnf-admin.php:195
-msgctxt "Plugins page listing"
-msgid "Donate"
-msgstr "Spenden"
+msgid "For forum searches, add widgets to bbPress: Forum Search No Results. The area is available when bbPress is active."
+msgstr "Fügen Sie für Forumsuchen Widgets zu bbPress: Forum-Suche ohne Treffer hinzu. Der Bereich ist bei aktivem bbPress verfügbar."
 
-#. translators: Plugins page listing
-#: includes/gwnf-admin.php:198
-msgctxt "Plugins page listing"
-msgid "Join our Newsletter"
-msgstr "Newsletter jetzt!"
+msgid "Test 404 error page"
+msgstr "404 Fehlerseite testen"
 
-# @ genesis-widgetized-notfound
-#. translators: 1, 2 = Open and close anchor tags
-#: includes/gwnf-admin.php:327
-#, php-format
-msgid "optional, could be deactivated %svia filter%s"
-msgstr "optional, kann %svia Filter%s deaktiviert werden"
+msgid "Test search not found results"
+msgstr "Nichts-gefunden-Ergebnisse testen"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:327
-msgid "Code Snippets for Customization"
-msgstr "Codeschnipsel für Anpassungen"
+msgid "About this plugin"
+msgstr "Über dieses Plugin"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:341
-msgid ""
-"Added Widget areas by the plugin - only displayed if having active widgets "
-"placed in:"
-msgstr ""
-"Vom Plugin hinzugefügte Widget-Bereiche - welche nur angezeigt werden, falls "
-"sich aktive Widgets darin befinden:"
+msgid "Version"
+msgstr "Version"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:343 includes/gwnf-widget-areas.php:136
-msgid "404 Error Page"
-msgstr "404 Fehlerseite"
+msgid "Close"
+msgstr "Schließen"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:343 includes/gwnf-admin.php:344
-#: includes/gwnf-admin.php:347
-#, php-format
-msgid "ID: %s"
-msgstr "ID: %s"
+msgid "Changelog"
+msgstr "Änderungsverlauf"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:344 includes/gwnf-widget-areas.php:153
-msgid "Search Not Found"
-msgstr "Suche nichts gefunden"
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:347
-#: includes/gwnf-bbpress-widgetized-noresults.php:45
 msgid "bbPress: Forum Search No Results"
 msgstr "bbPress: Forensuche keine Treffer"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:354
-msgid "Shortcodes are supported in all these widget areas."
-msgstr "Shortcodes werden in all diesen Widget-Bereichen unterstützt."
+msgid "Widgetized content when the forum search returns no results."
+msgstr "Widget-Inhalte, wenn die Forum-Suche keine Treffer liefert."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:358
-#, php-format
-msgid "Added Widget by the plugin: %s"
-msgstr "Hinzugefügtes Widget durch das Plugin: %s"
+msgid "This search widget has a display rule that does not match this area. Choose Global or a matching rule in its widget settings."
+msgstr "Die Anzeigeregel dieses Such-Widgets passt nicht zu diesem Bereich. In den Widget-Einstellungen Global oder eine passende Regel auswählen."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:358 includes/gwnf-widget-search.php:75
-msgid "Genesis - Search Form"
-msgstr "Genesis - Suchformular"
+msgid "This search widget is visible only to logged-in users. Visitors will not see it."
+msgstr "Dieses Such-Widget ist nur für angemeldete Nutzer sichtbar. Besucher sehen es nicht."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:360 includes/gwnf-widget-search.php:60
-msgid "A search form for your site. With a more options than the default one."
-msgstr ""
-"Ein Suchformular für Ihre Webseite. Mit mehr Optionen als das Standard-"
-"Suchwidget."
+msgid "404 page"
+msgstr "404-Seite"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:361
-msgid ""
-"For example, set placeholder and submit button texts via options, plus more "
-"stuff, like a few display options."
-msgstr ""
-"Beispielsweise können Sie Platzhalter- und Absenden-Button-Texte via "
-"Widgeteinstellungen festlegen, sowie weitere Sachen, etwa einige "
-"Anzeigeoptionen."
+msgid "Optional 404 starter content"
+msgstr "Optionaler 404-Startinhalt"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:365
-msgid "Provided Shortcodes by the plugin:"
-msgstr "Verfügbare Shortcodes des Plugins:"
+msgid "Default Genesis output"
+msgstr "Standardausgabe von Genesis"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:368 includes/gwnf-admin.php:373
-msgid "Supporting the following parameters"
-msgstr "Unterstützt werden die folgenden Parameter"
+msgid "Search with no results"
+msgstr "Suche ohne Treffer"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:369
-msgid "ID of the Widget area (Sidebar; see above)"
-msgstr "ID eines Widget-Bereiches (Sidebar; siehe oben)"
+msgid "No-results message and search form"
+msgstr "Suchhinweis und Suchformular"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:369 includes/gwnf-admin.php:374
-#: includes/gwnf-admin.php:375 includes/gwnf-admin.php:376
-#: includes/gwnf-admin.php:377 includes/gwnf-admin.php:378
-#: includes/gwnf-admin.php:379
-#, php-format
-msgid "Default: %s"
-msgstr "Standard: %s"
+msgid "bbPress search with no results"
+msgstr "bbPress-Suche ohne Treffer"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:369 includes/gwnf-admin.php:376
-#: includes/gwnf-admin.php:378 includes/gwnf-admin.php:379
-msgid "none, empty"
-msgstr "nichts, leer"
+msgid "Default bbPress output"
+msgstr "Standardausgabe von bbPress"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:374
-msgid "Search placeholder text"
-msgstr "Suche Platzhalter-Text"
+msgid "Setup overview"
+msgstr "Einrichtungsübersicht"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:374 includes/gwnf-shortcodes.php:30
-#: includes/gwnf-widget-search.php:47
-msgid "Search this website"
-msgstr "Webseite durchsuchen"
+msgid "Assigned widgets:"
+msgstr "Zugewiesene Widgets:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:375 includes/gwnf-admin.php:377
-msgid "HTML wrapper tag"
-msgstr "HTML-Wrapper-Tag"
+msgid "Empty area:"
+msgstr "Leerer Bereich:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:375 includes/gwnf-shortcodes.php:34
-#: includes/gwnf-widget-search.php:48 includes/gwnf-widget-search.php:309
-#: includes/gwnf-widget-search.php:376
-msgid "Search"
-msgstr "Suchen"
+msgid "Edit this widget area"
+msgstr "Diesen Widget-Bereich bearbeiten"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:376
-msgid "Additional label before the search form"
-msgstr "Zusätzliche Beschriftung (Label) for dem Suchformular"
+msgid "Assigned widgets can have their own visibility rules. An assigned widget that hides itself does not activate the empty-area fallback."
+msgstr "Zugewiesene Widgets können eigene Anzeigeregeln haben. Blendet sich ein zugewiesenes Widget selbst aus, wird die Ausgabe für einen leeren Bereich nicht aktiviert."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:378
-msgid "Can be a custom class, added to the wrapper tag"
-msgstr ""
-"Optionale, benutzerdefinierte CSS-Klasse, welche dem umschließenden Wrapper "
-"hinzugefügt wird"
+msgid "Used only when enabled and no widgets are assigned to the 404 area. Assigned widgets take precedence. Leave the text fields empty to use translated defaults."
+msgstr "Nur bei Aktivierung und ohne zugewiesene Widgets im 404-Bereich sichtbar. Zugewiesene Widgets haben Vorrang. Leere Textfelder verwenden übersetzte Standardtexte."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:379
-msgid "Optional setup post type(s) for search"
-msgstr "Optional, festgelegter Inhaltstyp (Post Type) für die Suche"
+msgid "Enable 404 starter content"
+msgstr "404-Startinhalt aktivieren"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:379
-msgid "i.e., WordPress default search behavior"
-msgstr "d.h. WordPress-Standardverhalten bei der Suche"
+msgid "Show a search form"
+msgstr "Suchformular anzeigen"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:383
-msgid "Important plugin links:"
-msgstr "Wichtige Plugin-Links:"
+msgid "Show a homepage link"
+msgstr "Startseitenlink anzeigen"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:385
-msgid "Plugin website"
-msgstr "Plugin-Webseite"
+msgid "404 heading"
+msgstr "404-Überschrift"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:387
-msgctxt "Help tab info"
-msgid "FAQ"
-msgstr "FAQ - Häufige Fragen"
+msgid "Page not found"
+msgstr "Seite nicht gefunden"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:389
-msgctxt "Help tab info"
-msgid "Support"
-msgstr "Support"
+msgid "404 explanation"
+msgstr "404-Erklärung"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:391
-msgctxt "Help tab info"
-msgid "Code Snippets"
-msgstr "Code-Snippets"
+msgid "The page you are looking for could not be found. Please check the address."
+msgstr "Die gesuchte Seite wurde nicht gefunden. Bitte die Adresse überprüfen."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:393
-msgctxt "Help tab info"
-msgid "Translations"
-msgstr "Übersetzungen"
+msgid "Test in the frontend"
+msgstr "Im Frontend testen"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:395
-msgctxt "Help tab info"
-msgid "Donate"
-msgstr "Spenden"
+msgid "Open 404 test in a new tab"
+msgstr "404-Test in neuem Tab öffnen"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:421
-msgid "More about the plugin author"
-msgstr "Mehr über den Plugin-Autor"
+msgid "Open empty-search test in a new tab"
+msgstr "Erfolglose Suche in neuem Tab testen"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-admin.php:422
-msgid "Social:"
-msgstr "Vernetzen:"
+msgid "These links open normal frontend requests. Also test while logged out, for example in a private browser window. Search plugins or redirects can change the result."
+msgstr "Diese Links öffnen normale Frontend-Anfragen. Auch ausgeloggt testen, zum Beispiel in einem privaten Browserfenster. Such-Plugins oder Weiterleitungen können das Ergebnis verändern."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-bbpress-widgetized-noresults.php:51
-msgid ""
-"Only for bbPress 2.3+: Widgetized content area if there are no forum search "
-"results."
-msgstr ""
-"Nur für bbPress 2.3+: Inhaltsbereich für Widgets, falls es keine Treffer bei "
-"der Forensuche gibt."
+msgid "Copy shortcodes"
+msgstr "Shortcodes kopieren"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-frontend.php:104
+msgid "Search form"
+msgstr "Suchformular"
+
+msgid "404 widget area"
+msgstr "404-Widget-Bereich"
+
+msgid "Empty-search widget area"
+msgstr "Widget-Bereich für erfolglose Suchen"
+
+msgid "Copied."
+msgstr "Kopiert."
+
+msgid "Select and copy the shortcode manually."
+msgstr "Den Shortcode markieren und manuell kopieren."
+
+msgid "Copy shortcode"
+msgstr "Shortcode kopieren"
+
+msgid "Widget-area shortcodes display assigned widgets. They do not insert the optional 404 starter content."
+msgstr "Widget-Bereich-Shortcodes zeigen zugewiesene Widgets. Sie fügen keinen optionalen 404-Startinhalt ein."
+
 msgid "Sorry, no content matched your criteria. Try a different search?"
-msgstr ""
-"Leider wurden keine Inhalte gefunden, die Ihren Kriterien entsprechen. "
-"Probieren Sie einfach eine neue Suche."
+msgstr "Leider wurden keine Inhalte gefunden, die Ihren Kriterien entsprechen. Probieren Sie einfach eine neue Suche."
 
-# @ genesis-widgetized-notfound
-#. Author of the plugin/theme
-#: includes/gwnf-functions-global.php:50
+msgid "Back to the homepage"
+msgstr "Zur Startseite"
+
 msgid "David Decker - DECKERWEB"
 msgstr "David Decker - DECKERWEB.de"
 
-#: includes/gwnf-widget-areas.php:39
+msgid "Search this website"
+msgstr "Webseite durchsuchen"
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "These settings apply only to this website. Unchecked layout options keep the theme layout."
+msgstr "Diese Einstellungen gelten nur für diese Website. Nicht aktivierte Layout-Optionen erhalten das Theme-Layout."
+
+msgid "Use full content width without sidebars"
+msgstr "Volle Inhaltsbreite ohne Seitenleisten verwenden"
+
+msgid "Searches with results keep their usual layout."
+msgstr "Suchen mit Treffern behalten ihr bisheriges Layout."
+
+msgid "Default no-results message"
+msgstr "Standardtext bei erfolgloser Suche"
+
+msgid "Plain text. Leave empty to use the translated default. This message appears only when the Search Not Found widget area is empty. The search form stays visible."
+msgstr "Normaler Text. Lassen Sie das Feld leer, um den übersetzten Standard zu verwenden. Diese Meldung erscheint nur, wenn der Widget-Bereich Suche ohne Treffer leer ist. Das Suchformular bleibt sichtbar."
+
+msgid "Manage widgets"
+msgstr "Widgets verwalten"
+
+msgid "Customize Genesis 404 pages and empty search results with widgets."
+msgstr "Gestalten Sie Genesis-404-Seiten und leere Suchergebnisse mit Widgets."
+
+msgid "This plugin requires a newer deckerweb Updater integration."
+msgstr "Dieses Plugin benötigt eine neuere deckerweb-Updater-Integration."
+
+msgid "The update package identity, version or requirements could not be verified. The installed plugin was preserved."
+msgstr "Identität, Version oder Anforderungen des Update-Pakets konnten nicht geprüft werden. Das installierte Plugin blieb erhalten."
+
 msgctxt "Used as a divider between text blocks where HTML is not allowed"
 msgid "###"
 msgstr "###"
 
-#: includes/gwnf-widget-areas.php:51
 msgid "Customize with Live Preview"
 msgstr "Anpassen mit Live-Vorschau"
 
-#: includes/gwnf-widget-areas.php:58
 msgid "Best to open these links in a new browser tab/ window."
 msgstr "Öffnen Sie diese Links am besten in einem neuen Browser-Tab/ -Fenster."
 
-#: includes/gwnf-widget-areas.php:66
-msgid "Test search not found results"
-msgstr "Nichts-gefunden-Ergebnisse testen"
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-areas.php:74
-msgid "Test 404 error page"
-msgstr "404 Fehlerseite testen"
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-areas.php:81
 msgid "This is the widget area of the search not found content section."
-msgstr ""
-"Dies ist der Widget-Bereich für das Inhaltsfeld, wenn das Suchergebnis leer "
-"ist (Suche nichts gefunden)."
+msgstr "Dies ist der Widget-Bereich für das Inhaltsfeld, wenn das Suchergebnis leer ist (Suche nichts gefunden)."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-areas.php:91
 msgid "This is the widget area of the 404 Not Found Error Page."
 msgstr "Dies ist der Widget-Bereich für die 404-Fehlerseite (Nichts gefunden)."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:61
-#, php-format
+msgid "404 Error Page"
+msgstr "404 Fehlerseite"
+
+msgid "Search Not Found"
+msgstr "Suche nichts gefunden"
+
+msgid "A search form for your site. With more options than the default one."
+msgstr "Ein Suchformular für Ihre Website mit mehr Optionen als das Standardformular."
+
 msgid "Provided by the plugin %s."
 msgstr "Hinzugefügt vom Plugin %s."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:279
+msgid "Genesis - Search Form"
+msgstr "Genesis - Suchformular"
+
 msgid "Title:"
 msgstr "Titel:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:286
 msgid "Optional Title URL:"
 msgstr "Optionale Titel-URL:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:294
 msgid "Open the URL in a new window/ tab?"
 msgstr "Die URL in neuem Fenster/ Tab öffnen?"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:301
 msgid "Do not display the Title?"
 msgstr "Titel nicht anzeigen?"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:308
 msgid "Optional intro text:"
 msgstr "Optionaler Intro-Text:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:309 includes/gwnf-widget-search.php:376
-#, php-format
 msgid "Add some additional %s info. NOTE: Just leave blank to not use at all."
-msgstr ""
-"Einige Zusatzinfos zu %s anzeigen. HINWEIS: Einfach leer lassen, um das Feld "
-"nicht zu verwenden."
+msgstr "Ergänzen Sie zusätzliche Informationen zur %s. Lassen Sie das Feld leer, wenn Sie sie nicht benötigen."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:317
-msgid "Search form"
-msgstr "Suchformular"
-
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:322
 msgid "Label string before search input field:"
-msgstr "Beschriftung/ Text vor dem Sucheingabefeld:"
+msgstr "Beschriftung des Suchfelds:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:324 includes/gwnf-widget-search.php:332
 msgid "NOTE: Leave empty to not use/ display this string!"
-msgstr "HINWEIS: Leer lassen, um dies nicht zu verwenden!"
+msgstr "Lassen Sie das Feld leer, wenn Sie keinen eigenen Text verwenden möchten."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:330
 msgid "Placeholder string for search input field:"
 msgstr "Platzhaltertext für das Sucheingabefeld:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:338
 msgid "Search button string:"
 msgstr "Suchen-/ Absenden-Buttontext:"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:340
 msgid "NOTE: Displaying may depend on your child theme settings/ styles."
-msgstr "HINWEIS: Anzeige kann von den Stilen des Child Themes abhängen."
+msgstr "Die Darstellung kann von den Einstellungen und Styles Ihres Child-Themes abhängen."
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:348
 msgid "Where to display this widget?"
 msgstr "Wo soll dieses Widget erscheinen?"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:351
 msgid "Global (default)"
 msgstr "Global (Standard)"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:355 includes/gwnf-widget-search.php:357
-#, php-format
+msgid "Only on 404 pages"
+msgstr "Nur auf 404-Seiten"
+
+msgid "Only on searches with no results"
+msgstr "Nur bei Suchen ohne Treffer"
+
 msgid "Single %s"
 msgstr "Einzel-%s"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:355
 msgid "Posts"
 msgstr "Beiträge"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:357
 msgid "Pages"
 msgstr "Seiten"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:359
 msgid "Both, Single Posts & Pages"
 msgstr "Beide, Einzel-Beiträge u. -Seiten"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:368
 msgid "Only displaying for logged in users?"
 msgstr "Nur für angemeldete Benutzer anzeigen?"
 
-# @ genesis-widgetized-notfound
-#: includes/gwnf-widget-search.php:375
 msgid "Optional outro text:"
 msgstr "Optionaler Outro-Text:"
 
-# @ genesis-widgetized-notfound
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/deckerweb/genesis-widgetized-notfound/"
-msgstr "https://github.com/deckerweb/genesis-widgetized-notfound/"
+msgid "Private mode must be boolean."
+msgstr "Der Private-Modus muss ein boolescher Wert sein."
 
-# @ genesis-widgetized-notfound
-#. Description of the plugin/theme
-msgid ""
-"Finally, use widgets to maintain and customize your 404 Error and Search Not "
-"Found pages in Genesis Framework and Child Themes."
-msgstr ""
-"Endlich: Mit Widgets die 404-Fehlerseiten sowie für 'Suche nichts gefunden' "
-"elegant anpassen und pflegen. Dieses Plugin funktioniert nur mit dem Genesis "
-"Framework und Child Themes."
+msgid "Invalid authentication provider."
+msgstr "Ungültiger Authentifizierungsanbieter."
 
-# @ genesis-widgetized-notfound
-#. Author URI of the plugin/theme
-msgid "https://deckerweb.de/"
-msgstr "https://deckerweb.de/"
+msgid "The plugin must be installed in a stable slug directory."
+msgstr "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
 
-# @ genesis-widgetized-notfound
-#~ msgid "1.5.0"
-#~ msgstr "1.5.0"
+msgid "Invalid GitHub repository URL."
+msgstr "Ungültige GitHub-Repository-URL."
+
+msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
+msgstr "Das private Update konnte nicht autorisiert werden. Prüfen Sie die Repository-Zugangsdaten und suchen Sie erneut nach Updates."
+
+msgid "Could not create the update download file."
+msgstr "Die Datei für den Update-Download konnte nicht erstellt werden."
+
+msgid "The private update download failed. Check credentials and try again."
+msgstr "Der Download des privaten Updates ist fehlgeschlagen. Prüfen Sie die Zugangsdaten und versuchen Sie es erneut."
+
+msgid "Could not access the update filesystem."
+msgstr "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
+
+msgid "GitHub release does not contain the plugin main file."
+msgstr "Der GitHub-Release enthält nicht die Hauptdatei des Plugins."
+
+msgid "Could not prepare the GitHub release package."
+msgstr "Das GitHub-Release-Paket konnte nicht vorbereitet werden."
+
+msgid "See the release on GitHub."
+msgstr "Sehen Sie sich den Release auf GitHub an."
+
+msgid "%s is installed but inactive. Activate it first."
+msgstr "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."
+
+msgid "%s is missing. Install and activate it first."
+msgstr "%s fehlt. Bitte zuerst installieren und aktivieren."
+
+msgid "%s must be network activated first."
+msgstr "%s muss zuerst netzwerkweit aktiviert werden."
+
+msgid "%s supports activation per site only."
+msgstr "%s unterstützt nur die Aktivierung je Website."
+
+msgid "Action cancelled."
+msgstr "Vorgang abgebrochen."
+
+msgid "Activate"
+msgstr "Aktivieren"
+
+msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
+msgstr "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde."
+
+msgid "Activating…"
+msgstr "Wird aktiviert…"
+
+msgid "Admin"
+msgstr "Administration"
+
+msgid "Affected features remain paused until their requirements are met."
+msgstr "Betroffene Funktionen pausieren, bis ihre Voraussetzungen erfüllt sind."
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Already active"
+msgstr "Bereits aktiv"
+
+msgid "Already up to date."
+msgstr "Bereits aktuell."
+
+msgid "Another action for this plugin is running. Please wait."
+msgstr "Für dieses Plugin läuft bereits eine Aktion. Bitte warten."
+
+msgid "Another updater provides a different release. Refresh updates before continuing."
+msgstr "Ein anderer Updater bietet einen abweichenden Release an. Bitte die Updateinformationen vor dem Fortfahren aktualisieren."
+
+msgid "Apr"
+msgstr "Apr"
+
+msgid "April"
+msgstr "April"
+
+msgid "Archive contains too many files."
+msgstr "Das Archiv enthält zu viele Dateien."
+
+msgid "Archive symlinks are not permitted."
+msgstr "Symbolische Verknüpfungen sind im Archiv nicht erlaubt."
+
+msgid "As of "
+msgstr "Stand: "
+
+msgid "Aug"
+msgstr "Aug"
+
+msgid "August"
+msgstr "August"
+
+msgid "Back to deckerweb"
+msgstr "Zurück zu deckerweb"
+
+msgid "Builder"
+msgstr "Builder"
+
+msgid "Cannot create temporary file."
+msgstr "Temporäre Datei konnte nicht erstellt werden."
+
+msgid "Cannot create verified archive."
+msgstr "Geprüftes Archiv konnte nicht erstellt werden."
+
+msgid "Cannot finalize archive."
+msgstr "Archiv konnte nicht abgeschlossen werden."
+
+msgid "Cannot normalize archive."
+msgstr "Archiv konnte nicht aufbereitet werden."
+
+msgid "Cannot read archive entry."
+msgstr "Archiveintrag konnte nicht gelesen werden."
+
+msgid "Catalog URL"
+msgstr "Katalog-URL"
+
+msgid "Catalog refreshed."
+msgstr "Katalog aktualisiert."
+
+msgid "Check status"
+msgstr "Status prüfen"
+
+msgid "Checking status…"
+msgstr "Status wird geprüft…"
+
+msgid "Commerce"
+msgstr "Commerce"
+
+msgid "Compatible additions only"
+msgstr "Nur passende Ergänzungen"
+
+msgid "Content"
+msgstr "Inhalte"
+
+msgid "Dec"
+msgstr "Dez"
+
+msgid "December"
+msgstr "Dezember"
+
+msgid "Delete Library settings when removing the last host plugin"
+msgstr "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen"
+
+msgid "Details & requirements"
+msgstr "Details & Voraussetzungen"
+
+msgid "Discover more plugins by deckerweb"
+msgstr "Weitere Plugins von deckerweb entdecken"
+
+msgid "Dismiss permanently"
+msgstr "Dauerhaft schließen"
+
+msgid "Done. The plugin is active."
+msgstr "Erledigt. Das Plugin ist aktiv."
+
+msgid "Enter a catalog URL first."
+msgstr "Bitte zuerst eine Katalog-URL eintragen."
+
+msgid "Expanded archive is too large."
+msgstr "Das entpackte Archiv ist zu groß."
+
+msgid "F j, Y"
+msgstr "j. F Y"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "February"
+msgstr "Februar"
+
+msgid "Filesystem credentials are required."
+msgstr "Zugangsdaten für das Dateisystem werden benötigt."
+
+msgid "Filesystem credentials are required. Use the catalog with JavaScript enabled or the native Plugins screen."
+msgstr "Dateisystem-Zugangsdaten sind erforderlich. Bitte den Katalog mit aktiviertem JavaScript oder die WordPress-Pluginverwaltung verwenden."
+
+msgid "Filter"
+msgstr "Filtern"
+
+msgid "Fits my installation"
+msgstr "Passt zu meiner Installation"
+
+msgid "Fixed"
+msgstr "Behoben"
+
+msgid "Fri"
+msgstr "Fr"
+
+msgid "Friday"
+msgstr "Freitag"
+
+msgid "GitHub Stars"
+msgstr "GitHub-Sterne"
+
+msgid "Hide catalog"
+msgstr "Katalog ausblenden"
+
+msgid "Improved"
+msgstr "Verbessert"
+
+msgid "Install and activate this plugin in the network admin."
+msgstr "Dieses Plugin bitte im Netzwerk-Admin installieren und aktivieren."
+
+msgid "Install deckerweb plugin"
+msgstr "deckerweb-Plugin installieren"
+
+msgid "Install now"
+msgstr "Jetzt installieren"
+
+msgid "Installation cancelled."
+msgstr "Installation abgebrochen."
+
+msgid "Installation failed."
+msgstr "Installation fehlgeschlagen."
+
+msgid "Installed"
+msgstr "Installiert"
+
+msgid "Installed: "
+msgstr "Installiert: "
+
+msgid "Installing…"
+msgstr "Wird installiert…"
+
+msgid "Invalid ZIP archive."
+msgstr "Ungültiges ZIP-Archiv."
+
+msgid "Invalid approval flag."
+msgstr "Ungültige Freigabeangabe."
+
+msgid "Invalid catalog field: "
+msgstr "Ungültiges Katalogfeld: "
+
+msgid "Invalid catalog revision."
+msgstr "Ungültiger Katalogstand."
+
+msgid "Invalid catalog schema."
+msgstr "Ungültiges Katalogformat."
+
+msgid "Invalid catalog timestamp."
+msgstr "Ungültiger Katalogzeitpunkt."
+
+msgid "Invalid dependencies."
+msgstr "Ungültige Abhängigkeiten."
+
+msgid "Invalid dependency URL."
+msgstr "Ungültige URL einer Abhängigkeit."
+
+msgid "Invalid dependency metadata."
+msgstr "Ungültige Angaben zu Abhängigkeiten."
+
+msgid "Invalid display field."
+msgstr "Ungültiges Anzeigefeld."
+
+msgid "Invalid icon color."
+msgstr "Ungültige Icon-Farbe."
+
+msgid "Invalid icon label."
+msgstr "Ungültiges Icon-Kürzel."
+
+msgid "Invalid identity or release metadata."
+msgstr "Ungültige Plugin- oder Release-Angaben."
+
+msgid "Invalid local icon."
+msgstr "Ungültiges lokales Icon."
+
+msgid "Invalid network policy."
+msgstr "Ungültige Netzwerkregel."
+
+msgid "Invalid network requirement."
+msgstr "Ungültige Netzwerkanforderung."
+
+msgid "Invalid platform version."
+msgstr "Ungültige Plattformversion."
+
+msgid "Invalid plugin series."
+msgstr "Ungültige Plugin-Serie."
+
+msgid "Invalid star count."
+msgstr "Ungültige Anzahl der GitHub-Sterne."
+
+msgid "Invalid stars date."
+msgstr "Ungültiges Datum der GitHub-Sterne."
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "January"
+msgstr "Januar"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "July"
+msgstr "Juli"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "June"
+msgstr "Juni"
+
+msgid "Library"
+msgstr "Library"
+
+msgid "Library changelog"
+msgstr "Library-Änderungsverlauf"
+
+msgid "Library settings"
+msgstr "Library-Einstellungen"
+
+msgid "Library settings saved."
+msgstr "Library-Einstellungen gespeichert."
+
+msgid "Manage Content"
+msgstr "Inhalte verwalten"
+
+msgid "Manage installed plugins"
+msgstr "Installierte Plugins verwalten"
+
+msgid "Mar"
+msgstr "Mär"
+
+msgid "March"
+msgstr "März"
+
+msgid "May"
+msgstr "Mai"
+
+msgid "Misc"
+msgstr "Sonstiges"
+
+msgid "Missing display text."
+msgstr "Anzeigetext fehlt."
+
+msgid "Missing plugin header."
+msgstr "Plugin-Header fehlt."
+
+msgid "Mon"
+msgstr "Mo"
+
+msgid "Monday"
+msgstr "Montag"
+
+msgid "More by deckerweb"
+msgstr "Mehr von deckerweb"
+
+msgid "Multisite"
+msgstr "Multisite"
+
+msgid "Network activate"
+msgstr "Netzwerkweit aktivieren"
+
+msgid "Network permission denied."
+msgstr "Keine Berechtigung für das Netzwerk."
+
+msgid "New"
+msgstr "Neu"
+
+msgid "No approved plugins match this selection."
+msgstr "Keine freigegebenen Plugins passen zu dieser Auswahl."
+
+msgid "Not installed. You can try again."
+msgstr "Nicht installiert. Ein erneuter Versuch ist möglich."
+
+msgid "Nov"
+msgstr "Nov"
+
+msgid "November"
+msgstr "November"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "October"
+msgstr "Oktober"
+
+msgid "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites."
+msgstr "Standardmäßig ausgeschaltet. Gilt nur, wenn kein weiterer Host installiert ist, auch kein deaktivierter. Entfernt Library-Einstellungen, Installationszuordnung und den Status des Einführungshinweises. Installierte Plugins, deren Inhalte und Einstellungen anderer Plugins bleiben erhalten. Netzwerkdaten werden gemeinsam von den Websites genutzt."
+
+msgid "Online catalog"
+msgstr "Online-Katalog"
+
+msgid "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release."
+msgstr "Nur HTTPS auf raw.githubusercontent.com/deckerweb. Der Server sieht die anfragende IP-Adresse. Beim Installieren eines Releases wird GitHub kontaktiert."
+
+msgid "Only approved releases"
+msgstr "Nur freigegebene Releases"
+
+msgid "Open catalog"
+msgstr "Katalog öffnen"
+
+msgid "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent."
+msgstr "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen werden 24 Stunden zwischengespeichert. Keine Website-URL, Plugin-Liste oder Nutzungsdaten werden übertragen."
+
+msgid "PHP ZIP support is required."
+msgstr "PHP-ZIP-Unterstützung wird benötigt."
+
+msgid "POST required."
+msgstr "Eine POST-Anfrage ist erforderlich."
+
+msgid "Permission denied."
+msgstr "Keine Berechtigung."
+
+msgid "Planned: "
+msgstr "Geplant: "
+
+msgid "Plugin identity or version does not match the catalog."
+msgstr "Plugin oder Version stimmt nicht mit dem Katalog überein."
+
+msgid "Plugin is not installed."
+msgstr "Das Plugin ist nicht installiert."
+
+msgid "Plugin series"
+msgstr "Plugin-Serien"
+
+msgid "Product website"
+msgstr "Produktwebsite"
+
+msgid "Refresh catalog"
+msgstr "Katalog aktualisieren"
+
+msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
+msgstr "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
+
+msgid "Release checksum is verified before installation. Activation is a separate step."
+msgstr "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat."
+
+msgid "Release in preparation"
+msgstr "Release in Vorbereitung"
+
+msgid "Release must contain exactly the approved plugin directory."
+msgstr "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
+
+msgid "Repository & documentation"
+msgstr "Repository & Dokumentation"
+
+msgid "Requirements shown are preliminary until the stable release is verified."
+msgstr "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
+
+msgid "Requires PHP %s or newer."
+msgstr "Benötigt PHP %s oder neuer."
+
+msgid "Requires WordPress %s or newer."
+msgstr "Benötigt WordPress %s oder neuer."
+
+msgid "Requires a WordPress Multisite network."
+msgstr "Benötigt ein WordPress-Multisite-Netzwerk."
+
+msgid "Reset filters"
+msgstr "Filter zurücksetzen"
+
+msgid "Retrieve approved catalog updates online"
+msgstr "Katalogfreigaben online aktualisieren"
+
+msgid "Sat"
+msgstr "Sa"
+
+msgid "Saturday"
+msgstr "Samstag"
+
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+msgid "Scripts"
+msgstr "Scripte"
+
+msgid "Search this catalog"
+msgstr "Diesen Katalog durchsuchen"
+
+msgid "Selected by deckerweb · Installed from GitHub releases"
+msgstr "Von deckerweb ausgewählt · Installation aus GitHub-Releases"
+
+msgid "Sep"
+msgstr "Sep"
+
+msgid "September"
+msgstr "September"
+
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+msgid "Shop"
+msgstr "Shop"
+
+msgid "Show deckerweb under Add Plugins"
+msgstr "deckerweb unter „Plugins hinzufügen“ anzeigen"
+
+msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
+msgstr "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
+
+msgid "Small plugins. Practical improvements."
+msgstr "Kleine Plugins. Konkrete Verbesserungen."
+
+msgid "Source: GitHub"
+msgstr "Quelle: GitHub"
+
+msgid "Sun"
+msgstr "So"
+
+msgid "Sunday"
+msgstr "Sonntag"
+
+msgid "The GitHub release could not be downloaded."
+msgstr "Das GitHub-Release konnte nicht heruntergeladen werden."
+
+msgid "The action is still running. Check its status again."
+msgstr "Die Aktion läuft noch. Bitte den Status erneut prüfen."
+
+msgid "The approved package could not be verified."
+msgstr "Das freigegebene Paket konnte nicht geprüft werden."
+
+msgid "The approved release changed. Refresh updates first."
+msgstr "Das freigegebene Release hat sich geändert. Bitte zuerst die Updates aktualisieren."
+
+msgid "The approved release could not be verified."
+msgstr "Der freigegebene Release konnte nicht geprüft werden."
+
+msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
+msgstr "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle."
+
+msgid "The catalog could not be verified. Please try again later."
+msgstr "Der Katalog konnte nicht geprüft werden. Bitte später erneut versuchen."
+
+msgid "The catalog is disabled."
+msgstr "Der Katalog ist deaktiviert."
+
+msgid "The catalog is hidden."
+msgstr "Der Katalog ist ausgeblendet."
+
+msgid "The deckerweb catalog could not load. Check platform requirements and the complete Library integration in the host plugin."
+msgstr "Der deckerweb-Katalog konnte nicht geladen werden. Bitte PHP-/WordPress-Anforderungen und die vollständige Library-Einbindung im Host-Plugin prüfen."
+
+msgid "The installed plugin identity could not be verified for this catalog update."
+msgstr "Die Identität des installierten Plugins konnte für dieses Katalogupdate nicht bestätigt werden."
+
+msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
+msgstr "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte oder mitgelieferte Katalog; vor der Installation wird die Online-Freigabe erneut geprüft."
+
+msgid "The online catalog source is not trusted."
+msgstr "Die Online-Katalogquelle ist nicht vertrauenswürdig."
+
+msgid "The release checksum does not match. Installation stopped."
+msgstr "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
+
+msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen."
+
+msgid "The requirements below describe the offered release."
+msgstr "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release."
+
+msgid "The update has not been confirmed. You can try again."
+msgstr "Die Aktualisierung wurde nicht bestätigt. Sie können es erneut versuchen."
+
+msgid "This catalog requires a newer Library."
+msgstr "Dieser Katalog benötigt eine neuere Library."
+
+msgid "This plugin directory already exists. Use the installed plugin; it will not be overwritten."
+msgstr "Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben."
+
+msgid "This release is no longer approved."
+msgstr "Dieses Release ist nicht mehr freigegeben."
+
+msgid "This release is not approved."
+msgstr "Dieses Release ist nicht freigegeben."
+
+msgid "Thu"
+msgstr "Do"
+
+msgid "Thursday"
+msgstr "Donnerstag"
+
+msgid "Tools"
+msgstr "Werkzeuge"
+
+msgid "Tue"
+msgstr "Di"
+
+msgid "Tuesday"
+msgstr "Dienstag"
+
+msgid "Unsafe archive path."
+msgstr "Unsicherer Archivpfad."
+
+msgid "Untrusted release URL."
+msgstr "Nicht vertrauenswürdige Release-URL."
+
+msgid "Update %1$s to version %2$s or newer."
+msgstr "%1$s bitte auf Version %2$s oder neuer aktualisieren."
+
+msgid "Update failed."
+msgstr "Aktualisierung fehlgeschlagen."
+
+msgid "Update to %s"
+msgstr "Auf %s aktualisieren"
+
+msgid "Updated"
+msgstr "Aktualisiert"
+
+msgid "Updating…"
+msgstr "Wird aktualisiert…"
+
+msgid "View plugins"
+msgstr "Plugins ansehen"
+
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
+msgid "Wed"
+msgstr "Mi"
+
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "You already use one of my plugins. Find selected additions in the deckerweb tab."
+msgstr "Sie nutzen bereits ein Plugin von mir. Ausgewählte Ergänzungen finden Sie im deckerweb-Tab."

@@ -1,0 +1,14 @@
+/* Only the plugin's own widget descriptions and contextual help. */
+#gwnf-404-widget .sidebar-description,#gwnf-notfound-widget .sidebar-description,#gwnf-bbpress-notfound-area .sidebar-description{background:#f7f7f7;margin-bottom:10px}
+#gwnf-404-widget .sidebar-description p,#gwnf-notfound-widget .sidebar-description p,#gwnf-bbpress-notfound-area .sidebar-description p{padding:15px}
+.gwnf-help-header{display:flex;align-items:center;gap:14px;margin-block:14px}
+.gwnf-help-header img{border-radius:10px}.gwnf-help-header h2,.gwnf-help-header p{margin:0}
+
+.gwnf-widget-divider{border:1px dashed #ddd;margin:15px 0}
+
+/* Closed embedded Library dialogs stay hidden when another plugin overrides dialog display. */
+#deckerweb-library dialog:not([open]){display:none!important}
+
+.gwnf-settings{max-width:1040px}.gwnf-settings .gwnf-help-header{margin-block:20px}.gwnf-settings .gwnf-help-header h1{padding:0}.gwnf-settings .form-table textarea{max-width:640px}
+
+.gwnf-comfort{margin-block:24px;padding:18px 22px;background:#fff;border:1px solid #c3c4c7;border-radius:5px}.gwnf-comfort h2{margin-top:0}.gwnf-setup-list{display:flex;flex-wrap:wrap;gap:24px;margin:0}.gwnf-setup-list>li{flex:1 1 220px}.gwnf-setup-list h3{margin-block:8px}.gwnf-rule-hint{border-inline-start:3px solid #996800;padding-inline-start:10px}.gwnf-shortcode-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-block:12px}.gwnf-shortcode-row label{flex-basis:180px}.gwnf-shortcode-row input{flex:1 1 280px;min-width:0}.gwnf-comfort .button{margin-block:4px}.gwnf-copy[hidden]{display:none}

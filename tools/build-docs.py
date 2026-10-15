@@ -1,0 +1,62 @@
+from pathlib import Path
+import json
+r=Path(__file__).resolve().parents[1];(r/'docs').mkdir(exist_ok=True)
+data=json.loads((r/'docs/content.json').read_text());history=data['history'];faq=data['faq']
+labels={'New':'Neu','Improved':'Verbessert','Fixed':'Behoben','Misc':'Sonstiges'}
+for de in (False,True):
+ suffix='-de' if de else '';idx=3 if de else 1
+ def hist(entries,wp=False):
+  return '\n\n'.join(('= ' if wp else '### ')+v+' · '+date+(' =' if wp else '')+'\n\n'+'\n'.join('* '+(labels[c] if de else c)+': '+(d if de else e) for c,e,d in items) for v,date,items in entries)
+ def faqs(items): return '\n\n'.join('### '+f[2 if de else 0]+'\n\n'+f[3 if de else 1] for f in items)
+ title='Genesis Widgetized Not Found & 404';other='[English](README.md)' if de else '[Deutsch](README-de.md)'
+ intro='Gestalte 404-Seiten und Suchen ohne Treffer mit vertrauten WordPress-Widgets. Für klassische Genesis-Themes, mit Such-Widget, Shortcodes und optionaler bbPress-Integration.' if de else 'Customize 404 pages and empty search results with familiar WordPress widgets. For classic Genesis themes, with a search widget, shortcodes and optional bbPress integration.'
+ heads=['Kurzvorstellung','Auf einen Blick','Installation und erste Schritte','Funktionen','FAQ','Änderungsverlauf','Autor und Geschichte','Support und Sicherheit','Copyright und Lizenz'] if de else ['About','At a Glance','Installation and first steps','Features','FAQ','Changelog','Author and history','Support and security','Copyright and license']
+ features=['Widget-Bereiche für 404 und leere Suchen.','Such-Widget mit Texten, Titel-Link und Anzeigeregeln.','Zwei Shortcodes und optionaler bbPress-Suchbereich.','Lokale Dokumentation, deutsche Übersetzungen und GitHub-Updates.'] if de else ['Widget areas for 404 and empty searches.','Search widget with configurable texts, title link and display rules.','Two shortcodes and optional bbPress search area.','Local documentation, German translations and GitHub updates.']
+ install='Lade das Plugin-ZIP hoch und aktiviere es. Genesis muss auf der jeweiligen Website als Parent-Theme aktiv sein. Öffne **Design → Widgets** und füge Inhalte in die beiden Bereiche ein. Bestehende Widget-IDs und Einstellungen bleiben bei einem Update erhalten.' if de else 'Upload the plugin ZIP and activate it. Genesis must be the active parent theme on the current site. Open **Appearance → Widgets** and populate the two areas. Updates preserve existing widget IDs and settings.'
+ featuretext='Mit dem Such-Widget bestimmst du Beschriftung, Platzhalter und Schaltfläche. Shortcodes platzieren das Formular oder aktive Widget-Bereiche in geeigneten Inhalten. bbPress erhält bei erfolglosen Forumsuchen einen eigenen Bereich. Die Gestaltung kommt aus deinem Child-Theme.' if de else 'The search widget controls label, placeholder and button text. Shortcodes place forms or active widget areas in supported content. bbPress gets its own area for unsuccessful forum searches. Styling comes from your child theme.'
+ connections='GitHub-Updates fragen Release-Metadaten ab und laden bei einem Update das Paket herunter. Die Library zeigt ihren mitgelieferten Katalog lokal; Online-Katalogabfragen sind optional und standardmäßig aus. GitHub sieht bei externen Anfragen die anfragende IP-Adresse. Keine Telemetrie; kein GitHub-Konto oder Token erforderlich. Bei Problemen mit aktivem Git Updater diesen vorübergehend deaktivieren und danach bei Bedarf wieder aktivieren.' if de else 'GitHub updates request release metadata and download the package during an update. The Library displays its bundled catalog locally; online catalog retrieval is optional and off by default. GitHub sees the requesting IP address during external requests. No telemetry or required GitHub account/token. If an active Git Updater causes problems, temporarily deactivate it and reactivate it afterward if needed.'
+ author='Entwickelt und herausgegeben von David Decker – DECKERWEB. Erste Veröffentlichung am 20. April 2012. Dieses GitHub-Paket enthält den Updater und ist nicht für WordPress.org bestimmt.' if de else 'Developed and published by David Decker – DECKERWEB. First released on April 20, 2012. This GitHub package includes the updater and is not intended for WordPress.org.'
+ support='[Issues](https://github.com/deckerweb/genesis-widgetized-notfound/issues) · [Vertrauliche Sicherheitsmeldung](SECURITY.md) · [Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)' if de else '[Issues](https://github.com/deckerweb/genesis-widgetized-notfound/issues) · [Private security reporting](SECURITY.md) · [Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)'
+ license='Copyright © 2012–2026 David Decker – DECKERWEB. GPL-2.0-or-later. [Lizenz und Komponenten](docs/LICENSES.md).' if de else 'Copyright © 2012–2026 David Decker – DECKERWEB. GPL-2.0-or-later. [License and components](docs/LICENSES.md).'
+ toc='\n'.join('- ['+h+'](#'+['about','glance','install','features','faq','changelog','author','support','license'][i]+')' for i,h in enumerate(heads))
+ out='# '+title+'\n\n![Genesis Widgetized Not Found & 404](assets/github-banner-'+('de' if de else 'en')+'.png)\n\n'+other+' · [Wiki](https://github.com/deckerweb/genesis-widgetized-notfound/wiki) · [Download](https://github.com/deckerweb/genesis-widgetized-notfound/releases/latest)\n\n## '+heads[0]+'\n\n'+intro+'\n\n**Version:** 2.0.0 · WordPress ≥ 6.4 · PHP ≥ 8.0 · Genesis\n\n[FAQ](#faq) · [Docs](docs/FAQ'+suffix+'.md)\n\n'+toc+'\n\n'
+ bodies=[intro,'\n'.join('- '+f for f in features),install,featuretext+'\n\n'+('Unter Genesis → Nicht gefunden & 404-Seite wählst du die volle Inhaltsbreite für 404 und leere Suchen getrennt aus und passt den Standard-Suchhinweis an. Beide Layout-Optionen sind standardmäßig aus; ein leeres Textfeld verwendet den übersetzten Standard. Die Einstellungen gelten pro Website und bleiben beim Entfernen des Plugins erhalten.' if de else 'Under Genesis → Not Found & 404 Page, choose full content width separately for 404 and empty searches, and customize the default search message. Both layout options are off by default; an empty text field uses the translated default. Settings belong to each site and are preserved when the plugin is removed.')+'\n\n'+connections,faqs(faq[:7])+'\n\n[FAQ by topic / Fragen nach Themen](docs/FAQ'+suffix+'.md).',hist(history[:7]),author,support,license]
+ bodies[3] += '\n\n' + data['comfort']['de' if de else 'en']
+ for i,h in enumerate(heads[1:],1): out+='<a id="'+['about','glance','install','features','faq','changelog','author','support','license'][i]+'"></a>\n## '+h+'\n\n'+bodies[i]+'\n\n'
+ (r/('README'+suffix+'.md')).write_text(out)
+ (r/('CHANGES'+suffix+'.md')).write_text('# '+heads[5]+'\n\n'+hist(history)+'\n')
+ (r/'docs'/('FAQ'+suffix+'.md')).write_text('# '+('Fragen nach Themen' if de else 'FAQ by topic')+'\n\n'+faqs(faq[:7])+'\n\n## '+('Anpassung und Entwicklung' if de else 'Customization and development')+'\n\n'+faqs(faq[7:])+'\n')
+ (r/'docs'/('changelog'+suffix+'.txt')).write_text('== Changelog ==\n\n'+hist(history[:7],True)+'\n')
+ (r/'docs'/('help'+suffix+'.txt')).write_text('=== '+title+' ===\n\n'+intro+'\n\n== '+heads[2]+' ==\n\n'+install+'\n\n'+featuretext+'\n\n== FAQ ==\n\n'+'\n\n'.join('= '+f[2 if de else 0]+' =\n\n'+f[3 if de else 1] for f in faq[:7])+'\n\n== '+('Verbindungen' if de else 'Connections')+' ==\n\n'+connections+'\n')
+ help_file=r/'docs'/('help'+suffix+'.txt')
+ help_file.write_text(help_file.read_text()+'\n\n'+data['comfort']['de' if de else 'en']+'\n')
+ (r/('readme'+suffix+'.txt')).write_text('=== '+title+' ===\nContributors: daveshine\nTags: genesis, 404, widgets, search\nRequires at least: 6.4\nTested up to: 7.1.3\nRequires PHP: 8.0\nStable tag: 2.0.0\nLicense: GPLv2 or later\nLicense URI: https://www.gnu.org/licenses/gpl-2.0.html\n\n'+intro+'\n\n== Description ==\n\n'+featuretext+'\n\n'+('Unter Genesis → Nicht gefunden & 404-Seite wählst du die volle Inhaltsbreite für 404 und leere Suchen getrennt aus und passt den Standard-Suchhinweis an. Beide Layout-Optionen sind standardmäßig aus; ein leeres Textfeld verwendet den übersetzten Standard. Die Einstellungen gelten pro Website und bleiben beim Entfernen des Plugins erhalten.' if de else 'Under Genesis → Not Found & 404 Page, choose full content width separately for 404 and empty searches, and customize the default search message. Both layout options are off by default; an empty text field uses the translated default. Settings belong to each site and are preserved when the plugin is removed.')+'\n\n'+connections+'\n\n== Installation ==\n\n'+install+'\n\n== Frequently Asked Questions ==\n\n'+'\n\n'.join('= '+f[2 if de else 0]+' =\n\n'+f[3 if de else 1] for f in faq[:7])+'\n\n== Changelog ==\n\n'+hist(history[:7],True)+'\n')
+for lang_suffix, lang in [('', 'en'), ('-de', 'de')]:
+ p=r/('readme'+lang_suffix+'.txt');s=p.read_text().replace('== Installation ==',data['comfort'][lang]+'\n\n== Installation ==');p.write_text(s)
+
+(r/'SECURITY.md').write_text('''# Security / Sicherheit
+
+Report security issues privately through [GitHub Security Advisories](https://github.com/deckerweb/genesis-widgetized-notfound/security/advisories/new). Include plugin, WordPress, PHP and Genesis versions and reproducible steps. Do not disclose vulnerabilities in public issues. This also covers embedded Library and updater code.
+
+Melde Sicherheitsprobleme vertraulich über [GitHub Security Advisories](https://github.com/deckerweb/genesis-widgetized-notfound/security/advisories/new). Nenne Plugin-, WordPress-, PHP- und Genesis-Version sowie nachvollziehbare Schritte. Veröffentliche Schwachstellen nicht in öffentlichen Issues. Der Meldeweg gilt auch für eingebettete Library- und Updater-Dateien.
+''')
+(r/'docs/LICENSES.md').write_text('''# License and provenance / Lizenz und Herkunft
+
+Plugin: David Decker – DECKERWEB, 2012–2026, GPL-2.0-or-later.
+
+Embedded components / Eingebettete Komponenten, David Decker – DECKERWEB, GPL-2.0-or-later:
+- [deckerweb Library 0.9.0](https://github.com/deckerweb/deckerweb-plugin-library/releases/tag/v0.9.0): includes/deckerweb-plugin-library/. Original runtime and manifest, including local component artwork and translations.
+- [deckerweb Updater 2.1.0](https://github.com/deckerweb/deckerweb-updater/releases/tag/v2.1.0): includes/deckerweb-github-release-updater-v2.php. Original engine.
+- Shared admin footer and changelog renderer from [Multisite Toolbar Additions](https://github.com/deckerweb/multisite-toolbar-additions), local structured-dialog implementation, David Decker – DECKERWEB, GPL-2.0-or-later.
+
+Framework Blueprint artwork: David Decker – DECKERWEB, GPL-2.0-or-later. / Grafiken: David Decker – DECKERWEB, GPL-2.0-or-later.\n\nSVG sources embed Manrope (copyright 2018 The Manrope Project Authors) and Literata, SIL Open Font License 1.1. PNG artwork is rendered from these sources. / SVG-Quellen betten Manrope und Literata unter SIL Open Font License 1.1 ein; PNGs sind daraus gerendert. See / Siehe assets/licenses/Manrope-OFL.txt and / und assets/licenses/Literata-OFL.txt.
+''')
+(r/'composer.json').write_text(json.dumps({'name':'deckerweb/genesis-widgetized-notfound','description':'Widgetized 404 and empty-search content for Genesis.','type':'wordpress-plugin','license':'GPL-2.0-or-later','require':{'php':'>=8.0'}},indent=2)+'\n')
+
+p=r/'docs/help-de.txt';s=p.read_text()
+for a,b in {'Gestalte':'Gestalten Sie','Öffne':'Öffnen Sie','Füge':'Fügen Sie','Verwende':'Verwenden Sie','Lade':'Laden Sie','aktiviere es':'aktivieren Sie es','deinem':'Ihrem','deinen':'Ihren','deiner':'Ihrer','deine':'Ihre','bestimmst du':'bestimmen Sie','Definiere':'Definieren Sie','wählst du':'wählen Sie','passt':'passen','gib':'geben Sie','Gib':'Geben Sie','Aktiviere':'Aktivieren Sie','füge':'fügen Sie','fügst du':'fügen Sie'}.items(): s=s.replace(a,b)
+(r/'docs/help-de-formal.txt').write_text(s)
+
+# Normalize the generated public text files.
+for p in list(r.glob('*.md')) + list((r/'docs').glob('*.txt')):
+ p.write_text(p.read_text().rstrip()+'\n')

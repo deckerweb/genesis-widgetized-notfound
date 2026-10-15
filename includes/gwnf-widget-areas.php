@@ -28,9 +28,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 function ddw_gwnf_get_widget_area_description( $area = '' ) {
 
 	/** Sanitize given area string */
-	$area = sanitize_key( $area );
+	$area = in_array( $area, array( '404', 'notfound' ), true ) ? $area : '404';
 
-	/** Divider string */
+	/** Filter the plain divider used in sidebar descriptions. @since 1.6.0 @param string $divider Divider text. */
 	$divider = esc_html(
 		apply_filters(
 			'gwnf/filter/widget_areas/divider',
@@ -62,7 +62,7 @@ function ddw_gwnf_get_widget_area_description( $area = '' ) {
 	$test_notfound = sprintf(
 		' %1$s &rarr; <a href="%2$s">%3$s</a>',
 		$divider,
-		esc_url( get_site_url() . '/?s=' . md5( rand() ) ),
+		esc_url( home_url() . '/?s=' . md5( rand() ) ),
 		esc_html__( 'Test search not found results', 'genesis-widgetized-notfound' )
 	);
 
@@ -70,7 +70,7 @@ function ddw_gwnf_get_widget_area_description( $area = '' ) {
 	$test_404 = sprintf(
 		' %1$s &rarr; <a href="%2$s">%3$s</a>',
 		$divider,
-		esc_url( get_site_url() . '/404-testing-' . md5( rand() ) ),
+		esc_url( home_url() . '/404-testing-' . md5( rand() ) ),
 		esc_html__( 'Test 404 error page', 'genesis-widgetized-notfound' )
 	);
 
@@ -100,17 +100,29 @@ function ddw_gwnf_get_widget_area_description( $area = '' ) {
 
 	}  // end switch
 
-	/** Finally output the description */
+	/**
+	 * Preserve the legacy literal description-filter key before the area-specific filter.
+	 * @since 1.6.0
+	 * @param string $description Sidebar help HTML to return.
+	 * @param string $area Area key: 404 or notfound.
+	 */
+	$output_html = apply_filters( 'gwnf/filter/widget_areas/{$area}/description', $output_html, $area );
+	/**
+	 * Filter the matching widget-area description.
+	 * @since 1.6.0
+	 * @param string $description Sidebar help HTML to return.
+	 * @param string $area Area key: 404 or notfound.
+	 */
 	return apply_filters(
-		'gwnf/filter/widget_areas/{$area}/description',
-		version_compare( get_bloginfo( 'version' ), '4.9.7', '<=' ) ? $output_string : $output_html,
+		"gwnf/filter/widget_areas/{$area}/description",
+		$output_html,
 		$area
 	);
 
 }  // end function
 
 
-add_action( 'init', 'ddw_gwnf_register_widget_areas' );
+
 /**
  * Register additional widget areas.
  *
@@ -121,15 +133,17 @@ add_action( 'init', 'ddw_gwnf_register_widget_areas' );
  *              use case.
  *
  * @uses  genesis_register_widget_area()
+ * @return void
  */
 function ddw_gwnf_register_widget_areas() {
 
 	/** Add shortcode support to widgets */
 	if ( ! GWNF_NO_WIDGETS_SHORTCODE && ! is_admin() ) {
-		add_filter( 'widget_text', 'do_shortcode' );
+		// Modern text widgets already process shortcodes on widget_text_content.
+		add_filter( 'widget_text', 'ddw_gwnf_legacy_widget_shortcodes', 11, 3 );
 	}
 
-	/** Set filter for "404 Error Page" widget title */
+	/** Filter the 404 sidebar title. @since 1.6.0 @param string $title Plain sidebar title. */
 	$gwnf_404_widget_title = esc_html(
 		apply_filters(
 			'gwnf/filter/widget_areas/404/title',
@@ -146,7 +160,7 @@ function ddw_gwnf_register_widget_areas() {
 		)
 	);
 
-	/** Set filter for "Search Not Found" widget title */
+	/** Filter the empty-search sidebar title. @since 1.6.0 @param string $title Plain sidebar title. */
 	$gwnf_notfound_widget_title = esc_html(
 		apply_filters(
 			'gwnf/filter/widget_areas/notfound/title',
@@ -164,3 +178,15 @@ function ddw_gwnf_register_widget_areas() {
 	);
 
 }  // end function
+/**
+ * Process shortcodes only for legacy text widgets; avoid double rendering modern ones.
+ * @since 2.0.0
+ * @param string $text Widget content.
+ * @param array $instance Saved widget instance.
+ * @param WP_Widget|null $widget Rendering widget when supplied by WordPress.
+ * @return string Content with legacy shortcodes expanded once.
+ */
+function ddw_gwnf_legacy_widget_shortcodes( $text, $instance = array(), $widget = null ) {
+ if ( $widget instanceof WP_Widget_Text && $widget->is_legacy_instance( $instance ) === false ) { return $text; }
+ return do_shortcode( $text );
+}

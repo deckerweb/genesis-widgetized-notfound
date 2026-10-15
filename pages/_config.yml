@@ -1,0 +1,5 @@
+theme: jekyll-theme-cayman
+title: Genesis Widgetized Not Found & 404
+description: Helpful content when nothing is found.
+show_downloads: false
+exclude: [README.md]

@@ -1,0 +1,50 @@
+=== Genesis Widgetized Not Found & 404 ===
+
+Gestalte 404-Seiten und Suchen ohne Treffer mit vertrauten WordPress-Widgets. Für klassische Genesis-Themes, mit Such-Widget, Shortcodes und optionaler bbPress-Integration.
+
+== Installation und erste Schritte ==
+
+Lade das Plugin-ZIP hoch und aktiviere es. Genesis muss auf der jeweiligen Website als Parent-Theme aktiv sein. Öffne **Design → Widgets** und füge Inhalte in die beiden Bereiche ein. Bestehende Widget-IDs und Einstellungen bleiben bei einem Update erhalten.
+
+Mit dem Such-Widget bestimmst du Beschriftung, Platzhalter und Schaltfläche. Shortcodes platzieren das Formular oder aktive Widget-Bereiche in geeigneten Inhalten. bbPress erhält bei erfolglosen Forumsuchen einen eigenen Bereich. Die Gestaltung kommt aus deinem Child-Theme.
+
+== FAQ ==
+
+= Wo füge ich Inhalte hinzu? =
+
+Unter Genesis → Nicht gefunden & 404-Seite befinden sich Einrichtungsübersicht, Layout-Optionen, Suchhinweis und optionaler 404-Startinhalt. Die einzelnen Bearbeitungslinks oder Design → Widgets führen zur Widget-Zuweisung.
+
+= Funktioniert das ohne Genesis? =
+
+Die Seitenintegration benötigt Genesis als aktives Parent-Theme. Ohne Genesis pausiert sie sicher und erhält gespeicherte Widgets. Library und Updater bleiben verfügbar.
+
+= Was passiert mit leeren Widget-Bereichen? =
+
+Ein leerer 404-Bereich zeigt die Genesis-Ausgabe oder den ausdrücklich aktivierten 404-Startinhalt. Ein leerer Suchbereich zeigt Suchhinweis und Suchformular. bbPress behält bei leerem Widget-Bereich seine eigene Meldung. Zugewiesene Widgets haben Vorrang, auch wenn ihre Anzeigeregeln sie ausblenden.
+
+= Welche Shortcodes gibt es? =
+
+Verwende [gwnf-search] und [gwnf-widget-area area="404"]. Weitere Bereichswerte sind notfound und bbpress-notfound. Suchattribute: search_text, button_text, form_label, wrapper, class, post_type. Auf der Einstellungsseite stehen Kopierbuttons für das Suchformular und die beiden Hauptbereiche bereit; manuelles Markieren ist ebenfalls möglich. Bereichs-Shortcodes fügen keinen 404-Startinhalt ein.
+
+= Unterstützt es Multisite? =
+
+Ja. Widgets gehören zur jeweiligen Website. Netzwerkaktivierung ist möglich; Genesis-Funktionen laufen nur auf Websites mit Genesis. Gemeinsame Library-Einstellungen gelten für das Netzwerk. Theme-Bearbeiter verwalten Widgets, Netzwerkadministratoren netzwerkweite Plugin-Updates.
+
+= Liefert eine 404-Seite weiterhin HTTP 404? =
+
+Ja. WordPress und Genesis bestimmen den HTTP-Status. Das Plugin ändert den dargestellten Inhalt, ohne Umleitungen oder Soft-404-Verhalten.
+
+= Was passiert beim Entfernen mit meinen Daten? =
+
+Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungseinstellungen dieser Website. Beim letzten Library-Host werden temporäre gemeinsame Library-Daten bereinigt; die optionale Löschung ihrer Einstellungen folgt dem eigenen Schalter. Andere Plugins und Inhalte werden nie gelöscht.
+
+== Verbindungen ==
+
+GitHub-Updates fragen Release-Metadaten ab und laden bei einem Update das Paket herunter. Die Library zeigt ihren mitgelieferten Katalog lokal; Online-Katalogabfragen sind optional und standardmäßig aus. GitHub sieht bei externen Anfragen die anfragende IP-Adresse. Keine Telemetrie; kein GitHub-Konto oder Token erforderlich. Bei Problemen mit aktivem Git Updater diesen vorübergehend deaktivieren und danach bei Bedarf wieder aktivieren.
+
+
+Die Einrichtungsübersicht zeigt die Anzahl zugewiesener Widgets, die Ausgabe bei leerem Bereich und einzelne Bearbeitungslinks, einschließlich bbPress bei registriertem Bereich. Die Anzahl garantiert keine sichtbare Ausgabe: Die Anzeigeregeln der Widgets gelten weiterhin. Widersprüchliche Regeln des Such-Widgets und eine Beschränkung auf angemeldete Nutzer werden erläutert. Die neuen Regeln Nur auf 404-Seiten und Nur bei Suchen ohne Treffer sind optional.
+
+Frontend-Testlinks öffnen normale Anfragen in einem neuen Tab, zusätzlich zu den bisherigen Customizer-Vorschauen. Auch ausgeloggt testen; Such-Plugins und Weiterleitungen können das Ergebnis beeinflussen. Shortcodes lassen sich per Schaltfläche kopieren oder bei fehlendem Zwischenablagezugriff manuell markieren. Widget-Bereich-Shortcodes zeigen zugewiesene Widgets, keinen Startinhalt.
+
+Der optionale 404-Startinhalt ist standardmäßig ausgeschaltet. Bei Aktivierung und leerem 404-Widget-Bereich erscheinen Überschrift und Erklärung sowie optional Suchformular und Startseitenlink. Leere Textfelder verwenden übersetzte Standardtexte. Zugewiesene 404-Widgets haben immer Vorrang; auch ein durch seine Anzeigeregel verborgenes Widget verhindert die Ausgabe für einen leeren Bereich. Nach Abschalten erscheint bei leerem 404-Bereich wieder die bisherige Genesis-Ausgabe. Der tatsächliche Aufruf einer fehlenden Seite behält den 404-Status. Alle Einstellungen gelten für die aktuelle Website.

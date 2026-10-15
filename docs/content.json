@@ -1,0 +1,356 @@
+{
+  "version": "2.0.0",
+  "requires_wp": "6.4",
+  "requires_php": "8.0",
+  "history": [
+    [
+      "2.0.0",
+      "2026-10-15",
+      [
+        [
+          "New",
+          "Setup overview with widget counts, editing shortcuts and visibility hints.",
+          "Einrichtungsübersicht mit Widget-Anzahl, Bearbeitungslinks und Sichtbarkeitshinweisen."
+        ],
+        [
+          "New",
+          "Optional 404 starter content with custom heading, explanation, search form and homepage link.",
+          "Optionaler 404-Startinhalt mit eigener Überschrift, Erklärung, Suchformular und Startseitenlink."
+        ],
+        [
+          "New",
+          "Independent full-width options for 404 pages and empty searches, plus a custom no-results message.",
+          "Getrennte Optionen für volle Inhaltsbreite bei 404 und erfolgloser Suche sowie ein eigener Suchhinweis."
+        ],
+        [
+          "New",
+          "Direct frontend tests, copyable shortcodes and search-widget rules for 404 and empty-search pages.",
+          "Direkte Frontend-Tests, kopierbare Shortcodes und Such-Widget-Regeln für 404 und erfolglose Suchen."
+        ],
+        [
+          "Improved",
+          "Compatibility with current WordPress, PHP and Genesis, including per-site settings and network activation.",
+          "Kompatibilität mit aktuellem WordPress, PHP und Genesis einschließlich Website-Einstellungen und Netzwerkaktivierung."
+        ],
+        [
+          "Improved",
+          "Accessible search forms, local documentation, German translations and updated banners and icons.",
+          "Zugängliche Suchformulare, lokale Dokumentation, deutsche Übersetzungen und aktualisierte Banner und Icons."
+        ],
+        [
+          "Fixed",
+          "Safer widget input, shortcode rendering and bbPress empty-search integration.",
+          "Sicherere Widget-Eingaben, Shortcode-Ausgabe und bbPress-Integration für erfolglose Suchen."
+        ],
+        [
+          "Misc",
+          "Requires WordPress 6.4 and PHP 8.0. Existing widgets and settings are preserved.",
+          "Benötigt WordPress 6.4 und PHP 8.0. Bestehende Widgets und Einstellungen bleiben erhalten."
+        ],
+        [
+          "Misc",
+          "Distributed through GitHub with deckerweb Library and Updater; the previous installer-recommendations library has been removed.",
+          "Vertrieb über GitHub mit deckerweb Library und Updater; die bisherige Library für Installationsempfehlungen wurde entfernt."
+        ]
+      ]
+    ],
+    [
+      "1.6.4",
+      "2019-05-04",
+      [
+        [
+          "New",
+          "Site Health debug information and newsletter links.",
+          "Diagnoseinformationen im Website-Zustand und Newsletter-Links."
+        ],
+        [
+          "Improved",
+          "WordPress 5.2 compatibility, installer recommendations library 1.4.0 and German translations.",
+          "Kompatibilität mit WordPress 5.2, Empfehlungsbibliothek 1.4.0 und deutsche Übersetzungen."
+        ]
+      ]
+    ],
+    [
+      "1.6.3",
+      "2018-11-22",
+      [
+        [
+          "Improved",
+          "Installation instructions, HTTP-status FAQ and installer recommendations library 1.2.1.",
+          "Installationsanleitung, FAQ zum HTTP-Status und Empfehlungsbibliothek 1.2.1."
+        ],
+        [
+          "Fixed",
+          "Widget administration and Customizer styles while adding widgets.",
+          "Darstellung beim Hinzufügen von Widgets in der Widget-Verwaltung und im Customizer."
+        ]
+      ]
+    ],
+    [
+      "1.6.2",
+      "2018-11-03",
+      [
+        [
+          "New",
+          "Plugin walkthrough video.",
+          "Video mit Plugin-Rundgang."
+        ],
+        [
+          "Improved",
+          "Installer recommendations library 1.2.0 with Dark Mode styling.",
+          "Empfehlungsbibliothek 1.2.0 mit Dark-Mode-Darstellung."
+        ]
+      ]
+    ],
+    [
+      "1.6.1",
+      "2018-10-01",
+      [
+        [
+          "New",
+          "Update messages on the Plugins screen and community support links.",
+          "Updatehinweise auf der Plugins-Seite und Community-Support-Links."
+        ],
+        [
+          "Improved",
+          "Installer recommendations library 1.1.0 and German translations.",
+          "Empfehlungsbibliothek 1.1.0 und deutsche Übersetzungen."
+        ]
+      ]
+    ],
+    [
+      "1.6.0",
+      "2018-08-25",
+      [
+        [
+          "New",
+          "Genesis menu shortcut, Customizer preview/test links, widget-area hints, GitHub distribution, Composer metadata, icons and installer recommendations.",
+          "Genesis-Menüverknüpfung, Customizer-Vorschau-/Testlinks, Widget-Bereich-Hinweise, GitHub-Vertrieb, Composer-Metadaten, Icons und Plugin-Empfehlungen."
+        ],
+        [
+          "Improved",
+          "Widget registration, developer filters, documentation, translations and screenshots.",
+          "Widget-Registrierung, Entwicklerfilter, Dokumentation, Übersetzungen und Bildschirmfotos."
+        ],
+        [
+          "Misc",
+          "Removed unavailable Facetious integration.",
+          "Nicht mehr verfügbare Facetious-Integration entfernt."
+        ]
+      ]
+    ],
+    [
+      "1.5.0",
+      "2013-05-29",
+      [
+        [
+          "New",
+          "Configurable search widget, search and widget-area shortcodes, bbPress 2.3 empty-search integration and partial Spanish translation.",
+          "Konfigurierbares Such-Widget, Such- und Widget-Bereich-Shortcodes, Integration für leere bbPress-2.3-Suchen und teilweise spanische Übersetzung."
+        ],
+        [
+          "Improved",
+          "Genesis 2.0 HTML5 markup, conditional frontend loading, stylesheet handling, documentation and German translations.",
+          "Genesis-2.0-HTML5-Markup, bedingtes Laden im Frontend, Stylesheets, Dokumentation und deutsche Übersetzungen."
+        ]
+      ]
+    ],
+    [
+      "1.4.0",
+      "2012-12-15",
+      [
+        [
+          "New",
+          "Constant to disable widget shortcode processing.",
+          "Konstante zum Abschalten der Shortcode-Verarbeitung in Widgets."
+        ],
+        [
+          "Improved",
+          "Widget class placeholder and German translations.",
+          "Widget-Klassenplatzhalter und deutsche Übersetzungen."
+        ],
+        [
+          "Misc",
+          "Three-part version numbers and screenshots moved outside the plugin package.",
+          "Dreiteilige Versionsnummern; Bildschirmfotos aus dem Plugin-Paket ausgelagert."
+        ]
+      ]
+    ],
+    [
+      "1.3.0",
+      "2012-08-20",
+      [
+        [
+          "New",
+          "Genesis settings help tab and online translation platform.",
+          "Hilferegister in Genesis-Einstellungen und Online-Übersetzungsplattform."
+        ],
+        [
+          "Improved",
+          "Compressed CSS and German translations.",
+          "Komprimiertes CSS und deutsche Übersetzungen."
+        ],
+        [
+          "Misc",
+          "Expanded GPL license information.",
+          "GPL-Lizenzinformationen ergänzt."
+        ]
+      ]
+    ],
+    [
+      "1.2.0",
+      "2012-04-27",
+      [
+        [
+          "New",
+          "Widgets help tab and gwnf_load_styles action.",
+          "Hilferegister in der Widget-Verwaltung und Aktion gwnf_load_styles."
+        ],
+        [
+          "Improved",
+          "Conditional admin loading, documentation and German translations.",
+          "Bedingtes Laden der Admin-Funktionen, Dokumentation und deutsche Übersetzungen."
+        ]
+      ]
+    ],
+    [
+      "1.1.0",
+      "2012-04-23",
+      [
+        [
+          "New",
+          "Full-width layout helpers for 404 and empty search results.",
+          "Hilfsfunktionen für Layouts in voller Breite bei 404 und leeren Suchergebnissen."
+        ],
+        [
+          "Improved",
+          "Conditional widget output, Genesis registration, Multisite handling, translations and empty-paragraph styling.",
+          "Bedingte Widget-Ausgabe, Genesis-Registrierung, Multisite-Verhalten, Übersetzungen und Darstellung leerer Absätze."
+        ]
+      ]
+    ],
+    [
+      "1.0.1",
+      "2012-04-20",
+      [
+        [
+          "Fixed",
+          "Function typo causing activation notices.",
+          "Funktions-Tippfehler behoben, der Aktivierungshinweise verursachte."
+        ],
+        [
+          "Improved",
+          "Widget registration, documentation, translations and WordPress.org banner.",
+          "Widget-Registrierung, Dokumentation, Übersetzungen und WordPress.org-Banner."
+        ]
+      ]
+    ],
+    [
+      "1.0.0",
+      "2012-04-20",
+      [
+        [
+          "New",
+          "Initial release: widgetized 404 and empty-search pages for Genesis.",
+          "Erste Veröffentlichung: Widget-Bereiche für 404-Seiten und leere Suchen in Genesis."
+        ]
+      ]
+    ]
+  ],
+  "faq": [
+    [
+      "Where do I add the content?",
+      "Open Genesis → Not Found & 404 Page for the setup overview, layout options, search message and optional 404 starter. Use each area’s editing link or Appearance → Widgets to assign content.",
+      "Wo füge ich Inhalte hinzu?",
+      "Unter Genesis → Nicht gefunden & 404-Seite befinden sich Einrichtungsübersicht, Layout-Optionen, Suchhinweis und optionaler 404-Startinhalt. Die einzelnen Bearbeitungslinks oder Design → Widgets führen zur Widget-Zuweisung."
+    ],
+    [
+      "Does this work without Genesis?",
+      "The page integration requires an active Genesis parent theme. Without Genesis it pauses safely and keeps saved widgets. The Library and updater remain available.",
+      "Funktioniert das ohne Genesis?",
+      "Die Seitenintegration benötigt Genesis als aktives Parent-Theme. Ohne Genesis pausiert sie sicher und erhält gespeicherte Widgets. Library und Updater bleiben verfügbar."
+    ],
+    [
+      "What happens with empty widget areas?",
+      "An empty 404 area keeps Genesis output unless the optional 404 starter is enabled. An empty search area shows the no-results message and search form. bbPress keeps its own feedback when its widget area is empty. Assigned widgets take precedence even if their own visibility rules hide them.",
+      "Was passiert mit leeren Widget-Bereichen?",
+      "Ein leerer 404-Bereich zeigt die Genesis-Ausgabe oder den ausdrücklich aktivierten 404-Startinhalt. Ein leerer Suchbereich zeigt Suchhinweis und Suchformular. bbPress behält bei leerem Widget-Bereich seine eigene Meldung. Zugewiesene Widgets haben Vorrang, auch wenn ihre Anzeigeregeln sie ausblenden."
+    ],
+    [
+      "Which shortcodes are available?",
+      "Use [gwnf-search] and [gwnf-widget-area area=\"404\"]. The other area values are notfound and bbpress-notfound. Search attributes: search_text, button_text, form_label, wrapper, class, post_type. Copy buttons for the search form and the two main areas are available on the settings page; manual selection also works. Area shortcodes do not insert 404 starter content.",
+      "Welche Shortcodes gibt es?",
+      "Verwende [gwnf-search] und [gwnf-widget-area area=\"404\"]. Weitere Bereichswerte sind notfound und bbpress-notfound. Suchattribute: search_text, button_text, form_label, wrapper, class, post_type. Auf der Einstellungsseite stehen Kopierbuttons für das Suchformular und die beiden Hauptbereiche bereit; manuelles Markieren ist ebenfalls möglich. Bereichs-Shortcodes fügen keinen 404-Startinhalt ein."
+    ],
+    [
+      "Does it support Multisite?",
+      "Yes. Widgets belong to each site. Network activation is allowed; Genesis features run only on sites using Genesis. Shared Library settings belong to the network. Theme editors manage widgets; network administrators manage network-wide plugin updates.",
+      "Unterstützt es Multisite?",
+      "Ja. Widgets gehören zur jeweiligen Website. Netzwerkaktivierung ist möglich; Genesis-Funktionen laufen nur auf Websites mit Genesis. Gemeinsame Library-Einstellungen gelten für das Netzwerk. Theme-Bearbeiter verwalten Widgets, Netzwerkadministratoren netzwerkweite Plugin-Updates."
+    ],
+    [
+      "Does a 404 still return HTTP 404?",
+      "Yes. WordPress and Genesis determine the HTTP status. This plugin changes the displayed content, without redirects or soft-404 handling.",
+      "Liefert eine 404-Seite weiterhin HTTP 404?",
+      "Ja. WordPress und Genesis bestimmen den HTTP-Status. Das Plugin ändert den dargestellten Inhalt, ohne Umleitungen oder Soft-404-Verhalten."
+    ],
+    [
+      "What happens to data when I remove it?",
+      "Deactivation and uninstall preserve widget content and this site’s presentation settings. Final-host uninstall cleans temporary shared Library data; optional Library settings deletion follows its own switch. Other plugins and content are never deleted.",
+      "Was passiert beim Entfernen mit meinen Daten?",
+      "Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungseinstellungen dieser Website. Beim letzten Library-Host werden temporäre gemeinsame Library-Daten bereinigt; die optionale Löschung ihrer Einstellungen folgt dem eigenen Schalter. Andere Plugins und Inhalte werden nie gelöscht."
+    ],
+    [
+      "How do I style the widget areas?",
+      "Use child-theme CSS with #gwnf-404-area, #gwnf-notfound-area and .gwnf-bbpress-notfound-area. The gwnf_load_styles action allows additional enqueued styles. Custom CSS is not stored by this plugin.",
+      "Wie gestalte ich die Widget-Bereiche?",
+      "Verwende Child-Theme-CSS mit #gwnf-404-area, #gwnf-notfound-area und .gwnf-bbpress-notfound-area. Die Aktion gwnf_load_styles erlaubt zusätzliche eingereihte Styles. Das Plugin speichert kein eigenes CSS."
+    ],
+    [
+      "How do I use a full-width layout?",
+      "Enable the corresponding option under Genesis → Not Found & 404 Page. The search option only changes searches with no results; successful searches keep their usual layout. Existing __gwnf_layout_404_full_width and __gwnf_layout_searchnotfound_full_width helpers remain available.",
+      "Wie verwende ich ein Layout in voller Breite?",
+      "Aktiviere die entsprechende Option unter Genesis → Nicht gefunden & 404-Seite. Die Suchoption ändert nur Suchen ohne Treffer; erfolgreiche Suchen behalten ihr bisheriges Layout. Die Hilfsfunktionen __gwnf_layout_404_full_width und __gwnf_layout_searchnotfound_full_width bleiben verfügbar."
+    ],
+    [
+      "Can I disable shortcodes?",
+      "Define GWNF_SHORTCODE_FEATURES as false before init to disable both plugin shortcodes. Define GWNF_NO_WIDGETS_SHORTCODE as true to disable the plugin-added legacy text-widget processing. WordPress’s own modern text-widget shortcode support remains under WordPress control.",
+      "Kann ich Shortcodes abschalten?",
+      "Definiere GWNF_SHORTCODE_FEATURES vor init als false, um beide Plugin-Shortcodes abzuschalten. GWNF_NO_WIDGETS_SHORTCODE mit true schaltet die vom Plugin ergänzte Verarbeitung alter Text-Widgets ab. Die eigene Shortcode-Unterstützung moderner Text-Widgets bleibt unter WordPress-Kontrolle."
+    ],
+    [
+      "How do search attributes work?",
+      "wrapper accepts div, section, aside, nav and span, falling back to div. class supports space-separated CSS classes. post_type accepts comma-separated publicly searchable registered post types. Label text is always provided to assistive technology, even with no custom label.",
+      "Wie funktionieren die Suchattribute?",
+      "wrapper akzeptiert div, section, aside, nav und span; sonst wird div verwendet. class unterstützt mehrere CSS-Klassen mit Leerzeichen. post_type akzeptiert kommaseparierte, öffentlich durchsuchbare registrierte Inhaltstypen. Eine Beschriftung für Hilfstechnologien ist auch ohne eigenen Label-Text vorhanden."
+    ],
+    [
+      "Which developer filters remain available?",
+      "Existing gwnf output/title/description filters remain. The intended area-description filters gwnf/filter/widget_areas/404/description and gwnf/filter/widget_areas/notfound/description now receive the corresponding area. gwnf_filter_shortcode_widget_area now filters the captured output.",
+      "Welche Entwicklerfilter bleiben verfügbar?",
+      "Bestehende gwnf-Ausgabe-, Titel- und Beschreibungsfilter bleiben erhalten. Die vorgesehenen Bereichsbeschreibungsfilter gwnf/filter/widget_areas/404/description und gwnf/filter/widget_areas/notfound/description erhalten jetzt den jeweiligen Bereich. gwnf_filter_shortcode_widget_area filtert jetzt die gepufferte Ausgabe."
+    ],
+    [
+      "How do I change the default search message?",
+      "Enter plain text under Genesis → Not Found & 404 Page. It appears only when the Search Not Found widget area is empty; the search form stays visible. Leave the field empty to restore the translated default. The existing output filter remains available. Without Genesis, the settings page is under Settings.",
+      "Wie ändere ich den Standardtext bei erfolgloser Suche?",
+      "Gib unter Genesis → Nicht gefunden & 404-Seite normalen Text ein. Er erscheint nur, wenn der Widget-Bereich Suche ohne Treffer leer ist; das Suchformular bleibt sichtbar. Ein leeres Textfeld stellt den übersetzten Standard wieder her. Der bestehende Ausgabefilter bleibt verfügbar. Ohne Genesis liegt die Einstellungsseite unter Einstellungen."
+    ],
+    [
+      "How do I test the result?",
+      "Use the frontend test links on the settings page for a normal missing-page request and a search with a random term. The existing Customizer previews remain available. Also check the result while logged out. Search plugins or redirects can change the outcome.",
+      "Wie prüfe ich das Ergebnis?",
+      "Die Frontend-Testlinks auf der Einstellungsseite öffnen eine normale Anfrage für eine fehlende Seite und eine Suche mit einem zufälligen Begriff. Die bisherigen Customizer-Vorschauen bleiben verfügbar. Das Ergebnis zusätzlich ausgeloggt prüfen. Such-Plugins oder Weiterleitungen können die Ausgabe beeinflussen."
+    ],
+    [
+      "Why is an assigned search widget not visible?",
+      "Check its display rule and logged-in-only setting. Single-post and single-page rules do not match 404 or empty-search contexts. Use Global or the matching new rule. The setup overview and saved widget form explain conflicting rules. A hidden assigned widget does not count as an empty area.",
+      "Warum ist ein zugewiesenes Such-Widget unsichtbar?",
+      "Die Anzeigeregel und die Beschränkung auf angemeldete Nutzer prüfen. Regeln für einzelne Beiträge oder Seiten passen nicht zu 404 oder erfolglosen Suchen. Global oder die passende neue Regel verwenden. Einrichtungsübersicht und gespeichertes Widget-Formular erläutern widersprüchliche Regeln. Ein verborgenes zugewiesenes Widget zählt nicht als leerer Bereich."
+    ]
+  ],
+  "comfort": {
+    "en": "The setup overview shows assigned widget counts, the empty-area fallback and individual editing links, including bbPress when its area is registered. Counts do not guarantee visible output: widget visibility rules still apply. Conflicting search-widget rules and logged-in-only visibility are explained. The new rules Only on 404 pages and Only on searches with no results are optional.\n\nFrontend test links open normal requests in a new tab, separately from the existing Customizer previews. Also test logged out; search plugins and redirects may affect the result. Shortcodes can be copied with the button, or selected manually if clipboard access is unavailable. Widget-area shortcodes render assigned widgets, not starter content.\n\nThe optional 404 starter is off by default. When enabled and the 404 widget area is empty, it supplies a heading and explanation, plus optional search form and homepage link. Empty text fields use translated defaults. Assigned 404 widgets always take precedence; even a widget hidden by its own rule prevents the empty-area fallback. Disabling the starter restores the usual Genesis output for an empty 404 area. The real missing-page request keeps its 404 status. All settings belong to the current site.",
+    "de": "Die Einrichtungsübersicht zeigt die Anzahl zugewiesener Widgets, die Ausgabe bei leerem Bereich und einzelne Bearbeitungslinks, einschließlich bbPress bei registriertem Bereich. Die Anzahl garantiert keine sichtbare Ausgabe: Die Anzeigeregeln der Widgets gelten weiterhin. Widersprüchliche Regeln des Such-Widgets und eine Beschränkung auf angemeldete Nutzer werden erläutert. Die neuen Regeln Nur auf 404-Seiten und Nur bei Suchen ohne Treffer sind optional.\n\nFrontend-Testlinks öffnen normale Anfragen in einem neuen Tab, zusätzlich zu den bisherigen Customizer-Vorschauen. Auch ausgeloggt testen; Such-Plugins und Weiterleitungen können das Ergebnis beeinflussen. Shortcodes lassen sich per Schaltfläche kopieren oder bei fehlendem Zwischenablagezugriff manuell markieren. Widget-Bereich-Shortcodes zeigen zugewiesene Widgets, keinen Startinhalt.\n\nDer optionale 404-Startinhalt ist standardmäßig ausgeschaltet. Bei Aktivierung und leerem 404-Widget-Bereich erscheinen Überschrift und Erklärung sowie optional Suchformular und Startseitenlink. Leere Textfelder verwenden übersetzte Standardtexte. Zugewiesene 404-Widgets haben immer Vorrang; auch ein durch seine Anzeigeregel verborgenes Widget verhindert die Ausgabe für einen leeren Bereich. Nach Abschalten erscheint bei leerem 404-Bereich wieder die bisherige Genesis-Ausgabe. Der tatsächliche Aufruf einer fehlenden Seite behält den 404-Status. Alle Einstellungen gelten für die aktuelle Website."
+  }
+}
