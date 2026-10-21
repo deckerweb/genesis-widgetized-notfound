@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.0.1 · 2026-10-21
+
+* Improved: Updated deckerweb Library and GitHub Updater with current package and compatibility checks.
+* Fixed: Hardened output escaping in search-widget settings.
+* Misc: Requires PHP 8.1; WordPress 6.4 remains supported. Existing widgets and settings are preserved.
+
 ### 2.0.0 · 2026-10-15
 
 * New: Setup overview with widget counts, editing shortcuts and visibility hints.

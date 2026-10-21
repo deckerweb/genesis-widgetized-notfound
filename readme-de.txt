@@ -3,12 +3,12 @@ Contributors: daveshine
 Tags: genesis, 404, widgets, search
 Requires at least: 6.4
 Tested up to: 7.1.3
-Requires PHP: 8.0
-Stable tag: 2.0.0
+Requires PHP: 8.1
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Gestalte 404-Seiten und Suchen ohne Treffer mit vertrauten WordPress-Widgets. Für klassische Genesis-Themes, mit Such-Widget, Shortcodes und optionaler bbPress-Integration.
+Widgets für Genesis-404-Seiten und Suchen ohne Treffer, mit Suchformular und Shortcodes.
 
 == Description ==
 
@@ -60,6 +60,12 @@ Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungsein
 
 == Changelog ==
 
+= 2.0.1 · 2026-10-21 =
+
+* Verbessert: deckerweb Library und GitHub-Updater mit aktuellen Paket- und Kompatibilitätsprüfungen aktualisiert.
+* Behoben: Ausgabeabsicherung in den Such-Widget-Einstellungen verbessert.
+* Sonstiges: Benötigt PHP 8.1; WordPress 6.4 bleibt unterstützt. Bestehende Widgets und Einstellungen bleiben erhalten.
+
 = 2.0.0 · 2026-10-15 =
 
 * Neu: Einrichtungsübersicht mit Widget-Anzahl, Bearbeitungslinks und Sichtbarkeitshinweisen.
@@ -97,8 +103,3 @@ Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungsein
 * Neu: Genesis-Menüverknüpfung, Customizer-Vorschau-/Testlinks, Widget-Bereich-Hinweise, GitHub-Vertrieb, Composer-Metadaten, Icons und Plugin-Empfehlungen.
 * Verbessert: Widget-Registrierung, Entwicklerfilter, Dokumentation, Übersetzungen und Bildschirmfotos.
 * Sonstiges: Nicht mehr verfügbare Facetious-Integration entfernt.
-
-= 1.5.0 · 2013-05-29 =
-
-* Neu: Konfigurierbares Such-Widget, Such- und Widget-Bereich-Shortcodes, Integration für leere bbPress-2.3-Suchen und teilweise spanische Übersetzung.
-* Verbessert: Genesis-2.0-HTML5-Markup, bedingtes Laden im Frontend, Stylesheets, Dokumentation und deutsche Übersetzungen.

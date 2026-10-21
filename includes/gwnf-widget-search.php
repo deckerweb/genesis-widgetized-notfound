@@ -61,6 +61,7 @@ class DDW_GWNF_Search_Widget extends WP_Widget {
 			array(
 				'classname'   => 'gwnf-search-widget',
 				'description' => esc_html__( 'A search form for your site. With more options than the default one.', 'genesis-widgetized-notfound' ) . ' &ndash; ' . sprintf(
+					/* translators: %s: Plugin name. */
 					esc_html__( 'Provided by the plugin %s.', 'genesis-widgetized-notfound' ),
 					'*' . __( 'Genesis Widgetized Not Found & 404', 'genesis-widgetized-notfound' ) . '*'
 				),
@@ -188,89 +189,92 @@ class DDW_GWNF_Search_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
-				<strong><?php _e( 'Title:', 'genesis-widgetized-notfound' ); ?></strong>
+				<strong><?php esc_html_e( 'Title:', 'genesis-widgetized-notfound' ); ?></strong>
 			</label>
-			<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo $title; ?>" />
+			<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 	   	</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title_url' ) ); ?>">
-			<?php _e( 'Optional Title URL:', 'genesis-widgetized-notfound' ); ?>
+			<?php esc_html_e( 'Optional Title URL:', 'genesis-widgetized-notfound' ); ?>
 			</label>
-			<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_url' ) ); ?>" value="<?php echo $title_url; ?>" />
+			<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_url' ) ); ?>" value="<?php echo esc_url( $instance['title_url'] ); ?>" />
 	   	</p>
 
 		<p>
 			<input type="checkbox" value="1" <?php checked( '1', $instance[ 'title_url_target' ] ); ?> id="<?php echo esc_attr( $this->get_field_id( 'title_url_target' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_url_target' ) ); ?>" />
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title_url_target' ) ); ?>">
-				<?php _e( 'Open the URL in a new window/ tab?' , 'genesis-widgetized-notfound' ); ?>
+				<?php esc_html_e( 'Open the URL in a new window/ tab?' , 'genesis-widgetized-notfound' ); ?>
 			</label>
 		</p>
 
 		<p>
 			<input type="checkbox" value="1" <?php checked( '1', $instance[ 'hide_title' ] ); ?> id="<?php echo esc_attr( $this->get_field_id( 'hide_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'hide_title' ) ); ?>" />
 			<label for="<?php echo esc_attr( $this->get_field_id( 'hide_title' ) ); ?>">
-				<?php _e( 'Do not display the Title?' , 'genesis-widgetized-notfound' ); ?>
+				<?php esc_html_e( 'Do not display the Title?' , 'genesis-widgetized-notfound' ); ?>
 			</label>
 		</p>
 
-		<hr <?php echo $gwnf_hr_style; ?> />
+		<hr class="gwnf-widget-divider" />
 
 		<p>
-			<label for="<?php /** Optional intro text */ echo esc_attr( $this->get_field_id( 'intro_text' ) ); ?>"><?php _e( 'Optional intro text:', 'genesis-widgetized-notfound' ); ?>
-				<small><?php echo sprintf( __( 'Add some additional %s info. NOTE: Just leave blank to not use at all.', 'genesis-widgetized-notfound' ), __( 'Search', 'genesis-widgetized-notfound' ) ); ?></small>
-				<textarea name="<?php echo esc_attr( $this->get_field_name( 'intro_text' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'intro_text' ) ); ?>" rows="2" class="widefat"><?php echo $intro_text; ?></textarea>
+			<label for="<?php /** Optional intro text */ echo esc_attr( $this->get_field_id( 'intro_text' ) ); ?>"><?php esc_html_e( 'Optional intro text:', 'genesis-widgetized-notfound' ); ?>
+				<small><?php /* translators: %s: Search label. */ echo esc_html( sprintf( __( 'Add some additional %s info. NOTE: Just leave blank to not use at all.', 'genesis-widgetized-notfound' ), __( 'Search', 'genesis-widgetized-notfound' ) ) ); ?></small>
+				<textarea name="<?php echo esc_attr( $this->get_field_name( 'intro_text' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'intro_text' ) ); ?>" rows="2" class="widefat"><?php echo esc_textarea( $instance['intro_text'] ); ?></textarea>
 			</label>
 		</p>
 
-		<hr <?php echo $gwnf_hr_style; ?> />
+		<hr class="gwnf-widget-divider" />
 
 		<p>
-			<strong><?php _e( 'Search form', 'genesis-widgetized-notfound' ); ?>:</strong>
+			<strong><?php esc_html_e( 'Search form', 'genesis-widgetized-notfound' ); ?>:</strong>
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'label_text' ) ); ?>">
-			<?php _e( 'Label string before search input field:', 'genesis-widgetized-notfound' ); ?>
+			<?php esc_html_e( 'Label string before search input field:', 'genesis-widgetized-notfound' ); ?>
 			<input type="text" id="<?php echo esc_attr( $this->get_field_id( 'label_text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'label_text' ) ); ?>" value="<?php echo esc_attr( $instance[ 'label_text' ] ); ?>" class="widefat" />
-				<small><?php _e( 'NOTE: Leave empty to not use/ display this string!', 'genesis-widgetized-notfound' ); ?></small>
+				<small><?php esc_html_e( 'NOTE: Leave empty to not use/ display this string!', 'genesis-widgetized-notfound' ); ?></small>
 			</label>
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'placeholder_text' ) ); ?>">
-			<?php _e( 'Placeholder string for search input field:', 'genesis-widgetized-notfound' ); ?>
+			<?php esc_html_e( 'Placeholder string for search input field:', 'genesis-widgetized-notfound' ); ?>
 			<input type="text" id="<?php echo esc_attr( $this->get_field_id( 'placeholder_text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'placeholder_text' ) ); ?>" value="<?php echo esc_attr( $instance[ 'placeholder_text' ] ); ?>" class="widefat" />
-				<small><?php _e( 'NOTE: Leave empty to not use/ display this string!', 'genesis-widgetized-notfound' ); ?></small>
+				<small><?php esc_html_e( 'NOTE: Leave empty to not use/ display this string!', 'genesis-widgetized-notfound' ); ?></small>
 			</label>
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>">
-			<?php _e( 'Search button string:', 'genesis-widgetized-notfound' ); ?>
+			<?php esc_html_e( 'Search button string:', 'genesis-widgetized-notfound' ); ?>
 			<input type="text" id="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" value="<?php echo esc_attr( $instance[ 'button_text' ] ); ?>" class="widefat" />
-				<small><?php _e( 'NOTE: Displaying may depend on your child theme settings/ styles.', 'genesis-widgetized-notfound' ); ?></small>
+				<small><?php esc_html_e( 'NOTE: Displaying may depend on your child theme settings/ styles.', 'genesis-widgetized-notfound' ); ?></small>
 			</label>
 		</p>
 
-		<hr <?php echo $gwnf_hr_style; ?> />
+		<hr class="gwnf-widget-divider" />
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'widget_display' ) ); ?>">
-				<strong><?php _e( 'Where to display this widget?', 'genesis-widgetized-notfound' ); ?>:</strong>
+				<strong><?php esc_html_e( 'Where to display this widget?', 'genesis-widgetized-notfound' ); ?>:</strong>
 				<select id="<?php echo esc_attr( $this->get_field_id( 'widget_display' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'widget_display' ) ); ?>">
 					<?php
-						printf( '<option value="global" %s>%s</option>', selected( 'global', $instance[ 'widget_display' ], 0 ), __( 'Global (default)', 'genesis-widgetized-notfound' ) );
+						printf( '<option value="global" %s>%s</option>', selected( 'global', $instance[ 'widget_display' ], 0 ), esc_html__( 'Global (default)', 'genesis-widgetized-notfound' ) );
 
 						printf( '<option value="only_404" %s>%s</option>', selected( 'only_404', $instance['widget_display'], false ), esc_html__( 'Only on 404 pages', 'genesis-widgetized-notfound' ) );
 						printf( '<option value="only_notfound" %s>%s</option>', selected( 'only_notfound', $instance['widget_display'], false ), esc_html__( 'Only on searches with no results', 'genesis-widgetized-notfound' ) );
-						echo $gwnf_select_divider;
+						echo '<option value="void" disabled="disabled">—————————————————</option>';
 
-						printf( '<option value="single_posts" %s>%s</option>', selected( 'single_posts', $instance[ 'widget_display' ], 0 ), sprintf( __( 'Single %s', 'genesis-widgetized-notfound' ), __( 'Posts', 'genesis-widgetized-notfound' ) ) );
+						/* translators: %s: Post type label. */
+						printf( '<option value="single_posts" %s>%s</option>', selected( 'single_posts', $instance[ 'widget_display' ], 0 ), esc_html( sprintf( __( 'Single %s', 'genesis-widgetized-notfound' ), __( 'Posts', 'genesis-widgetized-notfound' ) ) ) );
 
-						printf( '<option value="single_pages" %s>%s</option>', selected( 'single_pages', $instance[ 'widget_display' ], 0 ), sprintf( __( 'Single %s', 'genesis-widgetized-notfound' ), __( 'Pages', 'genesis-widgetized-notfound' ) ) );
+						/* translators: %s: Post type label. */
+						printf( '<option value="single_pages" %s>%s</option>', selected( 'single_pages', $instance[ 'widget_display' ], 0 ), esc_html( sprintf( __( 'Single %s', 'genesis-widgetized-notfound' ), __( 'Pages', 'genesis-widgetized-notfound' ) ) ) );
 
-						printf( '<option value="single_posts_pages" %s>%s</option>', selected( 'single_posts_pages', $instance[ 'widget_display' ], 0 ), __( 'Both, Single Posts & Pages', 'genesis-widgetized-notfound' ) );
+						/* translators: %s: Post type label. */
+						printf( '<option value="single_posts_pages" %s>%s</option>', selected( 'single_posts_pages', $instance[ 'widget_display' ], 0 ), esc_html__( 'Both, Single Posts & Pages', 'genesis-widgetized-notfound' ) );
 					?>
 				</select>
 			</label>
@@ -279,16 +283,16 @@ class DDW_GWNF_Search_Widget extends WP_Widget {
 		<p>
 			<input type="checkbox" value="1" <?php checked( '1', $instance[ 'not_in_public' ] ); ?> id="<?php echo esc_attr( $this->get_field_id( 'not_in_public' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'not_in_public' ) ); ?>" />
 			<label for="<?php echo esc_attr( $this->get_field_id( 'not_in_public' ) ); ?>">
-				<?php _e( 'Only displaying for logged in users?' , 'genesis-widgetized-notfound' ); ?>
+				<?php esc_html_e( 'Only displaying for logged in users?' , 'genesis-widgetized-notfound' ); ?>
 			</label>
 		</p>
 
-		<hr <?php echo $gwnf_hr_style; ?> />
+		<hr class="gwnf-widget-divider" />
 
 		<p>
-			<label for="<?php /** Optional outro text */ echo esc_attr( $this->get_field_id( 'outro_text' ) ); ?>"><?php _e( 'Optional outro text:', 'genesis-widgetized-notfound' ); ?>
-				<small><?php echo sprintf( __( 'Add some additional %s info. NOTE: Just leave blank to not use at all.', 'genesis-widgetized-notfound' ), __( 'Search', 'genesis-widgetized-notfound' ) ); ?></small>
-				<textarea name="<?php echo esc_attr( $this->get_field_name( 'outro_text' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'outro_text' ) ); ?>" rows="2" class="widefat"><?php echo $outro_text; ?></textarea>
+			<label for="<?php /** Optional outro text */ echo esc_attr( $this->get_field_id( 'outro_text' ) ); ?>"><?php esc_html_e( 'Optional outro text:', 'genesis-widgetized-notfound' ); ?>
+				<small><?php /* translators: %s: Search label. */ echo esc_html( sprintf( __( 'Add some additional %s info. NOTE: Just leave blank to not use at all.', 'genesis-widgetized-notfound' ), __( 'Search', 'genesis-widgetized-notfound' ) ) ); ?></small>
+				<textarea name="<?php echo esc_attr( $this->get_field_name( 'outro_text' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'outro_text' ) ); ?>" rows="2" class="widefat"><?php echo esc_textarea( $instance['outro_text'] ); ?></textarea>
 			</label>
 		</p>
 

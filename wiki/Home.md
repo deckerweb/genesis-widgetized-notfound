@@ -6,7 +6,7 @@
 
 Widget content for 404 pages and empty search results in classic Genesis themes. Includes a search widget, shortcodes and optional 404 starter content.
 
-**Version 2.0.0** · WordPress ≥ 6.4 · PHP ≥ 8.0 · Genesis
+**Version 2.0.1** · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
 
 [English](Home) · [Deutsch](Start)
 

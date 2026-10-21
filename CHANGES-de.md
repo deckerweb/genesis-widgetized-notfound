@@ -1,5 +1,11 @@
 # Änderungsverlauf
 
+### 2.0.1 · 2026-10-21
+
+* Verbessert: deckerweb Library und GitHub-Updater mit aktuellen Paket- und Kompatibilitätsprüfungen aktualisiert.
+* Behoben: Ausgabeabsicherung in den Such-Widget-Einstellungen verbessert.
+* Sonstiges: Benötigt PHP 8.1; WordPress 6.4 bleibt unterstützt. Bestehende Widgets und Einstellungen bleiben erhalten.
+
 ### 2.0.0 · 2026-10-15
 
 * Neu: Einrichtungsübersicht mit Widget-Anzahl, Bearbeitungslinks und Sichtbarkeitshinweisen.

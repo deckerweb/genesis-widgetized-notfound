@@ -122,7 +122,7 @@ function ddw_gwnf_help_sidebar_content() {
  */
 function ddw_gwnf_admin_assets( $hook ) {
  // Harden the embedded Library dialog without changing its pinned runtime.
- if ( str_contains( $hook, 'deckerweb-library' ) || ( 'plugin-install.php' === $hook && ( $_GET['tab'] ?? '' ) === 'deckerweb' ) ) {
+ if ( str_contains( $hook, 'deckerweb-library' ) || ( 'plugin-install.php' === $hook && 'deckerweb' === filter_input( INPUT_GET, 'tab', FILTER_SANITIZE_SPECIAL_CHARS ) ) ) {
   wp_enqueue_style( 'gwnf-library-dialog', plugins_url( 'css/gwnf-admin.css', GWNF_PLUGIN_FILE ), array(), GWNF_VERSION );
  }
  if ( str_contains( $hook, 'gwnf-settings' ) ) {

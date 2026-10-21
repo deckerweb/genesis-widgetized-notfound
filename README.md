@@ -1,6 +1,6 @@
 # Genesis Widgetized Not Found & 404
 
-![Genesis Widgetized Not Found & 404](assets/github-banner-en.png)
+![Genesis Widgetized Not Found & 404](https://raw.githubusercontent.com/deckerweb/genesis-widgetized-notfound/master/assets/github-banner-en.png)
 
 [Deutsch](README-de.md) · [Wiki](https://github.com/deckerweb/genesis-widgetized-notfound/wiki) · [Download](https://github.com/deckerweb/genesis-widgetized-notfound/releases/latest)
 
@@ -8,7 +8,7 @@
 
 Customize 404 pages and empty search results with familiar WordPress widgets. For classic Genesis themes, with a search widget, shortcodes and optional bbPress integration.
 
-**Version:** 2.0.0 · WordPress ≥ 6.4 · PHP ≥ 8.0 · Genesis
+**Version:** 2.0.1 · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
 
 [FAQ](#faq) · [Docs](docs/FAQ.md)
 
@@ -86,6 +86,12 @@ Deactivation and uninstall preserve widget content and this site’s presentatio
 <a id="changelog"></a>
 ## Changelog
 
+### 2.0.1 · 2026-10-21
+
+* Improved: Updated deckerweb Library and GitHub Updater with current package and compatibility checks.
+* Fixed: Hardened output escaping in search-widget settings.
+* Misc: Requires PHP 8.1; WordPress 6.4 remains supported. Existing widgets and settings are preserved.
+
 ### 2.0.0 · 2026-10-15
 
 * New: Setup overview with widget counts, editing shortcuts and visibility hints.
@@ -123,11 +129,6 @@ Deactivation and uninstall preserve widget content and this site’s presentatio
 * New: Genesis menu shortcut, Customizer preview/test links, widget-area hints, GitHub distribution, Composer metadata, icons and installer recommendations.
 * Improved: Widget registration, developer filters, documentation, translations and screenshots.
 * Misc: Removed unavailable Facetious integration.
-
-### 1.5.0 · 2013-05-29
-
-* New: Configurable search widget, search and widget-area shortcodes, bbPress 2.3 empty-search integration and partial Spanish translation.
-* Improved: Genesis 2.0 HTML5 markup, conditional frontend loading, stylesheet handling, documentation and German translations.
 
 <a id="author"></a>
 ## Author and history

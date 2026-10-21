@@ -141,10 +141,10 @@ function ddw_gwnf_get_customizer_preview_link( $area = '' ) {
 	switch ( $area ) {
 
 		case 'notfound':
-			$url = home_url() . '/?s=' . md5( rand() );
+			$url = home_url() . '/?s=' . md5( wp_rand() );
 			break;
 		case '404':
-			$url = home_url() . '/404-testing-' . md5( rand() );
+			$url = home_url() . '/404-testing-' . md5( wp_rand() );
 			break;
 
 	}  // end switch

@@ -62,7 +62,7 @@ function ddw_gwnf_get_widget_area_description( $area = '' ) {
 	$test_notfound = sprintf(
 		' %1$s &rarr; <a href="%2$s">%3$s</a>',
 		$divider,
-		esc_url( home_url() . '/?s=' . md5( rand() ) ),
+		esc_url( home_url() . '/?s=' . md5( wp_rand() ) ),
 		esc_html__( 'Test search not found results', 'genesis-widgetized-notfound' )
 	);
 
@@ -70,7 +70,7 @@ function ddw_gwnf_get_widget_area_description( $area = '' ) {
 	$test_404 = sprintf(
 		' %1$s &rarr; <a href="%2$s">%3$s</a>',
 		$divider,
-		esc_url( home_url() . '/404-testing-' . md5( rand() ) ),
+		esc_url( home_url() . '/404-testing-' . md5( wp_rand() ) ),
 		esc_html__( 'Test 404 error page', 'genesis-widgetized-notfound' )
 	);
 

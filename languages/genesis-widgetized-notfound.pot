@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis Widgetized Not Found & 404 2.0.0\n"
+"Project-Id-Version: Genesis Widgetized Not Found & 404 2.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/genesis-widgetized-notfound\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-15T05:38:52+00:00\n"
+"POT-Creation-Date: 2026-10-21T19:29:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: genesis-widgetized-notfound\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: includes/gwnf-admin.php:158
 #: includes/gwnf-settings.php:89
 #: includes/gwnf-updater.php:21
-#: includes/gwnf-widget-search.php:65
+#: includes/gwnf-widget-search.php:66
 msgid "Genesis Widgetized Not Found & 404"
 msgstr ""
 
@@ -270,7 +270,7 @@ msgid "Copy shortcodes"
 msgstr ""
 
 #: includes/gwnf-comfort.php:117
-#: includes/gwnf-widget-search.php:229
+#: includes/gwnf-widget-search.php:230
 msgid "Search form"
 msgstr ""
 
@@ -316,11 +316,12 @@ msgstr ""
 msgid "Search this website"
 msgstr ""
 
+#. translators: %s: Search label.
 #: includes/gwnf-search-form.php:20
 #: includes/gwnf-shortcodes.php:16
 #: includes/gwnf-widget-search.php:50
-#: includes/gwnf-widget-search.php:221
-#: includes/gwnf-widget-search.php:290
+#: includes/gwnf-widget-search.php:222
+#: includes/gwnf-widget-search.php:294
 msgid "Search"
 msgstr ""
 
@@ -395,146 +396,180 @@ msgstr ""
 msgid "A search form for your site. With more options than the default one."
 msgstr ""
 
-#: includes/gwnf-widget-search.php:64
+#. translators: %s: Plugin name.
+#: includes/gwnf-widget-search.php:65
 #, php-format
 msgid "Provided by the plugin %s."
 msgstr ""
 
-#: includes/gwnf-widget-search.php:78
+#: includes/gwnf-widget-search.php:79
 msgid "Genesis - Search Form"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:191
+#: includes/gwnf-widget-search.php:192
 msgid "Title:"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:198
+#: includes/gwnf-widget-search.php:199
 msgid "Optional Title URL:"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:206
+#: includes/gwnf-widget-search.php:207
 msgid "Open the URL in a new window/ tab?"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:213
+#: includes/gwnf-widget-search.php:214
 msgid "Do not display the Title?"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:220
+#: includes/gwnf-widget-search.php:221
 msgid "Optional intro text:"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:221
-#: includes/gwnf-widget-search.php:290
+#. translators: %s: Search label.
+#: includes/gwnf-widget-search.php:222
+#: includes/gwnf-widget-search.php:294
 #, php-format
 msgid "Add some additional %s info. NOTE: Just leave blank to not use at all."
 msgstr ""
 
-#: includes/gwnf-widget-search.php:234
+#: includes/gwnf-widget-search.php:235
 msgid "Label string before search input field:"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:236
-#: includes/gwnf-widget-search.php:244
+#: includes/gwnf-widget-search.php:237
+#: includes/gwnf-widget-search.php:245
 msgid "NOTE: Leave empty to not use/ display this string!"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:242
+#: includes/gwnf-widget-search.php:243
 msgid "Placeholder string for search input field:"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:250
+#: includes/gwnf-widget-search.php:251
 msgid "Search button string:"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:252
+#: includes/gwnf-widget-search.php:253
 msgid "NOTE: Displaying may depend on your child theme settings/ styles."
 msgstr ""
 
-#: includes/gwnf-widget-search.php:260
+#: includes/gwnf-widget-search.php:261
 msgid "Where to display this widget?"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:263
+#: includes/gwnf-widget-search.php:264
 msgid "Global (default)"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:265
+#: includes/gwnf-widget-search.php:266
 msgid "Only on 404 pages"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:266
+#: includes/gwnf-widget-search.php:267
 msgid "Only on searches with no results"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:269
+#. translators: %s: Post type label.
 #: includes/gwnf-widget-search.php:271
+#: includes/gwnf-widget-search.php:274
 #, php-format
 msgid "Single %s"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:269
+#. translators: %s: Post type label.
+#: includes/gwnf-widget-search.php:271
 msgid "Posts"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:271
+#. translators: %s: Post type label.
+#: includes/gwnf-widget-search.php:274
 msgid "Pages"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:273
+#. translators: %s: Post type label.
+#: includes/gwnf-widget-search.php:277
 msgid "Both, Single Posts & Pages"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:282
+#: includes/gwnf-widget-search.php:286
 msgid "Only displaying for logged in users?"
 msgstr ""
 
-#: includes/gwnf-widget-search.php:289
+#: includes/gwnf-widget-search.php:293
 msgid "Optional outro text:"
 msgstr ""
 
-#: includes/updater-translations.php:8
+#: includes/updater-translations.php:13
 msgid "Private mode must be boolean."
 msgstr ""
 
-#: includes/updater-translations.php:10
+#: includes/updater-translations.php:15
 msgid "Invalid authentication provider."
 msgstr ""
 
-#: includes/updater-translations.php:12
+#: includes/updater-translations.php:17
 msgid "The plugin must be installed in a stable slug directory."
 msgstr ""
 
-#: includes/updater-translations.php:14
+#: includes/updater-translations.php:19
 msgid "Invalid GitHub repository URL."
 msgstr ""
 
-#: includes/updater-translations.php:16
+#: includes/updater-translations.php:21
 msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
 msgstr ""
 
-#: includes/updater-translations.php:18
+#: includes/updater-translations.php:23
 msgid "Could not create the update download file."
 msgstr ""
 
-#: includes/updater-translations.php:20
+#: includes/updater-translations.php:25
 msgid "The private update download failed. Check credentials and try again."
 msgstr ""
 
-#: includes/updater-translations.php:22
+#: includes/updater-translations.php:27
 msgid "Could not access the update filesystem."
 msgstr ""
 
-#: includes/updater-translations.php:24
+#: includes/updater-translations.php:29
 msgid "GitHub release does not contain the plugin main file."
 msgstr ""
 
-#: includes/updater-translations.php:26
+#: includes/updater-translations.php:31
 msgid "Could not prepare the GitHub release package."
 msgstr ""
 
-#: includes/updater-translations.php:28
+#: includes/updater-translations.php:33
 msgid "See the release on GitHub."
+msgstr ""
+
+#: includes/updater-translations.php:35
+msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
+msgstr ""
+
+#: includes/updater-translations.php:37
+msgid "Manage installed plugins"
+msgstr ""
+
+#: includes/updater-translations.php:39
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/updater-translations.php:41
+msgid "Permission denied."
+msgstr ""
+
+#: includes/updater-translations.php:43
+msgid "Public catalog callbacks require both providers and cannot be used in private mode."
+msgstr ""
+
+#: includes/updater-translations.php:45
+msgid "The approved release could not be verified."
+msgstr ""
+
+#: includes/updater-translations.php:47
+msgid "The approved release changed. Refresh updates first."
 msgstr ""
 
 msgid "%s is installed but inactive. Activate it first."
@@ -561,6 +596,12 @@ msgstr ""
 msgid "Activating…"
 msgstr ""
 
+msgid "Active"
+msgstr ""
+
+msgid "Active filters: "
+msgstr ""
+
 msgid "Admin"
 msgstr ""
 
@@ -577,6 +618,9 @@ msgid "Already up to date."
 msgstr ""
 
 msgid "Another action for this plugin is running. Please wait."
+msgstr ""
+
+msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
 msgstr ""
 
 msgid "Another updater provides a different release. Refresh updates before continuing."
@@ -607,6 +651,12 @@ msgid "Back to deckerweb"
 msgstr ""
 
 msgid "Builder"
+msgstr ""
+
+msgid "Bundled catalog"
+msgstr ""
+
+msgid "Cached or bundled catalog"
 msgstr ""
 
 msgid "Cannot create temporary file."
@@ -645,6 +695,9 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+msgid "Copy diagnostic information"
+msgstr ""
+
 msgid "Dec"
 msgstr ""
 
@@ -658,6 +711,9 @@ msgid "Details & requirements"
 msgstr ""
 
 msgid "Discover more plugins by deckerweb"
+msgstr ""
+
+msgid "Discover randomly"
 msgstr ""
 
 msgid "Dismiss permanently"
@@ -729,6 +785,9 @@ msgstr ""
 msgid "Installed"
 msgstr ""
 
+msgid "Installed · inactive"
+msgstr ""
+
 msgid "Installed: "
 msgstr ""
 
@@ -789,6 +848,9 @@ msgstr ""
 msgid "Invalid plugin series."
 msgstr ""
 
+msgid "Invalid sort order."
+msgstr ""
+
 msgid "Invalid star count."
 msgstr ""
 
@@ -813,6 +875,9 @@ msgstr ""
 msgid "June"
 msgstr ""
 
+msgid "Last successful check: "
+msgstr ""
+
 msgid "Library"
 msgstr ""
 
@@ -826,9 +891,6 @@ msgid "Library settings saved."
 msgstr ""
 
 msgid "Manage Content"
-msgstr ""
-
-msgid "Manage installed plugins"
 msgstr ""
 
 msgid "Mar"
@@ -861,7 +923,16 @@ msgstr ""
 msgid "Multisite"
 msgstr ""
 
+msgid "Name A–Z"
+msgstr ""
+
+msgid "Name Z–A"
+msgstr ""
+
 msgid "Network activate"
+msgstr ""
+
+msgid "Network active"
 msgstr ""
 
 msgid "Network permission denied."
@@ -912,7 +983,7 @@ msgstr ""
 msgid "POST required."
 msgstr ""
 
-msgid "Permission denied."
+msgid "Permission denied. Reload the page and check your permissions."
 msgstr ""
 
 msgid "Planned: "
@@ -930,6 +1001,9 @@ msgstr ""
 msgid "Product website"
 msgstr ""
 
+msgid "Recently updated"
+msgstr ""
+
 msgid "Refresh catalog"
 msgstr ""
 
@@ -943,6 +1017,9 @@ msgid "Release in preparation"
 msgstr ""
 
 msgid "Release must contain exactly the approved plugin directory."
+msgstr ""
+
+msgid "Remove filter: "
 msgstr ""
 
 msgid "Repository & documentation"
@@ -963,6 +1040,9 @@ msgstr ""
 msgid "Reset filters"
 msgstr ""
 
+msgid "Reset view"
+msgstr ""
+
 msgid "Retrieve approved catalog updates online"
 msgstr ""
 
@@ -979,6 +1059,9 @@ msgid "Scripts"
 msgstr ""
 
 msgid "Search this catalog"
+msgstr ""
+
+msgid "Select and copy the text."
 msgstr ""
 
 msgid "Selected by deckerweb · Installed from GitHub releases"
@@ -1002,16 +1085,28 @@ msgstr ""
 msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
 msgstr ""
 
+msgid "Shuffle again"
+msgstr ""
+
 msgid "Small plugins. Practical improvements."
 msgstr ""
 
+msgid "Sort by"
+msgstr ""
+
 msgid "Source: GitHub"
+msgstr ""
+
+msgid "Standard"
 msgstr ""
 
 msgid "Sun"
 msgstr ""
 
 msgid "Sunday"
+msgstr ""
+
+msgid "Technical information"
 msgstr ""
 
 msgid "The GitHub release could not be downloaded."
@@ -1021,12 +1116,6 @@ msgid "The action is still running. Check its status again."
 msgstr ""
 
 msgid "The approved package could not be verified."
-msgstr ""
-
-msgid "The approved release changed. Refresh updates first."
-msgstr ""
-
-msgid "The approved release could not be verified."
 msgstr ""
 
 msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
@@ -1065,6 +1154,9 @@ msgstr ""
 msgid "The update has not been confirmed. You can try again."
 msgstr ""
 
+msgid "These details contain component versions and catalog status, without credentials or site content."
+msgstr ""
+
 msgid "This catalog requires a newer Library."
 msgstr ""
 
@@ -1099,6 +1191,9 @@ msgid "Untrusted release URL."
 msgstr ""
 
 msgid "Update %1$s to version %2$s or newer."
+msgstr ""
+
+msgid "Update available"
 msgstr ""
 
 msgid "Update failed."
