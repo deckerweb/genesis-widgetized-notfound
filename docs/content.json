@@ -1,8 +1,19 @@
 {
-  "version": "2.0.1",
+  "version": "2.0.2",
   "requires_wp": "6.4",
   "requires_php": "8.1",
   "history": [
+    [
+      "2.0.2",
+      "2026-10-22",
+      [
+        [
+          "Fixed",
+          "Updated to deckerweb Updater 2.2.1 so GitHub updates use the bundled implementation even when another plugin loads an older updater first.",
+          "deckerweb Updater auf 2.2.1 aktualisiert: GitHub-Updates verwenden auch dann die mitgelieferte Implementierung, wenn ein anderes Plugin zuerst einen älteren Updater lädt."
+        ]
+      ]
+    ],
     [
       "2.0.1",
       "2026-10-21",

@@ -8,9 +8,8 @@ defined( 'ABSPATH' ) || exit;
  * @return void
  */
 function ddw_gwnf_register_updater() {
- if ( ! class_exists( '\Deckerweb\GitHubReleaseUpdater\V2\Updater' ) ) { require_once GWNF_PLUGIN_DIR . 'includes/deckerweb-github-release-updater-v2.php'; }
- $class = '\Deckerweb\GitHubReleaseUpdater\V2\Updater';
- if ( ! defined( $class . '::SUPPORTS_HOST_TRANSLATIONS' ) || ! constant( $class . '::SUPPORTS_HOST_TRANSLATIONS' ) ) {
+ $class = require GWNF_PLUGIN_DIR . 'includes/deckerweb-github-release-updater-v2.php';
+ if ( ! is_string( $class ) || ! class_exists( $class, false ) || ! defined( $class . '::SUPPORTS_HOST_TRANSLATIONS' ) || ! constant( $class . '::SUPPORTS_HOST_TRANSLATIONS' ) ) {
   add_action( 'admin_notices', 'ddw_gwnf_updater_notice' );
   add_action( 'network_admin_notices', 'ddw_gwnf_updater_notice' );
   return;

@@ -3,7 +3,7 @@
  * Plugin Name: Genesis Widgetized Not Found & 404
  * Plugin URI: https://github.com/deckerweb/genesis-widgetized-notfound
  * Description: Customize Genesis 404 pages and empty search results with widgets, an accessible search form and shortcodes.
- * Version: 2.0.1
+ * Version: 2.0.2
  * Requires at least: 6.4
  * Requires PHP: 8.1
  * Author: David Decker – DECKERWEB
@@ -20,7 +20,7 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-define( 'GWNF_VERSION', '2.0.1' );
+define( 'GWNF_VERSION', '2.0.2' );
 define( 'GWNF_PLUGIN_FILE', __FILE__ );
 define( 'GWNF_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GWNF_PLUGIN_BASEDIR', trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) );

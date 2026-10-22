@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,zipfile
 r=Path(__file__).resolve().parents[1]
-out=Path.cwd()/"genesis-widgetized-notfound-2.0.1.zip"
+out=Path.cwd()/"genesis-widgetized-notfound-2.0.2.zip"
 root_files={"genesis-widgetized-notfound.php","uninstall.php","LICENSE","README.md","README-de.md","CHANGES.md","CHANGES-de.md","SECURITY.md","readme.txt","readme-de.txt"}
 with zipfile.ZipFile(out,"w",zipfile.ZIP_DEFLATED) as z:
  for p in sorted(r.rglob("*")):

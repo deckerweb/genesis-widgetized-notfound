@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+### 2.0.2 · 2026-10-22
+
+* Behoben: deckerweb Updater auf 2.2.1 aktualisiert: GitHub-Updates verwenden auch dann die mitgelieferte Implementierung, wenn ein anderes Plugin zuerst einen älteren Updater lädt.
+
 ### 2.0.1 · 2026-10-21
 
 * Verbessert: deckerweb Library und GitHub-Updater mit aktuellen Paket- und Kompatibilitätsprüfungen aktualisiert.

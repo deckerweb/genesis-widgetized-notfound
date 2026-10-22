@@ -4,7 +4,7 @@ Tags: genesis, 404, widgets, search
 Requires at least: 6.4
 Tested up to: 7.1.3
 Requires PHP: 8.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,10 @@ Deactivation and uninstall preserve widget content and this site’s presentatio
 
 == Changelog ==
 
+= 2.0.2 · 2026-10-22 =
+
+* Fixed: Updated to deckerweb Updater 2.2.1 so GitHub updates use the bundled implementation even when another plugin loads an older updater first.
+
 = 2.0.1 · 2026-10-21 =
 
 * Improved: Updated deckerweb Library and GitHub Updater with current package and compatibility checks.
@@ -97,9 +101,3 @@ Deactivation and uninstall preserve widget content and this site’s presentatio
 
 * New: Update messages on the Plugins screen and community support links.
 * Improved: Installer recommendations library 1.1.0 and German translations.
-
-= 1.6.0 · 2018-08-25 =
-
-* New: Genesis menu shortcut, Customizer preview/test links, widget-area hints, GitHub distribution, Composer metadata, icons and installer recommendations.
-* Improved: Widget registration, developer filters, documentation, translations and screenshots.
-* Misc: Removed unavailable Facetious integration.

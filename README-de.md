@@ -8,7 +8,7 @@
 
 Gestalte 404-Seiten und Suchen ohne Treffer mit vertrauten WordPress-Widgets. Für klassische Genesis-Themes, mit Such-Widget, Shortcodes und optionaler bbPress-Integration.
 
-**Version:** 2.0.1 · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
+**Version:** 2.0.2 · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
 
 [FAQ](#faq) · [Docs](docs/FAQ-de.md)
 
@@ -86,6 +86,10 @@ Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungsein
 <a id="changelog"></a>
 ## Änderungsverlauf
 
+### 2.0.2 · 2026-10-22
+
+* Behoben: deckerweb Updater auf 2.2.1 aktualisiert: GitHub-Updates verwenden auch dann die mitgelieferte Implementierung, wenn ein anderes Plugin zuerst einen älteren Updater lädt.
+
 ### 2.0.1 · 2026-10-21
 
 * Verbessert: deckerweb Library und GitHub-Updater mit aktuellen Paket- und Kompatibilitätsprüfungen aktualisiert.
@@ -123,12 +127,6 @@ Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungsein
 
 * Neu: Updatehinweise auf der Plugins-Seite und Community-Support-Links.
 * Verbessert: Empfehlungsbibliothek 1.1.0 und deutsche Übersetzungen.
-
-### 1.6.0 · 2018-08-25
-
-* Neu: Genesis-Menüverknüpfung, Customizer-Vorschau-/Testlinks, Widget-Bereich-Hinweise, GitHub-Vertrieb, Composer-Metadaten, Icons und Plugin-Empfehlungen.
-* Verbessert: Widget-Registrierung, Entwicklerfilter, Dokumentation, Übersetzungen und Bildschirmfotos.
-* Sonstiges: Nicht mehr verfügbare Facetious-Integration entfernt.
 
 <a id="author"></a>
 ## Autor und Geschichte

@@ -8,7 +8,7 @@
 
 Customize 404 pages and empty search results with familiar WordPress widgets. For classic Genesis themes, with a search widget, shortcodes and optional bbPress integration.
 
-**Version:** 2.0.1 · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
+**Version:** 2.0.2 · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
 
 [FAQ](#faq) · [Docs](docs/FAQ.md)
 
@@ -86,6 +86,10 @@ Deactivation and uninstall preserve widget content and this site’s presentatio
 <a id="changelog"></a>
 ## Changelog
 
+### 2.0.2 · 2026-10-22
+
+* Fixed: Updated to deckerweb Updater 2.2.1 so GitHub updates use the bundled implementation even when another plugin loads an older updater first.
+
 ### 2.0.1 · 2026-10-21
 
 * Improved: Updated deckerweb Library and GitHub Updater with current package and compatibility checks.
@@ -123,12 +127,6 @@ Deactivation and uninstall preserve widget content and this site’s presentatio
 
 * New: Update messages on the Plugins screen and community support links.
 * Improved: Installer recommendations library 1.1.0 and German translations.
-
-### 1.6.0 · 2018-08-25
-
-* New: Genesis menu shortcut, Customizer preview/test links, widget-area hints, GitHub distribution, Composer metadata, icons and installer recommendations.
-* Improved: Widget registration, developer filters, documentation, translations and screenshots.
-* Misc: Removed unavailable Facetious integration.
 
 <a id="author"></a>
 ## Author and history
