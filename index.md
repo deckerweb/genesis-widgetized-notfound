@@ -11,7 +11,7 @@ title: "Documentation"
 
 Widget content for 404 pages and empty search results in classic Genesis themes. Includes a search widget, shortcodes and optional 404 starter content.
 
-**Version 2.0.1** · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
+**Version 2.0.2** · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
 
 [English](index.html) · [Deutsch](index-de.html)
 

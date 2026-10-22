@@ -11,7 +11,7 @@ title: "Dokumentation"
 
 Widget-Inhalte für 404-Seiten und erfolglose Suchen in klassischen Genesis-Themes. Mit Such-Widget, Shortcodes und optionalem 404-Startinhalt.
 
-**Version 2.0.1** · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
+**Version 2.0.2** · WordPress ≥ 6.4 · PHP ≥ 8.1 · Genesis
 
 [English](index.html) · [Deutsch](index-de.html)
 
