@@ -2,9 +2,9 @@
 Contributors: daveshine
 Tags: genesis, 404, widgets, search
 Requires at least: 6.4
-Tested up to: 7.1.3
+Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,10 @@ Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungsein
 
 == Changelog ==
 
+= 2.0.3 · 2026-11-09 =
+
+* Behoben: deckerweb Library auf 1.3.0 und Updater auf 2.4.0 aktualisiert: normale Updates unabhängig vom Katalog, begrenzte Downloads und strengere Paketprüfung.
+
 = 2.0.2 · 2026-10-22 =
 
 * Behoben: deckerweb Updater auf 2.2.1 aktualisiert: GitHub-Updates verwenden auch dann die mitgelieferte Implementierung, wenn ein anderes Plugin zuerst einen älteren Updater lädt.
@@ -96,8 +100,3 @@ Deaktivierung und Deinstallation erhalten Widget-Inhalte und die Darstellungsein
 
 * Neu: Video mit Plugin-Rundgang.
 * Verbessert: Empfehlungsbibliothek 1.2.0 mit Dark-Mode-Darstellung.
-
-= 1.6.1 · 2018-10-01 =
-
-* Neu: Updatehinweise auf der Plugins-Seite und Community-Support-Links.
-* Verbessert: Empfehlungsbibliothek 1.1.0 und deutsche Übersetzungen.
